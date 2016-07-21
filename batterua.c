@@ -9,20 +9,24 @@
 #include <stdio.h>
 #include <math.h>
 
-#define R1 68000 //INSERIRE VALORE Ohm PARTITORE
-#define R2 33000 //INSERIRE VALORE Ohm PARTITORE
-void inizializzazione(void);
-void read_adc(void);
-unsigned int lettura [3] = 0;
+#define R1 67050 //INSERIRE VALORE Ohm PARTITORE
+#define R2 33060 //INSERIRE VALORE Ohm PARTITORE
+
+int lettura [3] = 0;
 unsigned int ore, minuti, secondi = 0;
 unsigned long tempo = 0;
 unsigned char str [8] = 0;
 float rapporto, current, voltage = 0;
 
+void inizializzazione(void);
+void read_adc(void);
+
+
+
 unsigned char combinazioni[] = {
     0b00000001, //AN0
     0b00000101, //AN1
-    0b00001001  //AN2
+    0b00001001,  //AN2
     0b00001101  //AN2
 };
 
@@ -49,7 +53,7 @@ void main(void) {
     inizializzazione();
     while(1){
          read_adc();
-    while ((current < -0.5) || (voltage < 13.5)) {
+    while ((current < -0.5) || (voltage < 14)) {
         PORTBbits.RB7 = 1; //attivo ciclo ricarica
         LCD_goto_line(1);
         LCD_write_message("Ciclo ricarica..");
