@@ -1,0 +1,667 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4480 ]
+[d frameptr 4065 ]
+"44 C:\Users\simone\Desktop\batteria4480.X\batterua.c
+[v _main main `(v  1 e 0 0 ]
+"74
+[v _read_adc read_adc `(v  1 e 0 0 ]
+"92
+[v _inizializzazione inizializzazione `(v  1 e 0 0 ]
+"61 C:/Users/simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+[v _delay_ms delay_ms `(v  1 e 0 0 ]
+"115
+[v _delay_set_quartz delay_set_quartz `(v  1 e 0 0 ]
+"49 C:/Users/simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+[v _LCD_enable_pulse LCD_enable_pulse `(v  1 e 0 0 ]
+"61
+[v _LCD_send_command LCD_send_command `(v  1 e 0 0 ]
+"98
+[v _LCD_shift_cursor LCD_shift_cursor `(v  1 e 0 0 ]
+"111
+[v _LCD_goto_line LCD_goto_line `(v  1 e 0 0 ]
+"145
+[v _LCD_write_char LCD_write_char `(v  1 e 0 0 ]
+"178
+[v _LCD_write_message LCD_write_message `(v  1 e 0 0 ]
+"194
+[v _LCD_write_string LCD_write_string `(v  1 e 0 0 ]
+"257
+[v _LCD_clear LCD_clear `(v  1 e 0 0 ]
+"266
+[v _LCD_cursor LCD_cursor `(v  1 e 0 0 ]
+"275
+[v _LCD_backlight LCD_backlight `(v  1 e 0 0 ]
+"283
+[v _LCD_initialize LCD_initialize `(v  1 e 0 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"409 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\doprnt.c
+[v _fround fround `(d  1 s 3 fround ]
+"425
+[v _scale scale `(d  1 s 3 scale ]
+"492
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"63 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\double.c
+[v ___flpack __flpack `(d  1 e 3 0 ]
+"88 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fladd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"54 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fldiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"60 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fldivl.c
+[v __div_to_l_ _div_to_l_ `(ul  1 e 4 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"20 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flsub.c
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"60 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftdivl.c
+[v __tdiv_to_l_ _tdiv_to_l_ `(ul  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"20 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\itoa.c
+[v _itoa itoa `(*.39uc  1 e 2 0 ]
+"17
+[v _utoa utoa `(*.39uc  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"35 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"28 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"16 C:\Users\simone\Desktop\batteria4480.X\batterua.c
+[v _lettura lettura `[3]ui  1 e 6 0 ]
+"17
+[v _ore ore `ui  1 e 2 0 ]
+[v _minuti minuti `ui  1 e 2 0 ]
+[v _secondi secondi `ui  1 e 2 0 ]
+"18
+[v _tempo tempo `ul  1 e 4 0 ]
+"19
+[v _str str `[8]uc  1 e 8 0 ]
+"20
+[v _rapporto rapporto `f  1 e 3 0 ]
+[v _current current `f  1 e 3 0 ]
+[v _voltage voltage `f  1 e 3 0 ]
+"22
+[v _combinazioni combinazioni `[3]uc  1 e 3 0 ]
+"49 C:/Users/simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+[v _delay_quartz_frequency_value delay_quartz_frequency_value `VEuc  1 e 1 0 ]
+"50
+[v _clock_counter_reference clock_counter_reference `VEui  1 e 2 0 ]
+[s S216 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"28434 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f4480.h
+[s S225 . 1 `uc 1 T1OSO 1 0 :1:0 
+`uc 1 T1OSI 1 0 :1:1 
+`uc 1 CCP1 1 0 :1:2 
+`uc 1 SCK 1 0 :1:3 
+`uc 1 SDI 1 0 :1:4 
+`uc 1 SDO 1 0 :1:5 
+`uc 1 TX 1 0 :1:6 
+`uc 1 RX 1 0 :1:7 
+]
+[s S234 . 1 `uc 1 T13CKI 1 0 :1:0 
+`uc 1 . 1 0 :2:1 
+`uc 1 SCL 1 0 :1:3 
+`uc 1 SDA 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 CK 1 0 :1:6 
+`uc 1 DT 1 0 :1:7 
+]
+[s S242 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 CCP2 1 0 :1:1 
+]
+[s S245 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PA1 1 0 :1:2 
+]
+[s S248 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PA2 1 0 :1:1 
+]
+[u S251 . 1 `S216 1 . 1 0 `S225 1 . 1 0 `S234 1 . 1 0 `S242 1 . 1 0 `S245 1 . 1 0 `S248 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES251  1 e 1 @3970 ]
+"28961
+[v _LATA LATA `VEuc  1 e 1 @3977 ]
+"29093
+[v _LATB LATB `VEuc  1 e 1 @3978 ]
+"29225
+[v _LATC LATC `VEuc  1 e 1 @3979 ]
+"29357
+[v _LATD LATD `VEuc  1 e 1 @3980 ]
+[s S21 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"29405
+[s S30 . 1 `uc 1 LD0 1 0 :1:0 
+]
+[s S32 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 LD1 1 0 :1:1 
+]
+[s S35 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LD2 1 0 :1:2 
+]
+[s S38 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 LD3 1 0 :1:3 
+]
+[s S41 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 LD4 1 0 :1:4 
+]
+[s S44 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 LD5 1 0 :1:5 
+]
+[s S47 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 LD6 1 0 :1:6 
+]
+[s S50 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 LD7 1 0 :1:7 
+]
+[u S53 . 1 `S21 1 . 1 0 `S30 1 . 1 0 `S32 1 . 1 0 `S35 1 . 1 0 `S38 1 . 1 0 `S41 1 . 1 0 `S44 1 . 1 0 `S47 1 . 1 0 `S50 1 . 1 0 ]
+[v _LATDbits LATDbits `VES53  1 e 1 @3980 ]
+"29591
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
+"29812
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"30033
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+"30254
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"32894
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
+"32964
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"33054
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
+[s S301 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"33102
+[s S304 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :4:2 
+]
+"33102
+"33102
+[s S311 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+]
+"33102
+[s S318 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+]
+"33102
+[s S321 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+"33102
+[s S324 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+"33102
+[s S327 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+"33102
+[s S330 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+"33102
+[u S333 . 1 `S301 1 . 1 0 `S304 1 . 1 0 `S301 1 . 1 0 `S311 1 . 1 0 `S318 1 . 1 0 `S321 1 . 1 0 `S324 1 . 1 0 `S327 1 . 1 0 `S330 1 . 1 0 ]
+"33102
+"33102
+[v _ADCON0bits ADCON0bits `VES333  1 e 1 @4034 ]
+"33182
+[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
+"33188
+[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+"34422
+[v _T0CON T0CON `VEuc  1 e 1 @4053 ]
+"34503
+[v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
+"34509
+[v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
+[s S119 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"34968
+[s S128 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"34968
+[s S137 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+"34968
+[s S146 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"34968
+[s S155 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+"34968
+[u S159 . 1 `S119 1 . 1 0 `S128 1 . 1 0 `S137 1 . 1 0 `S146 1 . 1 0 `S155 1 . 1 0 ]
+"34968
+"34968
+[v _INTCONbits INTCONbits `VES159  1 e 1 @4082 ]
+"354 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\doprnt.c
+[v _dpowers dpowers `C[10]ul  1 s 40 dpowers ]
+"7 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\powers.c
+[v __powers_ _powers_ `C[13]d  1 e 39 0 ]
+"39
+[v __npowers_ _npowers_ `C[13]d  1 e 39 0 ]
+"44 C:\Users\simone\Desktop\batteria4480.X\batterua.c
+[v _main main `(v  1 e 0 0 ]
+{
+"72
+} 0
+"492 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[u S563 . 4 `ul 1 vd 4 0 `d 1 integ 3 0 ]
+"526
+[v sprintf@tmpval tmpval `S563  1 a 4 13 ]
+"528
+[v sprintf@val val `ul  1 a 4 7 ]
+"516
+[v sprintf@fval fval `d  1 a 3 19 ]
+"504
+[v sprintf@prec prec `i  1 a 2 17 ]
+"516
+[v sprintf@exp exp `i  1 a 2 11 ]
+"508
+[v sprintf@flag flag `us  1 a 2 5 ]
+"494
+[v sprintf@ap ap `[1]*.39v  1 a 2 3 ]
+"499
+[v sprintf@c c `c  1 a 1 22 ]
+"492
+[v sprintf@sp sp `*.39uc  1 p 2 63 ]
+[v sprintf@f f `*.25Cuc  1 p 2 65 ]
+"1541
+} 0
+"425
+[v _scale scale `(d  1 s 3 scale ]
+{
+[v scale@scl scl `c  1 a 1 wreg ]
+[v scale@scl scl `c  1 a 1 wreg ]
+"428
+[v scale@scl scl `c  1 a 1 41 ]
+"441
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+{
+[v isdigit@c c `uc  1 a 1 wreg ]
+[v isdigit@c c `uc  1 a 1 wreg ]
+"14
+[v isdigit@c c `uc  1 a 1 2 ]
+"15
+} 0
+"409 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\doprnt.c
+[v _fround fround `(d  1 s 3 fround ]
+{
+[v fround@prec prec `uc  1 a 1 wreg ]
+[v fround@prec prec `uc  1 a 1 wreg ]
+"413
+[v fround@prec prec `uc  1 a 1 44 ]
+"418
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 5 ]
+[v ___awmod@counter counter `uc  1 a 1 4 ]
+"8
+[v ___awmod@dividend dividend `i  1 p 2 0 ]
+[v ___awmod@divisor divisor `i  1 p 2 2 ]
+"35
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 12 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 11 ]
+[v ___awdiv@counter counter `uc  1 a 1 10 ]
+"8
+[v ___awdiv@dividend dividend `i  1 p 2 6 ]
+[v ___awdiv@divisor divisor `i  1 p 2 8 ]
+"42
+} 0
+"60 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftdivl.c
+[v __tdiv_to_l_ _tdiv_to_l_ `(ul  1 e 4 0 ]
+{
+"63
+[v __tdiv_to_l_@quot quot `ul  1 a 4 9 ]
+"62
+[v __tdiv_to_l_@exp1 exp1 `uc  1 a 1 14 ]
+[v __tdiv_to_l_@cntr cntr `uc  1 a 1 13 ]
+"60
+[v __tdiv_to_l_@f1 f1 `f  1 p 3 0 ]
+[v __tdiv_to_l_@f2 f2 `f  1 p 3 3 ]
+"101
+} 0
+"60 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fldivl.c
+[v __div_to_l_ _div_to_l_ `(ul  1 e 4 0 ]
+{
+"63
+[v __div_to_l_@quot quot `ul  1 a 4 6 ]
+"62
+[v __div_to_l_@exp1 exp1 `uc  1 a 1 11 ]
+[v __div_to_l_@cntr cntr `uc  1 a 1 10 ]
+"60
+[v __div_to_l_@f1 f1 `d  1 p 3 0 ]
+[v __div_to_l_@f2 f2 `d  1 p 3 3 ]
+"101
+} 0
+"35 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+{
+"37
+[v ___lltoft@exp exp `uc  1 a 1 16 ]
+"35
+[v ___lltoft@c c `ul  1 p 4 8 ]
+"46
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"11
+[v ___llmod@counter counter `uc  1 a 1 8 ]
+"8
+[v ___llmod@dividend dividend `ul  1 p 4 0 ]
+[v ___llmod@divisor divisor `ul  1 p 4 4 ]
+"26
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"11
+[v ___lldiv@quotient quotient `ul  1 a 4 8 ]
+"12
+[v ___lldiv@counter counter `uc  1 a 1 12 ]
+"8
+[v ___lldiv@dividend dividend `ul  1 p 4 0 ]
+[v ___lldiv@divisor divisor `ul  1 p 4 4 ]
+"31
+} 0
+"44 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 52 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 56 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 51 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 42 ]
+"73
+} 0
+"20 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+{
+[v ___ftsub@f1 f1 `f  1 p 3 57 ]
+[v ___ftsub@f2 f2 `f  1 p 3 60 ]
+"27
+} 0
+"86 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 56 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 55 ]
+[v ___ftadd@sign sign `uc  1 a 1 54 ]
+"86
+[v ___ftadd@f1 f1 `f  1 p 3 45 ]
+[v ___ftadd@f2 f2 `f  1 p 3 48 ]
+"148
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+{
+[v ___ftneg@f1 f1 `f  1 p 3 0 ]
+"20
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+{
+[v ___ftge@ff1 ff1 `f  1 p 3 0 ]
+[v ___ftge@ff2 ff2 `f  1 p 3 3 ]
+"13
+} 0
+"74 C:\Users\simone\Desktop\batteria4480.X\batterua.c
+[v _read_adc read_adc `(v  1 e 0 0 ]
+{
+"75
+[v read_adc@i i `uc  1 a 1 52 ]
+"90
+} 0
+"28 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+{
+[v ___lwtoft@c c `ui  1 p 2 8 ]
+"31
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 30 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 34 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 33 ]
+[v ___ftmul@exp exp `uc  1 a 1 29 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 20 ]
+[v ___ftmul@f2 f2 `f  1 p 3 23 ]
+"157
+} 0
+"54 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"60
+[v ___ftdiv@f3 f3 `f  1 a 3 45 ]
+"59
+[v ___ftdiv@sign sign `uc  1 a 1 49 ]
+[v ___ftdiv@exp exp `uc  1 a 1 48 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 44 ]
+"54
+[v ___ftdiv@f1 f1 `f  1 p 3 35 ]
+[v ___ftdiv@f2 f2 `f  1 p 3 38 ]
+"86
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"92 C:\Users\simone\Desktop\batteria4480.X\batterua.c
+[v _inizializzazione inizializzazione `(v  1 e 0 0 ]
+{
+"123
+} 0
+"178 C:/Users/simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+[v _LCD_write_message LCD_write_message `(v  1 e 0 0 ]
+{
+[v LCD_write_message@buffer buffer `*.25Cuc  1 p 2 31 ]
+"188
+} 0
+"283
+[v _LCD_initialize LCD_initialize `(v  1 e 0 0 ]
+{
+[v LCD_initialize@quartz_frequency quartz_frequency `uc  1 a 1 wreg ]
+[v LCD_initialize@quartz_frequency quartz_frequency `uc  1 a 1 wreg ]
+"285
+[v LCD_initialize@quartz_frequency quartz_frequency `uc  1 a 1 28 ]
+"316
+} 0
+"115 C:/Users/simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+[v _delay_set_quartz delay_set_quartz `(v  1 e 0 0 ]
+{
+[v delay_set_quartz@frequency frequency `uc  1 a 1 wreg ]
+[v delay_set_quartz@frequency frequency `uc  1 a 1 wreg ]
+"117
+[v delay_set_quartz@frequency frequency `uc  1 a 1 0 ]
+"119
+} 0
+"266 C:/Users/simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+[v _LCD_cursor LCD_cursor `(v  1 e 0 0 ]
+{
+[v LCD_cursor@active active `uc  1 a 1 wreg ]
+[v LCD_cursor@active active `uc  1 a 1 wreg ]
+[v LCD_cursor@blinking blinking `uc  1 p 1 26 ]
+"268
+[v LCD_cursor@active active `uc  1 a 1 27 ]
+"270
+} 0
+"257
+[v _LCD_clear LCD_clear `(v  1 e 0 0 ]
+{
+"261
+} 0
+"275
+[v _LCD_backlight LCD_backlight `(v  1 e 0 0 ]
+{
+[v LCD_backlight@active active `uc  1 a 1 wreg ]
+[v LCD_backlight@active active `uc  1 a 1 wreg ]
+"277
+[v LCD_backlight@active active `uc  1 a 1 0 ]
+"278
+} 0
+"194
+[v _LCD_write_string LCD_write_string `(v  1 e 0 0 ]
+{
+[v LCD_write_string@buffer buffer `*.39uc  1 p 2 31 ]
+"204
+} 0
+"145
+[v _LCD_write_char LCD_write_char `(v  1 e 0 0 ]
+{
+[v LCD_write_char@value value `uc  1 a 1 wreg ]
+"147
+[v LCD_write_char@D0 D0 `uc  1 a 1 29 ]
+[v LCD_write_char@D1 D1 `uc  1 a 1 28 ]
+[v LCD_write_char@D2 D2 `uc  1 a 1 27 ]
+[v LCD_write_char@D3 D3 `uc  1 a 1 26 ]
+"145
+[v LCD_write_char@value value `uc  1 a 1 wreg ]
+"149
+[v LCD_write_char@value value `uc  1 a 1 30 ]
+"168
+} 0
+"111
+[v _LCD_goto_line LCD_goto_line `(v  1 e 0 0 ]
+{
+[v LCD_goto_line@line line `uc  1 a 1 wreg ]
+[v LCD_goto_line@line line `uc  1 a 1 wreg ]
+[v LCD_goto_line@line line `uc  1 a 1 26 ]
+"130
+} 0
+"61
+[v _LCD_send_command LCD_send_command `(v  1 e 0 0 ]
+{
+[v LCD_send_command@D3 D3 `uc  1 a 1 wreg ]
+[v LCD_send_command@D3 D3 `uc  1 a 1 wreg ]
+[v LCD_send_command@D2 D2 `uc  1 p 1 22 ]
+[v LCD_send_command@D1 D1 `uc  1 p 1 23 ]
+[v LCD_send_command@D0 D0 `uc  1 p 1 24 ]
+"63
+[v LCD_send_command@D3 D3 `uc  1 a 1 25 ]
+"68
+} 0
+"49
+[v _LCD_enable_pulse LCD_enable_pulse `(v  1 e 0 0 ]
+{
+"55
+} 0
+"61 C:/Users/simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+[v _delay_ms delay_ms `(v  1 e 0 0 ]
+{
+[v delay_ms@value_ms value_ms `ui  1 p 2 20 ]
+"96
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 18 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 14 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 16 ]
+"53
+} 0
