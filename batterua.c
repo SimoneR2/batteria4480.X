@@ -9,15 +9,17 @@
 #include <stdio.h>
 #include <math.h>
 
+#define BatteryCharger LATBbits.LATB7
+#define Load LATEbits.LATE0
 #define R1 67050 //INSERIRE VALORE Ohm PARTITORE
 #define R2 33060 //INSERIRE VALORE Ohm PARTITORE
 
 volatile int lettura [3] = 0;
-volatile unsigned int ore, minuti, secondi = 0;
-volatile unsigned long tempo = 0;
+volatile unsigned int ore, minuti, secondi, somme = 0;
+volatile unsigned long tempo, tempo_old = 0;
 volatile unsigned char str [8] = 0;
 volatile unsigned char stati = 0;
-volatile float rapporto, current, voltage = 0;
+volatile float rapporto, current, voltage, sommatoriaCorrente, correnteMedia, capacita = 0;
 
 void inizializzazione(void);
 void read_adc(void);
@@ -65,48 +67,72 @@ void main(void) {
     stati = 0;
     while (1) {
         read_adc();
-        if (stati == 0){
-        while ((current < -0.5) || (voltage < 14)) {
-            PORTBbits.RB7 = 1; //attivo ciclo ricarica
-            LCD_goto_line(1);
-            LCD_write_message("Ciclo ricarica..");
-            LCD_goto_line(2);
-            sprintf(str, "V:%.3f", voltage); //convert float to char
-            str[7] = '\0'; //add null character
-            LCD_write_string(str); //write Voltage in LCD
-            sprintf(str, " I:%.3f", current); //convert float to char
-            str[7] = '\0'; //add null character
-            LCD_write_string(str); //write Current in LCD
-            read_adc();
-            delay_ms(500); //attendi un po' prima di rileggere il tutto
-            //
-            delay_ms(1);
+
+        if (stati == 0) {
+            while ((current < -0.5) || (voltage < 14)) {
+                BatteryCharger = 1; //attivo ciclo ricarica
+                LCD_goto_line(1);
+                LCD_write_message("Ciclo ricarica..");
+                display_voltage(2);
+                delay_ms(500);
+            }
+            stati = 1;
         }
-        stati = 1;
+
+        if (stati == 1) {
+            if ((current > -0.5)&&(voltage > 14.2)) {
+                LCD_write_message("Carica terminata");
+                BatteryCharger = 0; //attivo ciclo ricarica
+                delay_ms(5000);
+            }
+            stati = 2;
         }
-        if (stati == 1){
-        if ((current > -0.5)&&(voltage > 14.2)) {
-            LCD_write_message("Carica terminata");
-            PORTBbits.RB7 = 0; //attivo ciclo ricarica
-            delay_ms(5000);
+
+        if (stati == 2) {
+            while (voltage > 13.0) {
+                LCD_goto_line(1);
+                LCD_write_message("     Attesa     ");
+                LCD_goto_line(2);
+                LCD_write_message("Stabilizzazione.");
+                delay_s(2);
+                display_voltage(2);
+                delay_s(2);
+            }
+            stati = 3;
         }
-        stati = 2;
+        if (stati == 3) {
+            tempo = 0;
+            secondi = 0;
+            minuti = 0;
+            ore = 0;
+            T0CON = 0x85;
+            TMR0H = 0x0B;
+            TMR0L = 0xDC;
+            Load = 1;
+            somme = 0;
+            while (voltage > 10) {
+                LCD_home();
+                LCD_write_message("tempo:");
+                LCD_write_integer(ore, 2, ZERO_CLEANING_OFF);
+                LCD_write_message(":");
+                LCD_write_integer(minuti, 2, ZERO_CLEANING_OFF);
+                LCD_write_message(":");
+                LCD_write_integer(secondi, 2, ZERO_CLEANING_OFF);
+                display_voltage(2);
+                delay_ms(100);
+                if (tempo - tempo_old >= 59) {
+                    tempo_old = tempo;
+                    somme++;
+                    sommatoriaCorrente = current + sommatoriaCorrente;
+                }
+            }
+            stati = 4;
         }
-        if (stati == 2){
-    while (voltage > 13) {
-        LCD_goto_line(1);
-        LCD_write_message("     Attesa     ");
-        LCD_goto_line(2);
-        LCD_write_message("Stabilizzazione.");
-        delay_s(1);
-        delay_ms(500);
-        display_voltage(2);
-        delay_s(1);
-        delay_ms(500);
+        if (stati == 4){
+            correnteMedia = sommatoriaCorrente/somme;
+            capacita = (correnteMedia/(ore+(minuti/60)+(secondi/3600)));
+        }
     }
-    stati = 3;
-        }
-}
 }
 
 void display_voltage(unsigned char line) {
@@ -151,6 +177,9 @@ void inizializzazione(void) {
     LATD = 0x00;
     TRISD = 0x00;
 
+    LATE = 0x00;
+    TRISE = 0b00000110;
+
     LCD_initialize(16);
     LCD_write_message("TESTER BATTERIE");
     delay_ms(500);
@@ -174,7 +203,7 @@ void inizializzazione(void) {
     PIR1bits.TMR1IF = 0;
     PIE1bits.TMR1IE = 1;
     IPR1bits.TMR1IP = 0;
-    
+
     RCONbits.IPEN = 1;
     INTCONbits.GIEH = 1;
     INTCONbits.GIEL = 1;
