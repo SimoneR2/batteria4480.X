@@ -12,22 +12,23 @@
 #define R1 67050 //INSERIRE VALORE Ohm PARTITORE
 #define R2 33060 //INSERIRE VALORE Ohm PARTITORE
 
-int lettura [3] = 0;
-unsigned int ore, minuti, secondi = 0;
-unsigned long tempo = 0;
-unsigned char str [8] = 0;
-float rapporto, current, voltage = 0;
+volatile int lettura [3] = 0;
+volatile unsigned int ore, minuti, secondi = 0;
+volatile unsigned long tempo = 0;
+volatile unsigned char str [8] = 0;
+volatile unsigned char stati = 0;
+volatile float rapporto, current, voltage = 0;
 
 void inizializzazione(void);
 void read_adc(void);
-
+void display_voltage(unsigned char line);
 
 
 unsigned char combinazioni[] = {
     0b00000001, //AN0
     0b00000101, //AN1
-    0b00001001,  //AN2
-    0b00001101  //AN2
+    0b00001001, //AN2
+    0b00001101 //AN2
 };
 
 __interrupt(high_priority) void isr_alta(void) { //incremento ogni secondo
@@ -46,35 +47,77 @@ __interrupt(high_priority) void isr_alta(void) { //incremento ogni secondo
     }
 }
 
+__interrupt(low_priority) void isr_bassa(void) {
+    if (PIR1bits.TMR1IF == 1) {
+        //read_adc();
+        TMR1H = 0x3C;
+        TMR1L = 0xB0;
+        PIR1bits.TMR1IF = 0;
+        T1CON = 0x31;
+    }
+}
+
 void main(void) {
     delay_set_quartz(16);
     rapporto = (R1 + R2);
     rapporto = R2 / rapporto;
     inizializzazione();
-    while(1){
-         read_adc();
-    while ((current < -0.5) || (voltage < 14)) {
-        PORTBbits.RB7 = 1; //attivo ciclo ricarica
-        LCD_goto_line(1);
-        LCD_write_message("Ciclo ricarica..");
-        LCD_goto_line(2);
-        sprintf(str, "V:%.3f", voltage); //convert float to char
-        str[7] = '\0'; //add null character
-        LCD_write_string(str); //write Voltage in LCD
-        sprintf(str, " I:%.3f", current); //convert float to char
-        str[7] = '\0'; //add null character
-        LCD_write_string(str); //write Current in LCD
+    stati = 0;
+    while (1) {
         read_adc();
-        delay_ms(500); //attendi un po' prima di rileggere il tutto
-       //
-        delay_ms(1);
+        if (stati == 0){
+        while ((current < -0.5) || (voltage < 14)) {
+            PORTBbits.RB7 = 1; //attivo ciclo ricarica
+            LCD_goto_line(1);
+            LCD_write_message("Ciclo ricarica..");
+            LCD_goto_line(2);
+            sprintf(str, "V:%.3f", voltage); //convert float to char
+            str[7] = '\0'; //add null character
+            LCD_write_string(str); //write Voltage in LCD
+            sprintf(str, " I:%.3f", current); //convert float to char
+            str[7] = '\0'; //add null character
+            LCD_write_string(str); //write Current in LCD
+            read_adc();
+            delay_ms(500); //attendi un po' prima di rileggere il tutto
+            //
+            delay_ms(1);
+        }
+        stati = 1;
+        }
+        if (stati == 1){
+        if ((current > -0.5)&&(voltage > 14.2)) {
+            LCD_write_message("Carica terminata");
+            PORTBbits.RB7 = 0; //attivo ciclo ricarica
+            delay_ms(5000);
+        }
+        stati = 2;
+        }
+        if (stati == 2){
+    while (voltage > 13) {
+        LCD_goto_line(1);
+        LCD_write_message("     Attesa     ");
+        LCD_goto_line(2);
+        LCD_write_message("Stabilizzazione.");
+        delay_s(1);
+        delay_ms(500);
+        display_voltage(2);
+        delay_s(1);
+        delay_ms(500);
     }
-    if ((current > -1)&&(voltage > 14.5)) {
-        LCD_write_message("Carica terminata");
-        PORTBbits.RB7 = 0; //attivo ciclo ricarica
-        delay_ms(5000);
-    }
-    }
+    stati = 3;
+        }
+}
+}
+
+void display_voltage(unsigned char line) {
+    read_adc();
+    LCD_goto_line(line);
+    sprintf(str, "V:%.3f", voltage); //convert float to char
+    str[7] = '\0'; //add null character
+    LCD_write_string(str); //write Voltage in LCD
+    sprintf(str, " I:%.3f", current); //convert float to char
+    str[7] = '\0'; //add null character
+    LCD_write_string(str); //write Current in LCD
 }
 
 void read_adc(void) {
@@ -104,7 +147,7 @@ void inizializzazione(void) {
 
     LATC = 0x00;
     TRISC = 0x00;
-    
+
     LATD = 0x00;
     TRISD = 0x00;
 
@@ -119,10 +162,22 @@ void inizializzazione(void) {
     ADCON0bits.CHS3 = 0; //IMPOSTAZIONE DI SICUREZZA
     ADCON0bits.CHS2 = 0; //IMPOSTAZIONE DI SICUREZZA
     ADCON0bits.CHS1 = 0; //IMPOSTAZIONE DI SICUREZZA
+
     T0CON = 0x85;
     TMR0H = 0x0B;
     TMR0L = 0xDC;
-    INTCONbits.GIE = 1;
+
+    T1CON = 0x31;
+    TMR1H = 0x3C;
+    TMR1L = 0xB0;
+
+    PIR1bits.TMR1IF = 0;
+    PIE1bits.TMR1IE = 1;
+    IPR1bits.TMR1IP = 0;
+    
+    RCONbits.IPEN = 1;
+    INTCONbits.GIEH = 1;
+    INTCONbits.GIEL = 1;
     INTCONbits.TMR0IF = 0;
     INTCONbits.TMR0IE = 1;
     ADCON0bits.ADON = 1; //attivo ADC

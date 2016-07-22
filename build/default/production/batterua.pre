@@ -18851,15 +18851,16 @@ extern double trunc(double);
 extern double round(double);
 
 # 15 "batterua.c"
-int lettura [3] = 0;
-unsigned int ore, minuti, secondi = 0;
-unsigned long tempo = 0;
-unsigned char str [8] = 0;
-float rapporto, current, voltage = 0;
+volatile int lettura [3] = 0;
+volatile unsigned int ore, minuti, secondi = 0;
+volatile unsigned long tempo = 0;
+volatile unsigned char str [8] = 0;
+volatile unsigned char stati = 0;
+volatile float rapporto, current, voltage = 0;
 
 void inizializzazione(void);
 void read_adc(void);
-
+void display_voltage(unsigned char line);
 
 
 unsigned char combinazioni[] = {
@@ -18885,13 +18886,25 @@ ore++;
 }
 }
 
+__attribute__((interrupt("__low_priority"))) void isr_bassa(void) {
+if (PIR1bits.TMR1IF == 1) {
+
+TMR1H = 0x3C;
+TMR1L = 0xB0;
+PIR1bits.TMR1IF = 0;
+T1CON = 0x31;
+}
+}
+
 void main(void) {
 delay_set_quartz(16);
 rapporto = (67050 + 33060);
 rapporto = 33060 / rapporto;
 inizializzazione();
-while(1){
+stati = 0;
+while (1) {
 read_adc();
+if (stati == 0){
 while ((current < -0.5) || (voltage < 14)) {
 PORTBbits.RB7 = 1;
 LCD_goto_line(1);
@@ -18908,12 +18921,42 @@ delay_ms(500);
 
 delay_ms(1);
 }
-if ((current > -1)&&(voltage > 14.5)) {
+stati = 1;
+}
+if (stati == 1){
+if ((current > -0.5)&&(voltage > 14.2)) {
 LCD_write_message("Carica terminata");
 PORTBbits.RB7 = 0;
 delay_ms(5000);
 }
+stati = 2;
 }
+if (stati == 2){
+while (voltage > 13) {
+LCD_goto_line(1);
+LCD_write_message("     Attesa     ");
+LCD_goto_line(2);
+LCD_write_message("Stabilizzazione.");
+delay_s(1);
+delay_ms(500);
+display_voltage(2);
+delay_s(1);
+delay_ms(500);
+}
+stati = 3;
+}
+}
+}
+
+void display_voltage(unsigned char line) {
+read_adc();
+LCD_goto_line(line);
+sprintf(str, "V:%.3f", voltage);
+str[7] = '\0';
+LCD_write_string(str);
+sprintf(str, " I:%.3f", current);
+str[7] = '\0';
+LCD_write_string(str);
 }
 
 void read_adc(void) {
@@ -18958,10 +19001,22 @@ ADCON2 = 0b10110101;
 ADCON0bits.CHS3 = 0;
 ADCON0bits.CHS2 = 0;
 ADCON0bits.CHS1 = 0;
+
 T0CON = 0x85;
 TMR0H = 0x0B;
 TMR0L = 0xDC;
-INTCONbits.GIE = 1;
+
+T1CON = 0x31;
+TMR1H = 0x3C;
+TMR1L = 0xB0;
+
+PIR1bits.TMR1IF = 0;
+PIE1bits.TMR1IE = 1;
+IPR1bits.TMR1IP = 0;
+
+RCONbits.IPEN = 1;
+INTCONbits.GIEH = 1;
+INTCONbits.GIEL = 1;
 INTCONbits.TMR0IF = 0;
 INTCONbits.TMR0IE = 1;
 ADCON0bits.ADON = 1;
