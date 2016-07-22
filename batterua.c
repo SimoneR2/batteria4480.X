@@ -130,7 +130,7 @@ void main(void) {
         }
         if (stati == 4){
             correnteMedia = sommatoriaCorrente/somme;
-            capacita = (correnteMedia/(ore+(minuti/60)+(secondi/3600)));
+            capacita = (correnteMedia*(ore+(minuti/60)+(secondi/3600)));
         }
     }
 }
@@ -144,6 +144,7 @@ void display_voltage(unsigned char line) {
     sprintf(str, " I:%.3f", current); //convert float to char
     str[7] = '\0'; //add null character
     LCD_write_string(str); //write Current in LCD
+    LCD_write_message("   "); //verificare questi spazi
 }
 
 void read_adc(void) {
