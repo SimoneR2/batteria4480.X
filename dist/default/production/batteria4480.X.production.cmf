@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\simon\AppData\Local\Temp\s9ts.obj
+$C:\Users\simon\AppData\Local\Temp\s9fo.obj
 idloc IDLOC 0 200000 200000 8 1
 reset_vec CODE 0 0 0 4 1
 end_init CODE 0 B8 B8 4 1
@@ -1058,42 +1058,42 @@ E4C text0 CODE >138:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
 E50 text0 CODE >139:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
 E60 text0 CODE >140:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
 E70 text0 CODE >141:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
-34C8 cinit CODE >1493:C:\Users\simon\AppData\Local\Temp\s9ts.
-34C8 cinit CODE >1495:C:\Users\simon\AppData\Local\Temp\s9ts.
-34C8 cinit CODE >1498:C:\Users\simon\AppData\Local\Temp\s9ts.
-34C8 cinit CODE >1565:C:\Users\simon\AppData\Local\Temp\s9ts.
-34CC cinit CODE >1566:C:\Users\simon\AppData\Local\Temp\s9ts.
-34CE cinit CODE >1567:C:\Users\simon\AppData\Local\Temp\s9ts.
-34CE cinit CODE >1568:C:\Users\simon\AppData\Local\Temp\s9ts.
-34D0 cinit CODE >1569:C:\Users\simon\AppData\Local\Temp\s9ts.
-34D2 cinit CODE >1570:C:\Users\simon\AppData\Local\Temp\s9ts.
-34D4 cinit CODE >1573:C:\Users\simon\AppData\Local\Temp\s9ts.
-34D8 cinit CODE >1574:C:\Users\simon\AppData\Local\Temp\s9ts.
-34DA cinit CODE >1575:C:\Users\simon\AppData\Local\Temp\s9ts.
-34DA cinit CODE >1576:C:\Users\simon\AppData\Local\Temp\s9ts.
-34DC cinit CODE >1577:C:\Users\simon\AppData\Local\Temp\s9ts.
-34DE cinit CODE >1578:C:\Users\simon\AppData\Local\Temp\s9ts.
-34E0 cinit CODE >1583:C:\Users\simon\AppData\Local\Temp\s9ts.
-34E2 cinit CODE >1584:C:\Users\simon\AppData\Local\Temp\s9ts.
-34E4 cinit CODE >1585:C:\Users\simon\AppData\Local\Temp\s9ts.
-34E6 cinit CODE >1586:C:\Users\simon\AppData\Local\Temp\s9ts.
-34E8 cinit CODE >1587:C:\Users\simon\AppData\Local\Temp\s9ts.
-34EA cinit CODE >1588:C:\Users\simon\AppData\Local\Temp\s9ts.
-34EC cinit CODE >1589:C:\Users\simon\AppData\Local\Temp\s9ts.
-34F0 cinit CODE >1590:C:\Users\simon\AppData\Local\Temp\s9ts.
-34F4 cinit CODE >1591:C:\Users\simon\AppData\Local\Temp\s9ts.
-34F4 cinit CODE >1592:C:\Users\simon\AppData\Local\Temp\s9ts.
-34F6 cinit CODE >1593:C:\Users\simon\AppData\Local\Temp\s9ts.
-34FA cinit CODE >1594:C:\Users\simon\AppData\Local\Temp\s9ts.
-34FC cinit CODE >1595:C:\Users\simon\AppData\Local\Temp\s9ts.
-34FE cinit CODE >1596:C:\Users\simon\AppData\Local\Temp\s9ts.
-3500 cinit CODE >1602:C:\Users\simon\AppData\Local\Temp\s9ts.
-3500 cinit CODE >1604:C:\Users\simon\AppData\Local\Temp\s9ts.
-3502 cinit CODE >1605:C:\Users\simon\AppData\Local\Temp\s9ts.
-3504 cinit CODE >1607:C:\Users\simon\AppData\Local\Temp\s9ts.
-3506 cinit CODE >1608:C:\Users\simon\AppData\Local\Temp\s9ts.
-3508 cinit CODE >1609:C:\Users\simon\AppData\Local\Temp\s9ts.
-350A cinit CODE >1610:C:\Users\simon\AppData\Local\Temp\s9ts.
+34C8 cinit CODE >1493:C:\Users\simon\AppData\Local\Temp\s9fo.
+34C8 cinit CODE >1495:C:\Users\simon\AppData\Local\Temp\s9fo.
+34C8 cinit CODE >1498:C:\Users\simon\AppData\Local\Temp\s9fo.
+34C8 cinit CODE >1565:C:\Users\simon\AppData\Local\Temp\s9fo.
+34CC cinit CODE >1566:C:\Users\simon\AppData\Local\Temp\s9fo.
+34CE cinit CODE >1567:C:\Users\simon\AppData\Local\Temp\s9fo.
+34CE cinit CODE >1568:C:\Users\simon\AppData\Local\Temp\s9fo.
+34D0 cinit CODE >1569:C:\Users\simon\AppData\Local\Temp\s9fo.
+34D2 cinit CODE >1570:C:\Users\simon\AppData\Local\Temp\s9fo.
+34D4 cinit CODE >1573:C:\Users\simon\AppData\Local\Temp\s9fo.
+34D8 cinit CODE >1574:C:\Users\simon\AppData\Local\Temp\s9fo.
+34DA cinit CODE >1575:C:\Users\simon\AppData\Local\Temp\s9fo.
+34DA cinit CODE >1576:C:\Users\simon\AppData\Local\Temp\s9fo.
+34DC cinit CODE >1577:C:\Users\simon\AppData\Local\Temp\s9fo.
+34DE cinit CODE >1578:C:\Users\simon\AppData\Local\Temp\s9fo.
+34E0 cinit CODE >1583:C:\Users\simon\AppData\Local\Temp\s9fo.
+34E2 cinit CODE >1584:C:\Users\simon\AppData\Local\Temp\s9fo.
+34E4 cinit CODE >1585:C:\Users\simon\AppData\Local\Temp\s9fo.
+34E6 cinit CODE >1586:C:\Users\simon\AppData\Local\Temp\s9fo.
+34E8 cinit CODE >1587:C:\Users\simon\AppData\Local\Temp\s9fo.
+34EA cinit CODE >1588:C:\Users\simon\AppData\Local\Temp\s9fo.
+34EC cinit CODE >1589:C:\Users\simon\AppData\Local\Temp\s9fo.
+34F0 cinit CODE >1590:C:\Users\simon\AppData\Local\Temp\s9fo.
+34F4 cinit CODE >1591:C:\Users\simon\AppData\Local\Temp\s9fo.
+34F4 cinit CODE >1592:C:\Users\simon\AppData\Local\Temp\s9fo.
+34F6 cinit CODE >1593:C:\Users\simon\AppData\Local\Temp\s9fo.
+34FA cinit CODE >1594:C:\Users\simon\AppData\Local\Temp\s9fo.
+34FC cinit CODE >1595:C:\Users\simon\AppData\Local\Temp\s9fo.
+34FE cinit CODE >1596:C:\Users\simon\AppData\Local\Temp\s9fo.
+3500 cinit CODE >1602:C:\Users\simon\AppData\Local\Temp\s9fo.
+3500 cinit CODE >1604:C:\Users\simon\AppData\Local\Temp\s9fo.
+3502 cinit CODE >1605:C:\Users\simon\AppData\Local\Temp\s9fo.
+3504 cinit CODE >1607:C:\Users\simon\AppData\Local\Temp\s9fo.
+3506 cinit CODE >1608:C:\Users\simon\AppData\Local\Temp\s9fo.
+3508 cinit CODE >1609:C:\Users\simon\AppData\Local\Temp\s9fo.
+350A cinit CODE >1610:C:\Users\simon\AppData\Local\Temp\s9fo.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1118,7 +1118,7 @@ __end_of__tdiv_to_l_ 2932 0 CODE 0 text14 dist/default/production\batteria4480.X
 LCD_write_integer@convertedInt 77 0 BANK0 1 cstackBANK0 dist/default/production\batteria4480.X.production.obj
 _current E0 0 BANK0 1 bssBANK0 dist/default/production\batteria4480.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\batteria4480.X.production.obj
-__mediumconst 3EE4 0 MEDIUMCONST 0 mediumconst C:\Users\simon\AppData\Local\Temp\s9ts.obj
+__mediumconst 3EE4 0 MEDIUMCONST 0 mediumconst C:\Users\simon\AppData\Local\Temp\s9fo.obj
 LCD_write_char@value 65 0 BANK0 1 cstackBANK0 dist/default/production\batteria4480.X.production.obj
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\batteria4480.X.production.obj
 __size_of_LCD_send_command 0 0 ABS 0 - dist/default/production\batteria4480.X.production.obj
@@ -1131,12 +1131,12 @@ _LATB F8A 0 ABS 0 - dist/default/production\batteria4480.X.production.obj
 _LATC F8B 0 ABS 0 - dist/default/production\batteria4480.X.production.obj
 _LATD F8C 0 ABS 0 - dist/default/production\batteria4480.X.production.obj
 _LATE F8D 0 ABS 0 - dist/default/production\batteria4480.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\simon\AppData\Local\Temp\s9ts.obj
+___sp 0 0 STACK 2 stack C:\Users\simon\AppData\Local\Temp\s9fo.obj
 _itoa 3480 0 CODE 0 text31 dist/default/production\batteria4480.X.production.obj
 _main 904 0 CODE 0 text0 dist/default/production\batteria4480.X.production.obj
 _utoa 2F72 0 CODE 0 text32 dist/default/production\batteria4480.X.production.obj
 btemp 40 0 COMRAM 1 temp dist/default/production\batteria4480.X.production.obj
-start B8 0 CODE 0 init C:\Users\simon\AppData\Local\Temp\s9ts.obj
+start B8 0 CODE 0 init C:\Users\simon\AppData\Local\Temp\s9fo.obj
 ___flmul@aexp A0 0 BANK0 1 cstackBANK0 dist/default/production\batteria4480.X.production.obj
 ___flmul@bexp A5 0 BANK0 1 cstackBANK0 dist/default/production\batteria4480.X.production.obj
 ___flmul@prod A6 0 BANK0 1 cstackBANK0 dist/default/production\batteria4480.X.production.obj
@@ -1172,11 +1172,11 @@ __end_of_LCD_write_string 3686 0 CODE 0 text35 dist/default/production\batteria4
 _sprintf$1402 100 0 BANK1 1 cstackBANK1 dist/default/production\batteria4480.X.production.obj
 utoa@c 29 0 COMRAM 1 cstackCOMRAM dist/default/production\batteria4480.X.production.obj
 utoa@v 27 0 COMRAM 1 cstackCOMRAM dist/default/production\batteria4480.X.production.obj
-__accesstop 60 0 ABS 0 - C:\Users\simon\AppData\Local\Temp\s9ts.obj
-intlevel0 0 0 CODE 0 text C:\Users\simon\AppData\Local\Temp\s9ts.obj
-intlevel1 0 0 CODE 0 text C:\Users\simon\AppData\Local\Temp\s9ts.obj
-intlevel2 0 0 CODE 0 text C:\Users\simon\AppData\Local\Temp\s9ts.obj
-intlevel3 0 0 CODE 0 text C:\Users\simon\AppData\Local\Temp\s9ts.obj
+__accesstop 60 0 ABS 0 - C:\Users\simon\AppData\Local\Temp\s9fo.obj
+intlevel0 0 0 CODE 0 text C:\Users\simon\AppData\Local\Temp\s9fo.obj
+intlevel1 0 0 CODE 0 text C:\Users\simon\AppData\Local\Temp\s9fo.obj
+intlevel2 0 0 CODE 0 text C:\Users\simon\AppData\Local\Temp\s9fo.obj
+intlevel3 0 0 CODE 0 text C:\Users\simon\AppData\Local\Temp\s9fo.obj
 __end_of_LCD_home 36AC 0 CODE 0 text37 dist/default/production\batteria4480.X.production.obj
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\batteria4480.X.production.obj
 __size_of__div_to_l_ 0 0 ABS 0 - dist/default/production\batteria4480.X.production.obj
@@ -1207,8 +1207,8 @@ _ADRESL FC3 0 ABS 0 - dist/default/production\batteria4480.X.production.obj
 _scale$1401 B0 0 BANK0 1 cstackBANK0 dist/default/production\batteria4480.X.production.obj
 LCD_write_message@buffer 66 0 BANK0 1 cstackBANK0 dist/default/production\batteria4480.X.production.obj
 ___awdiv@dividend 26 0 COMRAM 1 cstackCOMRAM dist/default/production\batteria4480.X.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\simon\AppData\Local\Temp\s9ts.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\simon\AppData\Local\Temp\s9ts.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\simon\AppData\Local\Temp\s9fo.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\simon\AppData\Local\Temp\s9fo.obj
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\batteria4480.X.production.obj
 LCD_write_char@D0 64 0 BANK0 1 cstackBANK0 dist/default/production\batteria4480.X.production.obj
 LCD_write_char@D1 63 0 BANK0 1 cstackBANK0 dist/default/production\batteria4480.X.production.obj
@@ -1321,7 +1321,7 @@ __size_of_LCD_clear 0 0 ABS 0 - dist/default/production\batteria4480.X.productio
 __size_of_LCD_backlight 0 0 ABS 0 - dist/default/production\batteria4480.X.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\batteria4480.X.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production\batteria4480.X.production.obj
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\simon\AppData\Local\Temp\s9ts.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\simon\AppData\Local\Temp\s9fo.obj
 ___xxtofl@arg 62 0 BANK0 1 cstackBANK0 dist/default/production\batteria4480.X.production.obj
 ___xxtofl@exp 61 0 BANK0 1 cstackBANK0 dist/default/production\batteria4480.X.production.obj
 ___xxtofl@val 20 0 COMRAM 1 cstackCOMRAM dist/default/production\batteria4480.X.production.obj
@@ -1540,8 +1540,8 @@ __Lfardata 0 0 FARRAM 0 fardata dist/default/production\batteria4480.X.productio
 _read_adc 2246 0 CODE 0 text23 dist/default/production\batteria4480.X.production.obj
 ___fldiv@new_exp 77 0 BANK0 1 cstackBANK0 dist/default/production\batteria4480.X.production.obj
 itoa@cp 6C 0 BANK0 1 cstackBANK0 dist/default/production\batteria4480.X.production.obj
-stackhi 2FF 0 ABS 0 - C:\Users\simon\AppData\Local\Temp\s9ts.obj
-stacklo 119 0 ABS 0 - C:\Users\simon\AppData\Local\Temp\s9ts.obj
+stackhi 2FF 0 ABS 0 - C:\Users\simon\AppData\Local\Temp\s9fo.obj
+stacklo 119 0 ABS 0 - C:\Users\simon\AppData\Local\Temp\s9fo.obj
 _voltage F0 0 BANK0 1 bssBANK0 dist/default/production\batteria4480.X.production.obj
 __Lintcode 8 0 CODE 0 intcode dist/default/production\batteria4480.X.production.obj
 _secondi F8 0 BANK0 1 bssBANK0 dist/default/production\batteria4480.X.production.obj
@@ -1648,7 +1648,7 @@ __Ltext38 0 0 ABS 0 text38 dist/default/production\batteria4480.X.production.obj
 __Ltext39 0 0 ABS 0 text39 dist/default/production\batteria4480.X.production.obj
 __Ltext40 0 0 ABS 0 text40 dist/default/production\batteria4480.X.production.obj
 __Ltext41 0 0 ABS 0 text41 dist/default/production\batteria4480.X.production.obj
-__ramtop 300 0 RAM 0 ramtop C:\Users\simon\AppData\Local\Temp\s9ts.obj
+__ramtop 300 0 RAM 0 ramtop C:\Users\simon\AppData\Local\Temp\s9fo.obj
 _sprintf BC 0 CODE 0 text8 dist/default/production\batteria4480.X.production.obj
 _isr_bassa 18 0 CODE 0 intcodelo dist/default/production\batteria4480.X.production.obj
 __size_of_LCD_cursor 0 0 ABS 0 - dist/default/production\batteria4480.X.production.obj

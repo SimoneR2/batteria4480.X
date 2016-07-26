@@ -13,7 +13,7 @@
 #define Load LATEbits.LATE0
 #define R1 67050 //INSERIRE VALORE Ohm PARTITORE
 #define R2 33060 //INSERIRE VALORE Ohm PARTITORE
-unsigned char ore, minuti, secondi = 0;
+volatile unsigned char ore, minuti, secondi = 0;
 volatile int lettura [3] = 0;
 volatile unsigned int  somme = 0;
 volatile unsigned long tempo, tempo_old = 0;

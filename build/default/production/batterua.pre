@@ -18851,7 +18851,7 @@ extern double trunc(double);
 extern double round(double);
 
 # 16 "batterua.c"
-unsigned char ore, minuti, secondi = 0;
+volatile unsigned char ore, minuti, secondi = 0;
 volatile int lettura [3] = 0;
 volatile unsigned int somme = 0;
 volatile unsigned long tempo, tempo_old = 0;

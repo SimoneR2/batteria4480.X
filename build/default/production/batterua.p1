@@ -15559,13 +15559,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;math.h: 54: extern double trunc(double);
 [; ;math.h: 55: extern double round(double);
 "16 batterua.c
-[v _ore `uc ~T0 @X0 1 e ]
-[v _minuti `uc ~T0 @X0 1 e ]
-[v _secondi `uc ~T0 @X0 1 e ]
+[v _ore `Vuc ~T0 @X0 1 e ]
+[v _minuti `Vuc ~T0 @X0 1 e ]
+[v _secondi `Vuc ~T0 @X0 1 e ]
 [i _secondi
 -> -> 0 `i `uc
 ]
-[; ;batterua.c: 16: unsigned char ore, minuti, secondi = 0;
+[; ;batterua.c: 16: volatile unsigned char ore, minuti, secondi = 0;
 "17
 [v _lettura `Vi ~T0 @X0 -> 3 `i e ]
 [i _lettura

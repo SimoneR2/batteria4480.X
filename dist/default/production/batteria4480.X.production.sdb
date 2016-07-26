@@ -110,9 +110,9 @@
 "50
 [v _clock_counter_reference clock_counter_reference `VEui  1 e 2 0 ]
 "16 D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
-[v _ore ore `uc  1 e 1 0 ]
-[v _minuti minuti `uc  1 e 1 0 ]
-[v _secondi secondi `uc  1 e 1 0 ]
+[v _ore ore `VEuc  1 e 1 0 ]
+[v _minuti minuti `VEuc  1 e 1 0 ]
+[v _secondi secondi `VEuc  1 e 1 0 ]
 "17
 [v _lettura lettura `VE[3]i  1 e 6 0 ]
 "18

@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.37 build -260352376 
-                                                                                               Tue Jul 26 17:55:04 2016
+                                                                                               Tue Jul 26 17:56:13 2016
 
 Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110536
      1                           	processor	18F4480
@@ -1421,17 +1421,17 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1415                           ;batterua.c: 104: secondi = 0;
   1416  000AFA  0E00               	movlw	0
   1417  000AFC  0100               	movlb	0	; () banked
-  1418  000AFE  6FF8               	movwf	_secondi& (0+255),b
+  1418  000AFE  6FF8               	movwf	_secondi& (0+255),b	;volatile
   1419                           
   1420                           ;batterua.c: 105: minuti = 0;
   1421  000B00  0E00               	movlw	0
   1422  000B02  0100               	movlb	0	; () banked
-  1423  000B04  6FF6               	movwf	_minuti& (0+255),b
+  1423  000B04  6FF6               	movwf	_minuti& (0+255),b	;volatile
   1424                           
   1425                           ;batterua.c: 106: ore = 0;
   1426  000B06  0E00               	movlw	0
   1427  000B08  0100               	movlb	0	; () banked
-  1428  000B0A  6FF7               	movwf	_ore& (0+255),b
+  1428  000B0A  6FF7               	movwf	_ore& (0+255),b	;volatile
   1429                           
   1430                           ;batterua.c: 107: T0CON = 0x85;
   1431  000B0C  0E85               	movlw	133
@@ -1473,7 +1473,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1467  000B36  ECF2  F01A         	call	_LCD_write_message	;wreg free
   1468                           
   1469                           ;batterua.c: 115: LCD_write_integer(ore, 2, 0x00);
-  1470  000B3A  C0F7  F06E         	movff	_ore,LCD_write_integer@value
+  1470  000B3A  C0F7  F06E         	movff	_ore,LCD_write_integer@value	;volatile
   1471  000B3E  0100               	movlb	0	; () banked
   1472  000B40  6B6F               	clrf	(LCD_write_integer@value+1)& (0+255),b
   1473  000B42  0E02               	movlw	2
@@ -1494,7 +1494,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1488  000B5E  ECF2  F01A         	call	_LCD_write_message	;wreg free
   1489                           
   1490                           ;batterua.c: 117: LCD_write_integer(minuti, 2, 0x00);
-  1491  000B62  C0F6  F06E         	movff	_minuti,LCD_write_integer@value
+  1491  000B62  C0F6  F06E         	movff	_minuti,LCD_write_integer@value	;volatile
   1492  000B66  0100               	movlb	0	; () banked
   1493  000B68  6B6F               	clrf	(LCD_write_integer@value+1)& (0+255),b
   1494  000B6A  0E02               	movlw	2
@@ -1515,7 +1515,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1509  000B86  ECF2  F01A         	call	_LCD_write_message	;wreg free
   1510                           
   1511                           ;batterua.c: 119: LCD_write_integer(secondi, 2, 0x00);
-  1512  000B8A  C0F8  F06E         	movff	_secondi,LCD_write_integer@value
+  1512  000B8A  C0F8  F06E         	movff	_secondi,LCD_write_integer@value	;volatile
   1513  000B8E  0100               	movlb	0	; () banked
   1514  000B90  6B6F               	clrf	(LCD_write_integer@value+1)& (0+255),b
   1515  000B92  0E02               	movlw	2
@@ -1686,7 +1686,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1679  000CF6  0E42               	movlw	66
   1680  000CF8  6F6D               	movwf	(___fldiv@a+3)& (0+255),b
   1681  000CFA  0100               	movlb	0	; () banked
-  1682  000CFC  51F6               	movf	_minuti& (0+255),w,b
+  1682  000CFC  51F6               	movf	_minuti& (0+255),w,b	;volatile
   1683  000CFE  6E20               	movwf	___xxtofl@val,c
   1684  000D00  6A21               	clrf	___xxtofl@val+1,c
   1685  000D02  6A22               	clrf	___xxtofl@val+2,c
@@ -1703,7 +1703,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1696  000D28  C068  F085         	movff	?___fldiv+2,___fladd@a+2
   1697  000D2C  C069  F086         	movff	?___fldiv+3,___fladd@a+3
   1698  000D30  0100               	movlb	0	; () banked
-  1699  000D32  51F7               	movf	_ore& (0+255),w,b
+  1699  000D32  51F7               	movf	_ore& (0+255),w,b	;volatile
   1700  000D34  6E20               	movwf	___xxtofl@val,c
   1701  000D36  6A21               	clrf	___xxtofl@val+1,c
   1702  000D38  6A22               	clrf	___xxtofl@val+2,c
@@ -1732,7 +1732,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1724  000D74  0E45               	movlw	69
   1725  000D76  6F6D               	movwf	(___fldiv@a+3)& (0+255),b
   1726  000D78  0100               	movlb	0	; () banked
-  1727  000D7A  51F8               	movf	_secondi& (0+255),w,b
+  1727  000D7A  51F8               	movf	_secondi& (0+255),w,b	;volatile
   1728  000D7C  6E20               	movwf	___xxtofl@val,c
   1729  000D7E  6A21               	clrf	___xxtofl@val+1,c
   1730  000D80  6A22               	clrf	___xxtofl@val+2,c
@@ -11794,13 +11794,13 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
  11776                           ; BSR set to: 0
  11777                           ;batterua.c: 40: secondi++;
  11778  002F0A  0100               	movlb	0	; () banked
- 11779  002F0C  2BF8               	incf	_secondi& (0+255),f,b
+ 11779  002F0C  2BF8               	incf	_secondi& (0+255),f,b	;volatile
  11780                           
  11781                           ; BSR set to: 0
  11782                           ;batterua.c: 41: if (secondi == 60) {
  11783  002F0E  0E3C               	movlw	60
  11784  002F10  0100               	movlb	0	; () banked
- 11785  002F12  19F8               	xorwf	_secondi& (0+255),w,b
+ 11785  002F12  19F8               	xorwf	_secondi& (0+255),w,b	;volatile
  11786  002F14  A4D8               	btfss	status,2,c
  11787  002F16  D00F               	goto	i2l203
  11788                           
@@ -11808,18 +11808,18 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
  11790                           ;batterua.c: 42: secondi = 0;
  11791  002F18  0E00               	movlw	0
  11792  002F1A  0100               	movlb	0	; () banked
- 11793  002F1C  6FF8               	movwf	_secondi& (0+255),b
+ 11793  002F1C  6FF8               	movwf	_secondi& (0+255),b	;volatile
  11794                           
  11795                           ; BSR set to: 0
  11796                           ;batterua.c: 43: minuti++;
  11797  002F1E  0100               	movlb	0	; () banked
- 11798  002F20  2BF6               	incf	_minuti& (0+255),f,b
+ 11798  002F20  2BF6               	incf	_minuti& (0+255),f,b	;volatile
  11799                           
  11800                           ; BSR set to: 0
  11801                           ;batterua.c: 44: if (minuti == 60) {
  11802  002F22  0E3C               	movlw	60
  11803  002F24  0100               	movlb	0	; () banked
- 11804  002F26  19F6               	xorwf	_minuti& (0+255),w,b
+ 11804  002F26  19F6               	xorwf	_minuti& (0+255),w,b	;volatile
  11805  002F28  A4D8               	btfss	status,2,c
  11806  002F2A  D005               	goto	i2l203
  11807                           
@@ -11827,12 +11827,12 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
  11809                           ;batterua.c: 45: minuti = 0;
  11810  002F2C  0E00               	movlw	0
  11811  002F2E  0100               	movlb	0	; () banked
- 11812  002F30  6FF6               	movwf	_minuti& (0+255),b
+ 11812  002F30  6FF6               	movwf	_minuti& (0+255),b	;volatile
  11813                           
  11814                           ; BSR set to: 0
  11815                           ;batterua.c: 46: ore++;
  11816  002F32  0100               	movlb	0	; () banked
- 11817  002F34  2BF7               	incf	_ore& (0+255),f,b
+ 11817  002F34  2BF7               	incf	_ore& (0+255),f,b	;volatile
  11818  002F36                     i2l203:
  11819                           
  11820                           ; BSR set to: 0
@@ -12772,7 +12772,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.37 build -260352376 
-Symbol Table                                                                                   Tue Jul 26 17:55:04 2016
+Symbol Table                                                                                   Tue Jul 26 17:56:13 2016
 
                      ___fldiv@aexp 007E                       ___fldiv@bexp 007D  
         __size_of_delay_set_quartz 0008                       ___fldiv@sign 0072  
