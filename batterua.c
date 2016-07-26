@@ -13,14 +13,13 @@
 #define Load LATEbits.LATE0
 #define R1 67050 //INSERIRE VALORE Ohm PARTITORE
 #define R2 33060 //INSERIRE VALORE Ohm PARTITORE
-
+unsigned char ore, minuti, secondi = 0;
 volatile int lettura [3] = 0;
-volatile unsigned int ore, minuti, secondi, somme = 0;
+volatile unsigned int  somme = 0;
 volatile unsigned long tempo, tempo_old = 0;
 volatile unsigned char str [8] = 0;
 volatile unsigned char stati = 0;
-volatile float rapporto, current, voltage, sommatoriaCorrente, correnteMedia, capacita = 0;
-
+float rapporto, current, voltage, sommatoriaCorrente, correnteMedia = 0;
 void inizializzazione(void);
 void read_adc(void);
 void display_voltage(unsigned char line);
@@ -130,12 +129,12 @@ void main(void) {
         }
         if (stati == 4){
             correnteMedia = sommatoriaCorrente/somme;
-            capacita = (correnteMedia*(ore+(minuti/60)+(secondi/3600)));
+            correnteMedia = (correnteMedia*(ore+((float)minuti/60)+((float)secondi/3600)));
             LCD_home();
             LCD_write_message(" test terminato ");
             LCD_goto_line(2);
             LCD_write_message("Capacita':");
-            sprintf(str,"%.3f", capacita);
+            sprintf(str,"%.3f", correnteMedia);
             str[5] = '\0';
             LCD_write_string(str);
             LCD_write_message("Ah");

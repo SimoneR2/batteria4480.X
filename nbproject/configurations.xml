@@ -60,7 +60,7 @@
         <property key="asmlist" value="true"/>
         <property key="define-macros" value=""/>
         <property key="extra-include-directories"
-                  value="..\..\..\Desktop\LaurTec_PIC_libraries_v_3.3.1 - Copia\inc;..\..\..\Desktop\LaurTec_PIC_libraries_v_3.3.1 - Copia\src"/>
+                  value="..\..\Drive\librerie\LaurTec_PIC_libraries_v_3.3.0\inc;..\..\Drive\librerie\LaurTec_PIC_libraries_v_3.3.0\src"/>
         <property key="identifier-length" value="255"/>
         <property key="operation-mode" value="free"/>
         <property key="opt-xc8-compiler-strict_ansi" value="false"/>
@@ -73,7 +73,6 @@
         <property key="optimization-level" value="9"/>
         <property key="optimization-set" value="default"/>
         <property key="optimization-speed" value="false"/>
-        <property key="optimization-stable-enable" value="false"/>
         <property key="preprocess-assembler" value="true"/>
         <property key="undefine-macros" value=""/>
         <property key="use-cci" value="true"/>
@@ -115,7 +114,7 @@
         <property key="initialize-data" value="true"/>
         <property key="keep-generated-startup.as" value="false"/>
         <property key="link-in-c-library" value="true"/>
-        <property key="link-in-peripheral-library" value="false"/>
+        <property key="link-in-peripheral-library" value="true"/>
         <property key="managed-stack" value="false"/>
         <property key="opt-xc8-linker-file" value="false"/>
         <property key="opt-xc8-linker-link_startup" value="false"/>
@@ -176,7 +175,7 @@
         <property key="oscillator.rcfrequencyunit" value="Kilo"/>
         <property key="performancedata.show" value="false"/>
         <property key="periphADC1.altscl" value="false"/>
-        <property key="periphADC1.minTacq" value=""/>
+        <property key="periphADC1.minTacq" value="5"/>
         <property key="periphADC1.tacqunits" value="microseconds"/>
         <property key="periphADC2.altscl" value="false"/>
         <property key="periphADC2.minTacq" value=""/>
@@ -254,10 +253,6 @@
                   value="report"/>
         <property key="warningmessagebreakoptions.W0015_CORE_INVALID_ALT_WREG_SET"
                   value="report"/>
-        <property key="warningmessagebreakoptions.W0051_INSTRUCTION_DIV_NOT_ENOUGH_REPEAT"
-                  value="report"/>
-        <property key="warningmessagebreakoptions.W0052_INSTRUCTION_DIV_TOO_MANY_REPEAT"
-                  value="report"/>
         <property key="warningmessagebreakoptions.W0101_SIM_UPDATE_FAILED"
                   value="report"/>
         <property key="warningmessagebreakoptions.W0102_SIM_PERIPH_MISSING"
@@ -327,11 +322,6 @@
                   value="report"/>
         <property key="warningmessagebreakoptions.W0230_ADC_TRIGSEL_NOT_SUPPORTED"
                   value="report"/>
-        <property key="warningmessagebreakoptions.W0231_ADC_NOT_WARMED" value="report"/>
-        <property key="warningmessagebreakoptions.W0232_ADC_CALIBRATION_ABORTED"
-                  value="report"/>
-        <property key="warningmessagebreakoptions.W0233_ADC_CORE_POWERED_EARLY"
-                  value="report"/>
         <property key="warningmessagebreakoptions.W0400_PWM_PWM_FASTER_THAN_FOSC"
                   value="report"/>
         <property key="warningmessagebreakoptions.W0700_CLC_GENERAL_WARNING"
@@ -355,8 +345,6 @@
         <property key="warningmessagebreakoptions.W1405_DMA_IRQ_DIR_MISMATCH"
                   value="report"/>
         <property key="warningmessagebreakoptions.W1600_PPS_INVALID_MAP" value="report"/>
-        <property key="warningmessagebreakoptions.W1601_PPS_INVALID_PIN_DESCRIPTION"
-                  value="report"/>
         <property key="warningmessagebreakoptions.W2001_INPUTCAPTURE_TMR3_UNAVAILABLE"
                   value="report"/>
         <property key="warningmessagebreakoptions.W2002_INPUTCAPTURE_CAPTURE_EMPTY"
@@ -395,10 +383,6 @@
         <property key="warningmessagebreakoptions.W9602_COMP_DAC_SOURCE_UNAVAILABLE"
                   value="report"/>
         <property key="warningmessagebreakoptions.W9603_COMP_CVREF_SOURCE_UNAVAILABLE"
-                  value="report"/>
-        <property key="warningmessagebreakoptions.W9604_COMP_SLOPE_SOURCE_UNAVAILABLE"
-                  value="report"/>
-        <property key="warningmessagebreakoptions.W9605_COMP_PRG_SOURCE_UNAVAILABLE"
                   value="report"/>
         <property key="warningmessagebreakoptions.W9801_FVR_INVALID_MODE_SELECTION"
                   value="report"/>
