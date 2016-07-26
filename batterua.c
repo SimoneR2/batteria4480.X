@@ -131,6 +131,15 @@ void main(void) {
         if (stati == 4){
             correnteMedia = sommatoriaCorrente/somme;
             capacita = (correnteMedia*(ore+(minuti/60)+(secondi/3600)));
+            LCD_home();
+            LCD_write_message(" test terminato ");
+            LCD_goto_line(2);
+            LCD_write_message("Capacita':");
+            sprintf(str,"%.3f", capacita);
+            str[5] = '\0';
+            LCD_write_string(str);
+            LCD_write_message("Ah");
+            while(1);
         }
     }
 }

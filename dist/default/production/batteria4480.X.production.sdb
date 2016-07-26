@@ -3,28 +3,18 @@
 [d edition pro ]
 [d chip 18F4480 ]
 [d frameptr 4065 ]
-"34 C:\Users\simone\Documents\GitHub\batteria4480.X\batterua.c
-[v _isr_alta isr_alta `IIH(v  1 e 1 0 ]
-"50
-[v _isr_bassa isr_bassa `IIL(v  1 e 1 0 ]
-"60
-[v _main main `(v  1 e 1 0 ]
-"112
-[v _display_voltage display_voltage `(v  1 e 1 0 ]
-"123
-[v _read_adc read_adc `(v  1 e 1 0 ]
-"141
-[v _inizializzazione inizializzazione `(v  1 e 1 0 ]
-"61 C:/Users/simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+"61 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
 [v _delay_ms delay_ms `(v  1 e 1 0 ]
 "102
 [v _delay_s delay_s `(v  1 e 1 0 ]
 "115
 [v _delay_set_quartz delay_set_quartz `(v  1 e 1 0 ]
-"49 C:/Users/simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+"49 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
 [v _LCD_enable_pulse LCD_enable_pulse `(v  1 e 1 0 ]
 "61
 [v _LCD_send_command LCD_send_command `(v  1 e 1 0 ]
+"74
+[v _LCD_home LCD_home `(v  1 e 1 0 ]
 "98
 [v _LCD_shift_cursor LCD_shift_cursor `(v  1 e 1 0 ]
 "111
@@ -35,6 +25,8 @@
 [v _LCD_write_message LCD_write_message `(v  1 e 1 0 ]
 "194
 [v _LCD_write_string LCD_write_string `(v  1 e 1 0 ]
+"210
+[v _LCD_write_integer LCD_write_integer `(v  1 e 1 0 ]
 "257
 [v _LCD_clear LCD_clear `(v  1 e 1 0 ]
 "266
@@ -43,6 +35,18 @@
 [v _LCD_backlight LCD_backlight `(v  1 e 1 0 ]
 "283
 [v _LCD_initialize LCD_initialize `(v  1 e 1 0 ]
+"36 C:\Users\simone\Documents\GitHub\batteria4480.X\batterua.c
+[v _isr_alta isr_alta `IIH(v  1 e 1 0 ]
+"52
+[v _isr_bassa isr_bassa `IIL(v  1 e 1 0 ]
+"62
+[v _main main `(v  1 e 1 0 ]
+"147
+[v _display_voltage display_voltage `(v  1 e 1 0 ]
+"159
+[v _read_adc read_adc `(v  1 e 1 0 ]
+"177
+[v _inizializzazione inizializzazione `(v  1 e 1 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awmod.c
@@ -101,67 +105,72 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"15 C:\Users\simone\Documents\GitHub\batteria4480.X\batterua.c
-[v _lettura lettura `VE[3]i  1 e 6 0 ]
-"16
-[v _ore ore `VEui  1 e 2 0 ]
-[v _minuti minuti `VEui  1 e 2 0 ]
-[v _secondi secondi `VEui  1 e 2 0 ]
-"17
-[v _tempo tempo `VEul  1 e 4 0 ]
-"18
-[v _str str `VE[8]uc  1 e 8 0 ]
-"19
-[v _stati stati `VEuc  1 e 1 0 ]
-"20
-[v _rapporto rapporto `VEf  1 e 4 0 ]
-[v _current current `VEf  1 e 4 0 ]
-[v _voltage voltage `VEf  1 e 4 0 ]
-"27
-[v _combinazioni combinazioni `[4]uc  1 e 4 0 ]
-"49 C:/Users/simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+"49 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
 [v _delay_quartz_frequency_value delay_quartz_frequency_value `VEuc  1 e 1 0 ]
 "50
 [v _clock_counter_reference clock_counter_reference `VEui  1 e 2 0 ]
-[s S216 . 1 `uc 1 RB0 1 0 :1:0 
-`uc 1 RB1 1 0 :1:1 
-`uc 1 RB2 1 0 :1:2 
-`uc 1 RB3 1 0 :1:3 
-`uc 1 RB4 1 0 :1:4 
-`uc 1 RB5 1 0 :1:5 
-`uc 1 RB6 1 0 :1:6 
-`uc 1 RB7 1 0 :1:7 
-]
-"28253 C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic18f4480.h
-[s S225 . 1 `uc 1 INT0 1 0 :1:0 
-`uc 1 INT1 1 0 :1:1 
-`uc 1 INT2 1 0 :1:2 
-`uc 1 CANRX 1 0 :1:3 
-`uc 1 KBI0 1 0 :1:4 
-`uc 1 KBI1 1 0 :1:5 
-`uc 1 KBI2 1 0 :1:6 
-`uc 1 KBI3 1 0 :1:7 
-]
-[s S234 . 1 `uc 1 AN10 1 0 :1:0 
-`uc 1 AN8 1 0 :1:1 
-`uc 1 CANTX 1 0 :1:2 
-`uc 1 . 1 0 :1:3 
-`uc 1 AN9 1 0 :1:4 
-`uc 1 PGM 1 0 :1:5 
-`uc 1 PGC 1 0 :1:6 
-`uc 1 PGD 1 0 :1:7 
-]
-[s S243 . 1 `uc 1 FLT0 1 0 :1:0 
-]
-[s S245 . 1 `uc 1 . 1 0 :3:0 
-`uc 1 CCP2_PA2 1 0 :1:3 
-]
-[u S248 . 1 `S216 1 . 1 0 `S225 1 . 1 0 `S234 1 . 1 0 `S243 1 . 1 0 `S245 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES248  1 e 1 @3969 ]
-"28849
+"17 C:\Users\simone\Documents\GitHub\batteria4480.X\batterua.c
+[v _lettura lettura `VE[3]i  1 e 6 0 ]
+"18
+[v _ore ore `VEui  1 e 2 0 ]
+[v _minuti minuti `VEui  1 e 2 0 ]
+[v _secondi secondi `VEui  1 e 2 0 ]
+[v _somme somme `VEui  1 e 2 0 ]
+"19
+[v _tempo tempo `VEul  1 e 4 0 ]
+[v _tempo_old tempo_old `VEul  1 e 4 0 ]
+"20
+[v _str str `VE[8]uc  1 e 8 0 ]
+"21
+[v _stati stati `VEuc  1 e 1 0 ]
+"22
+[v _rapporto rapporto `VEf  1 e 4 0 ]
+[v _current current `VEf  1 e 4 0 ]
+[v _voltage voltage `VEf  1 e 4 0 ]
+[v _sommatoriaCorrente sommatoriaCorrente `VEf  1 e 4 0 ]
+[v _correnteMedia correnteMedia `VEf  1 e 4 0 ]
+[v _capacita capacita `VEf  1 e 4 0 ]
+"29
+[v _combinazioni combinazioni `[4]uc  1 e 4 0 ]
+"28849 C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic18f4480.h
 [v _LATA LATA `VEuc  1 e 1 @3977 ]
 "28981
 [v _LATB LATB `VEuc  1 e 1 @3978 ]
+[s S216 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"29029
+[s S225 . 1 `uc 1 LB0 1 0 :1:0 
+]
+[s S227 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 LB1 1 0 :1:1 
+]
+[s S230 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LB2 1 0 :1:2 
+]
+[s S233 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 LB3 1 0 :1:3 
+]
+[s S236 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 LB4 1 0 :1:4 
+]
+[s S239 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 LB5 1 0 :1:5 
+]
+[s S242 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 LB6 1 0 :1:6 
+]
+[s S245 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 LB7 1 0 :1:7 
+]
+[u S248 . 1 `S216 1 . 1 0 `S225 1 . 1 0 `S227 1 . 1 0 `S230 1 . 1 0 `S233 1 . 1 0 `S236 1 . 1 0 `S239 1 . 1 0 `S242 1 . 1 0 `S245 1 . 1 0 ]
+[v _LATBbits LATBbits `VES248  1 e 1 @3978 ]
 "29113
 [v _LATC LATC `VEuc  1 e 1 @3979 ]
 "29245
@@ -201,6 +210,23 @@
 ]
 [u S53 . 1 `S21 1 . 1 0 `S30 1 . 1 0 `S32 1 . 1 0 `S35 1 . 1 0 `S38 1 . 1 0 `S41 1 . 1 0 `S44 1 . 1 0 `S47 1 . 1 0 `S50 1 . 1 0 ]
 [v _LATDbits LATDbits `VES53  1 e 1 @3980 ]
+"29377
+[v _LATE LATE `VEuc  1 e 1 @3981 ]
+[s S297 . 1 `uc 1 LATE0 1 0 :1:0 
+`uc 1 LATE1 1 0 :1:1 
+`uc 1 LATE2 1 0 :1:2 
+]
+"29400
+[s S301 . 1 `uc 1 LE0 1 0 :1:0 
+]
+[s S303 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 LE1 1 0 :1:1 
+]
+[s S306 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LE2 1 0 :1:2 
+]
+[u S309 . 1 `S297 1 . 1 0 `S301 1 . 1 0 `S303 1 . 1 0 `S306 1 . 1 0 ]
+[v _LATEbits LATEbits `VES309  1 e 1 @3981 ]
 "29434
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 "29655
@@ -209,7 +235,9 @@
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
 "30097
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
-[s S380 . 1 `uc 1 TMR1IE 1 0 :1:0 
+"30318
+[v _TRISE TRISE `VEuc  1 e 1 @3990 ]
+[s S416 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSPIE 1 0 :1:3 
@@ -219,14 +247,14 @@
 `uc 1 PSPIE 1 0 :1:7 
 ]
 "30565
-[s S389 . 1 `uc 1 . 1 0 :5:0 
+[s S425 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 RC1IE 1 0 :1:5 
 ]
-[s S392 . 1 `uc 1 . 1 0 :4:0 
+[s S428 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IE 1 0 :1:4 
 ]
-[u S395 . 1 `S380 1 . 1 0 `S389 1 . 1 0 `S392 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES395  1 e 1 @3997 ]
+[u S431 . 1 `S416 1 . 1 0 `S425 1 . 1 0 `S428 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES431  1 e 1 @3997 ]
 [s S170 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -245,7 +273,7 @@
 ]
 [u S185 . 1 `S170 1 . 1 0 `S179 1 . 1 0 `S182 1 . 1 0 ]
 [v _PIR1bits PIR1bits `VES185  1 e 1 @3998 ]
-[s S415 . 1 `uc 1 TMR1IP 1 0 :1:0 
+[s S451 . 1 `uc 1 TMR1IP 1 0 :1:0 
 `uc 1 TMR2IP 1 0 :1:1 
 `uc 1 CCP1IP 1 0 :1:2 
 `uc 1 SSPIP 1 0 :1:3 
@@ -255,33 +283,33 @@
 `uc 1 PSPIP 1 0 :1:7 
 ]
 "30727
-[s S424 . 1 `uc 1 . 1 0 :4:0 
+[s S460 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TXBIP 1 0 :1:4 
 ]
-[s S427 . 1 `uc 1 . 1 0 :5:0 
+[s S463 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 RC1IP 1 0 :1:5 
 ]
-[s S430 . 1 `uc 1 . 1 0 :4:0 
+[s S466 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IP 1 0 :1:4 
 ]
-[u S433 . 1 `S415 1 . 1 0 `S424 1 . 1 0 `S427 1 . 1 0 `S430 1 . 1 0 ]
-[v _IPR1bits IPR1bits `VES433  1 e 1 @3999 ]
+[u S469 . 1 `S451 1 . 1 0 `S460 1 . 1 0 `S463 1 . 1 0 `S466 1 . 1 0 ]
+[v _IPR1bits IPR1bits `VES469  1 e 1 @3999 ]
 "32737
 [v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
 "32807
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
 "32897
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
-[s S299 . 1 `uc 1 . 1 0 :1:0 
+[s S334 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_NOT_DONE 1 0 :1:1 
 ]
 "32941
-[s S302 . 1 `uc 1 ADON 1 0 :1:0 
+[s S337 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 ]
 "32941
-[s S306 . 1 `uc 1 . 1 0 :1:0 
+[s S341 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -289,30 +317,30 @@
 `uc 1 CHS3 1 0 :1:5 
 ]
 "32941
-[s S313 . 1 `uc 1 . 1 0 :1:0 
+[s S348 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 DONE 1 0 :1:1 
 ]
 "32941
-[s S316 . 1 `uc 1 . 1 0 :1:0 
+[s S351 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
 "32941
-[s S319 . 1 `uc 1 . 1 0 :1:0 
+[s S354 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_DONE 1 0 :1:1 
 ]
 "32941
-[s S322 . 1 `uc 1 . 1 0 :1:0 
+[s S357 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
 "32941
-[s S325 . 1 `uc 1 . 1 0 :1:0 
+[s S360 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GODONE 1 0 :1:1 
 ]
 "32941
-[u S328 . 1 `S299 1 . 1 0 `S302 1 . 1 0 `S306 1 . 1 0 `S313 1 . 1 0 `S316 1 . 1 0 `S319 1 . 1 0 `S322 1 . 1 0 `S325 1 . 1 0 ]
+[u S363 . 1 `S334 1 . 1 0 `S337 1 . 1 0 `S341 1 . 1 0 `S348 1 . 1 0 `S351 1 . 1 0 `S354 1 . 1 0 `S357 1 . 1 0 `S360 1 . 1 0 ]
 "32941
 "32941
-[v _ADCON0bits ADCON0bits `VES328  1 e 1 @4034 ]
+[v _ADCON0bits ADCON0bits `VES363  1 e 1 @4034 ]
 "33021
 [v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
 "33027
@@ -323,26 +351,26 @@
 [v _TMR1L TMR1L `VEuc  1 e 1 @4046 ]
 "33743
 [v _TMR1H TMR1H `VEuc  1 e 1 @4047 ]
-[s S457 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+[s S493 . 1 `uc 1 NOT_BOR 1 0 :1:0 
 ]
 "33792
-[s S459 . 1 `uc 1 . 1 0 :1:0 
+[s S495 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_POR 1 0 :1:1 
 ]
 "33792
-[s S462 . 1 `uc 1 . 1 0 :2:0 
+[s S498 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_PD 1 0 :1:2 
 ]
 "33792
-[s S465 . 1 `uc 1 . 1 0 :3:0 
+[s S501 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_TO 1 0 :1:3 
 ]
 "33792
-[s S468 . 1 `uc 1 . 1 0 :4:0 
+[s S504 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 NOT_RI 1 0 :1:4 
 ]
 "33792
-[s S471 . 1 `uc 1 nBOR 1 0 :1:0 
+[s S507 . 1 `uc 1 nBOR 1 0 :1:0 
 `uc 1 nPOR 1 0 :1:1 
 `uc 1 nPD 1 0 :1:2 
 `uc 1 nTO 1 0 :1:3 
@@ -352,17 +380,17 @@
 `uc 1 IPEN 1 0 :1:7 
 ]
 "33792
-[s S480 . 1 `uc 1 BOR 1 0 :1:0 
+[s S516 . 1 `uc 1 BOR 1 0 :1:0 
 `uc 1 POR 1 0 :1:1 
 `uc 1 PD 1 0 :1:2 
 `uc 1 TO 1 0 :1:3 
 `uc 1 RI 1 0 :1:4 
 ]
 "33792
-[u S486 . 1 `S457 1 . 1 0 `S459 1 . 1 0 `S462 1 . 1 0 `S465 1 . 1 0 `S468 1 . 1 0 `S471 1 . 1 0 `S480 1 . 1 0 ]
+[u S522 . 1 `S493 1 . 1 0 `S495 1 . 1 0 `S498 1 . 1 0 `S501 1 . 1 0 `S504 1 . 1 0 `S507 1 . 1 0 `S516 1 . 1 0 ]
 "33792
 "33792
-[v _RCONbits RCONbits `VES486  1 e 1 @4048 ]
+[v _RCONbits RCONbits `VES522  1 e 1 @4048 ]
 "34253
 [v _T0CON T0CON `VEuc  1 e 1 @4053 ]
 "34334
@@ -404,23 +432,17 @@
 [v __powers_ _powers_ `C[13]d  1 e 52 0 ]
 "39
 [v __npowers_ _npowers_ `C[13]d  1 e 52 0 ]
-"60 C:\Users\simone\Documents\GitHub\batteria4480.X\batterua.c
+"62 C:\Users\simone\Documents\GitHub\batteria4480.X\batterua.c
 [v _main main `(v  1 e 1 0 ]
 {
-"110
+"145
 } 0
-"141
+"177
 [v _inizializzazione inizializzazione `(v  1 e 1 0 ]
 {
-"184
+"223
 } 0
-"178 C:/Users/simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
-[v _LCD_write_message LCD_write_message `(v  1 e 1 0 ]
-{
-[v LCD_write_message@buffer buffer `*.25Cuc  1 p 2 15 ]
-"188
-} 0
-"283
+"283 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
 [v _LCD_initialize LCD_initialize `(v  1 e 1 0 ]
 {
 [v LCD_initialize@quartz_frequency quartz_frequency `uc  1 a 1 wreg ]
@@ -429,7 +451,7 @@
 [v LCD_initialize@quartz_frequency quartz_frequency `uc  1 a 1 12 ]
 "316
 } 0
-"115 C:/Users/simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+"115 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
 [v _delay_set_quartz delay_set_quartz `(v  1 e 1 0 ]
 {
 [v delay_set_quartz@frequency frequency `uc  1 a 1 wreg ]
@@ -438,7 +460,7 @@
 [v delay_set_quartz@frequency frequency `uc  1 a 1 31 ]
 "119
 } 0
-"266 C:/Users/simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+"266 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
 [v _LCD_cursor LCD_cursor `(v  1 e 1 0 ]
 {
 [v LCD_cursor@active active `uc  1 a 1 wreg ]
@@ -462,37 +484,37 @@
 [v LCD_backlight@active active `uc  1 a 1 31 ]
 "278
 } 0
-"112 C:\Users\simone\Documents\GitHub\batteria4480.X\batterua.c
+"147 C:\Users\simone\Documents\GitHub\batteria4480.X\batterua.c
 [v _display_voltage display_voltage `(v  1 e 1 0 ]
 {
 [v display_voltage@line line `uc  1 a 1 wreg ]
 [v display_voltage@line line `uc  1 a 1 wreg ]
-[v display_voltage@line line `uc  1 a 1 113 ]
-"121
+[v display_voltage@line line `uc  1 a 1 0 ]
+"157
 } 0
 "492 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 "516
-[v sprintf@fval fval `d  1 a 4 108 ]
-[u S736 . 4 `ul 1 vd 4 0 `d 1 integ 4 0 ]
+[v sprintf@fval fval `d  1 a 4 117 ]
+[u S788 . 4 `ul 1 vd 4 0 `d 1 integ 4 0 ]
 "526
-[v sprintf@tmpval tmpval `S736  1 a 4 102 ]
+[v sprintf@tmpval tmpval `S788  1 a 4 111 ]
 "528
-[v sprintf@val val `ul  1 a 4 96 ]
+[v sprintf@val val `ul  1 a 4 105 ]
 "504
-[v sprintf@prec prec `i  1 a 2 106 ]
+[v sprintf@prec prec `i  1 a 2 115 ]
 "516
-[v sprintf@exp exp `i  1 a 2 100 ]
+[v sprintf@exp exp `i  1 a 2 109 ]
 "508
-[v sprintf@flag flag `us  1 a 2 94 ]
+[v sprintf@flag flag `us  1 a 2 103 ]
 "494
-[v sprintf@ap ap `[1]*.39v  1 a 2 92 ]
+[v sprintf@ap ap `[1]*.39v  1 a 2 101 ]
 "499
-[v sprintf@c c `c  1 a 1 112 ]
+[v sprintf@c c `c  1 a 1 121 ]
 "492
-[v sprintf@sp sp `*.39uc  1 p 2 78 ]
-[v sprintf@f f `*.25Cuc  1 p 2 80 ]
+[v sprintf@sp sp `*.39uc  1 p 2 87 ]
+[v sprintf@f f `*.25Cuc  1 p 2 89 ]
 "1541
 } 0
 "425
@@ -501,7 +523,7 @@
 [v scale@scl scl `c  1 a 1 wreg ]
 [v scale@scl scl `c  1 a 1 wreg ]
 "428
-[v scale@scl scl `c  1 a 1 45 ]
+[v scale@scl scl `c  1 a 1 54 ]
 "441
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\isdigit.c
@@ -519,7 +541,7 @@
 [v fround@prec prec `uc  1 a 1 wreg ]
 [v fround@prec prec `uc  1 a 1 wreg ]
 "413
-[v fround@prec prec `uc  1 a 1 49 ]
+[v fround@prec prec `uc  1 a 1 58 ]
 "418
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awmod.c
@@ -598,33 +620,33 @@
 [v ___fltol __fltol `(l  1 e 4 0 ]
 {
 "45
-[v ___fltol@exp1 exp1 `uc  1 a 1 55 ]
-[v ___fltol@sign1 sign1 `uc  1 a 1 54 ]
+[v ___fltol@exp1 exp1 `uc  1 a 1 64 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 63 ]
 "43
-[v ___fltol@f1 f1 `d  1 p 4 46 ]
+[v ___fltol@f1 f1 `d  1 p 4 55 ]
 "70
 } 0
 "245 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\sprcadd.c
 [v ___flsub __flsub `(d  1 e 4 0 ]
 {
-[v ___flsub@b b `d  1 p 4 70 ]
-[v ___flsub@a a `d  1 p 4 74 ]
+[v ___flsub@b b `d  1 p 4 79 ]
+[v ___flsub@a a `d  1 p 4 83 ]
 "250
 } 0
 "10
 [v ___fladd __fladd `(d  1 e 4 0 ]
 {
 "17
-[v ___fladd@grs grs `uc  1 a 1 69 ]
+[v ___fladd@grs grs `uc  1 a 1 78 ]
 "15
-[v ___fladd@bexp bexp `uc  1 a 1 68 ]
+[v ___fladd@bexp bexp `uc  1 a 1 77 ]
 "16
-[v ___fladd@aexp aexp `uc  1 a 1 67 ]
+[v ___fladd@aexp aexp `uc  1 a 1 76 ]
 "13
-[v ___fladd@signs signs `uc  1 a 1 66 ]
+[v ___fladd@signs signs `uc  1 a 1 75 ]
 "10
-[v ___fladd@b b `d  1 p 4 50 ]
-[v ___fladd@a a `d  1 p 4 54 ]
+[v ___fladd@b b `d  1 p 4 59 ]
+[v ___fladd@a a `d  1 p 4 63 ]
 "237
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\flneg.c
@@ -640,74 +662,160 @@
 [v ___flge@ff2 ff2 `d  1 p 4 4 ]
 "19
 } 0
-"123 C:\Users\simone\Documents\GitHub\batteria4480.X\batterua.c
+"159 C:\Users\simone\Documents\GitHub\batteria4480.X\batterua.c
 [v _read_adc read_adc `(v  1 e 1 0 ]
 {
-"124
-[v read_adc@i i `uc  1 a 1 64 ]
-"139
+"160
+[v read_adc@i i `uc  1 a 1 73 ]
+"175
 } 0
 "10 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
 {
 [v ___xxtofl@sign sign `uc  1 a 1 wreg ]
 "13
-[v ___xxtofl@arg arg `ul  1 a 4 10 ]
+[v ___xxtofl@arg arg `ul  1 a 4 17 ]
 "12
-[v ___xxtofl@exp exp `uc  1 a 1 9 ]
+[v ___xxtofl@exp exp `uc  1 a 1 16 ]
 "10
 [v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-[v ___xxtofl@val val `l  1 p 4 0 ]
+[v ___xxtofl@val val `l  1 p 4 7 ]
 "15
-[v ___xxtofl@sign sign `uc  1 a 1 8 ]
+[v ___xxtofl@sign sign `uc  1 a 1 15 ]
 "44
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1043 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1095 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1048 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S1051 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1043 1 fAsBytes 4 0 `S1048 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1051  1 a 4 31 ]
+[s S1100 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S1103 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1095 1 fAsBytes 4 0 `S1100 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1103  1 a 4 40 ]
 "12
-[v ___flmul@grs grs `ul  1 a 4 26 ]
-[s S1119 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[v ___flmul@grs grs `ul  1 a 4 35 ]
+[s S1171 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1122 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S1119 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1122  1 a 2 35 ]
+[u S1174 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S1171 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1174  1 a 2 44 ]
 "10
-[v ___flmul@bexp bexp `uc  1 a 1 30 ]
+[v ___flmul@bexp bexp `uc  1 a 1 39 ]
 "11
-[v ___flmul@aexp aexp `uc  1 a 1 25 ]
+[v ___flmul@aexp aexp `uc  1 a 1 34 ]
 "9
-[v ___flmul@sign sign `uc  1 a 1 24 ]
+[v ___flmul@sign sign `uc  1 a 1 33 ]
 "8
-[v ___flmul@b b `d  1 p 4 12 ]
-[v ___flmul@a a `d  1 p 4 16 ]
+[v ___flmul@b b `d  1 p 4 21 ]
+[v ___flmul@a a `d  1 p 4 25 ]
 "205
 } 0
 "11 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
 {
 "21
-[v ___fldiv@grs grs `ul  1 a 4 56 ]
+[v ___fldiv@grs grs `ul  1 a 4 65 ]
 "22
-[v ___fldiv@rem rem `ul  1 a 4 50 ]
+[v ___fldiv@rem rem `ul  1 a 4 59 ]
 "20
-[v ___fldiv@new_exp new_exp `i  1 a 2 54 ]
+[v ___fldiv@new_exp new_exp `i  1 a 2 63 ]
 "19
-[v ___fldiv@aexp aexp `uc  1 a 1 61 ]
+[v ___fldiv@aexp aexp `uc  1 a 1 70 ]
 "18
-[v ___fldiv@bexp bexp `uc  1 a 1 60 ]
+[v ___fldiv@bexp bexp `uc  1 a 1 69 ]
 "16
-[v ___fldiv@sign sign `uc  1 a 1 49 ]
+[v ___fldiv@sign sign `uc  1 a 1 58 ]
 "11
-[v ___fldiv@b b `d  1 p 4 37 ]
-[v ___fldiv@a a `d  1 p 4 41 ]
+[v ___fldiv@b b `d  1 p 4 46 ]
+[v ___fldiv@a a `d  1 p 4 50 ]
 "184
 } 0
-"194 C:/Users/simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+"178 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+[v _LCD_write_message LCD_write_message `(v  1 e 1 0 ]
+{
+[v LCD_write_message@buffer buffer `*.25Cuc  1 p 2 15 ]
+"188
+} 0
+"111
+[v _LCD_goto_line LCD_goto_line `(v  1 e 1 0 ]
+{
+[v LCD_goto_line@line line `uc  1 a 1 wreg ]
+[v LCD_goto_line@line line `uc  1 a 1 wreg ]
+[v LCD_goto_line@line line `uc  1 a 1 10 ]
+"130
+} 0
+"102 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+[v _delay_s delay_s `(v  1 e 1 0 ]
+{
+[v delay_s@value_s value_s `uc  1 a 1 wreg ]
+"104
+[v delay_s@repeat_loop repeat_loop `uc  1 a 1 7 ]
+"102
+[v delay_s@value_s value_s `uc  1 a 1 wreg ]
+"106
+[v delay_s@value_s value_s `uc  1 a 1 6 ]
+"108
+} 0
+"210 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+[v _LCD_write_integer LCD_write_integer `(v  1 e 1 0 ]
+{
+"213
+[v LCD_write_integer@convertedInt convertedInt `[6]uc  1 a 6 33 ]
+"216
+[v LCD_write_integer@index index `uc  1 a 1 39 ]
+"210
+[v LCD_write_integer@value value `i  1 p 2 24 ]
+[v LCD_write_integer@number_of_digits number_of_digits `uc  1 p 1 26 ]
+[v LCD_write_integer@zero_cleaning zero_cleaning `uc  1 p 1 27 ]
+[v LCD_write_integer@F16106 F16106 `[6]uc  1 s 6 F16106 ]
+"251
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\itoa.c
+[v _itoa itoa `(*.39uc  1 e 2 0 ]
+{
+"6
+[v itoa@cp cp `*.39uc  1 a 2 22 ]
+"4
+[v itoa@buf buf `*.39uc  1 p 2 16 ]
+[v itoa@val val `i  1 p 2 18 ]
+[v itoa@base base `i  1 p 2 20 ]
+"14
+} 0
+"17
+[v _utoa utoa `(*.39uc  1 e 2 0 ]
+{
+"19
+[v utoa@v v `ui  1 a 2 13 ]
+"20
+[v utoa@c c `uc  1 a 1 15 ]
+"17
+[v utoa@buf buf `*.39uc  1 p 2 7 ]
+[v utoa@val val `ui  1 p 2 9 ]
+[v utoa@base base `i  1 p 2 11 ]
+"37
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwmod@counter counter `uc  1 a 1 31 ]
+"8
+[v ___lwmod@dividend dividend `ui  1 p 2 0 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 2 ]
+"26
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 4 ]
+"8
+[v ___lwdiv@dividend dividend `ui  1 p 2 0 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
+"31
+} 0
+"194 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
 [v _LCD_write_string LCD_write_string `(v  1 e 1 0 ]
 {
 [v LCD_write_string@buffer buffer `*.39uc  1 p 2 15 ]
@@ -728,13 +836,10 @@
 [v LCD_write_char@value value `uc  1 a 1 14 ]
 "168
 } 0
-"111
-[v _LCD_goto_line LCD_goto_line `(v  1 e 1 0 ]
+"74
+[v _LCD_home LCD_home `(v  1 e 1 0 ]
 {
-[v LCD_goto_line@line line `uc  1 a 1 wreg ]
-[v LCD_goto_line@line line `uc  1 a 1 wreg ]
-[v LCD_goto_line@line line `uc  1 a 1 10 ]
-"130
+"78
 } 0
 "61
 [v _LCD_send_command LCD_send_command `(v  1 e 1 0 ]
@@ -753,19 +858,7 @@
 {
 "55
 } 0
-"102 C:/Users/simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
-[v _delay_s delay_s `(v  1 e 1 0 ]
-{
-[v delay_s@value_s value_s `uc  1 a 1 wreg ]
-"104
-[v delay_s@repeat_loop repeat_loop `uc  1 a 1 7 ]
-"102
-[v delay_s@value_s value_s `uc  1 a 1 wreg ]
-"106
-[v delay_s@value_s value_s `uc  1 a 1 6 ]
-"108
-} 0
-"61
+"61 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
 [v _delay_ms delay_ms `(v  1 e 1 0 ]
 {
 [v delay_ms@value_ms value_ms `ui  1 p 2 4 ]
@@ -781,13 +874,13 @@
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
 } 0
-"50 C:\Users\simone\Documents\GitHub\batteria4480.X\batterua.c
+"52 C:\Users\simone\Documents\GitHub\batteria4480.X\batterua.c
 [v _isr_bassa isr_bassa `IIL(v  1 e 1 0 ]
 {
-"58
+"60
 } 0
-"34
+"36
 [v _isr_alta isr_alta `IIH(v  1 e 1 0 ]
 {
-"48
+"50
 } 0

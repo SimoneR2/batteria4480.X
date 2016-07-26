@@ -18436,7 +18436,7 @@ extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
 
-# 74 "C:/Users/simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/inc\delay.h"
+# 74 "../../../Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/inc\delay.h"
 void delay_ms (unsigned int value_ms);
 
 # 88
@@ -18445,7 +18445,7 @@ void delay_s (unsigned char value_s);
 # 102
 void delay_set_quartz (unsigned char frequency);
 
-# 165 "C:/Users/simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/inc\LCD_44780.h"
+# 165 "../../../Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/inc\LCD_44780.h"
 void LCD_enable_pulse (void);
 
 # 184
@@ -18490,7 +18490,7 @@ void LCD_backlight(unsigned char active);
 # 370
 void LCD_initialize(unsigned char quartz_frequency);
 
-# 49 "C:/Users/simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c"
+# 49 "../../../Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c"
 void LCD_enable_pulse (void) {
 
 LATDbits.LATD2 = 1;
@@ -18724,7 +18724,7 @@ LCD_cursor (0,0);
 
 }
 
-# 49 "C:/Users/simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c"
+# 49 "../../../Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c"
 volatile unsigned char delay_quartz_frequency_value = 16;
 volatile unsigned int clock_counter_reference = 0;
 
@@ -18850,13 +18850,13 @@ extern double fmod(double, double);
 extern double trunc(double);
 extern double round(double);
 
-# 15 "batterua.c"
+# 17 "batterua.c"
 volatile int lettura [3] = 0;
-volatile unsigned int ore, minuti, secondi = 0;
-volatile unsigned long tempo = 0;
+volatile unsigned int ore, minuti, secondi, somme = 0;
+volatile unsigned long tempo, tempo_old = 0;
 volatile unsigned char str [8] = 0;
 volatile unsigned char stati = 0;
-volatile float rapporto, current, voltage = 0;
+volatile float rapporto, current, voltage, sommatoriaCorrente, correnteMedia, capacita = 0;
 
 void inizializzazione(void);
 void read_adc(void);
@@ -18904,46 +18904,79 @@ inizializzazione();
 stati = 0;
 while (1) {
 read_adc();
-if (stati == 0){
+
+if (stati == 0) {
 while ((current < -0.5) || (voltage < 14)) {
-PORTBbits.RB7 = 1;
+LATBbits.LATB7 = 1;
 LCD_goto_line(1);
 LCD_write_message("Ciclo ricarica..");
-LCD_goto_line(2);
-sprintf(str, "V:%.3f", voltage);
-str[7] = '\0';
-LCD_write_string(str);
-sprintf(str, " I:%.3f", current);
-str[7] = '\0';
-LCD_write_string(str);
-read_adc();
+display_voltage(2);
 delay_ms(500);
-
-delay_ms(1);
 }
 stati = 1;
 }
-if (stati == 1){
+
+if (stati == 1) {
 if ((current > -0.5)&&(voltage > 14.2)) {
 LCD_write_message("Carica terminata");
-PORTBbits.RB7 = 0;
+LATBbits.LATB7 = 0;
 delay_ms(5000);
 }
 stati = 2;
 }
-if (stati == 2){
-while (voltage > 13) {
+
+if (stati == 2) {
+while (voltage > 13.0) {
 LCD_goto_line(1);
 LCD_write_message("     Attesa     ");
 LCD_goto_line(2);
 LCD_write_message("Stabilizzazione.");
-delay_s(1);
-delay_ms(500);
+delay_s(2);
 display_voltage(2);
-delay_s(1);
-delay_ms(500);
+delay_s(2);
 }
 stati = 3;
+}
+if (stati == 3) {
+tempo = 0;
+secondi = 0;
+minuti = 0;
+ore = 0;
+T0CON = 0x85;
+TMR0H = 0x0B;
+TMR0L = 0xDC;
+LATEbits.LATE0 = 1;
+somme = 0;
+while (voltage > 10) {
+LCD_home();
+LCD_write_message("tempo:");
+LCD_write_integer(ore, 2, 0x00);
+LCD_write_message(":");
+LCD_write_integer(minuti, 2, 0x00);
+LCD_write_message(":");
+LCD_write_integer(secondi, 2, 0x00);
+display_voltage(2);
+delay_ms(100);
+if (tempo - tempo_old >= 59) {
+tempo_old = tempo;
+somme++;
+sommatoriaCorrente = current + sommatoriaCorrente;
+}
+}
+stati = 4;
+}
+if (stati == 4){
+correnteMedia = sommatoriaCorrente/somme;
+capacita = (correnteMedia*(ore+(minuti/60)+(secondi/3600)));
+LCD_home();
+LCD_write_message(" test terminato ");
+LCD_goto_line(2);
+LCD_write_message("Capacita':");
+sprintf(str,"%.3f", capacita);
+str[5] = '\0';
+LCD_write_string(str);
+LCD_write_message("Ah");
+while(1);
 }
 }
 }
@@ -18957,6 +18990,7 @@ LCD_write_string(str);
 sprintf(str, " I:%.3f", current);
 str[7] = '\0';
 LCD_write_string(str);
+LCD_write_message("   ");
 }
 
 void read_adc(void) {
@@ -18989,6 +19023,9 @@ TRISC = 0x00;
 
 LATD = 0x00;
 TRISD = 0x00;
+
+LATE = 0x00;
+TRISE = 0b00000110;
 
 LCD_initialize(16);
 LCD_write_message("TESTER BATTERIE");
