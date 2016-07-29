@@ -72,23 +72,17 @@ void main(void) {
                 batteryCharger = 1; //attivo ciclo ricarica
                 LCD_goto_line(1);
                 LCD_write_message("Ciclo ricarica..");
-                LCD_goto_line(2);
-                sprintf(str, "V:%.3f", voltage); //convert float to char
-                str[7] = '\0'; //add null character
-                LCD_write_string(str); //write Voltage in LCD
-                sprintf(str, " I:%.3f", current); //convert float to char
-                str[7] = '\0'; //add null character
-                LCD_write_string(str); //write Current in LCD
+                display_voltage(2);
+                delay_s(1);
                 read_adc();
-                delay_ms(500); //attendi un po' prima di rileggere il tutto
-                //
-                delay_ms(1);
             }
             stati = 1;
         }
         if (stati == 1) {
             if ((current > -0.5)&&(voltage > 14.2)) {
+                LCD_home();
                 LCD_write_message("Carica terminata");
+                display_voltage(2);
                 batteryCharger = 0; //attivo ciclo ricarica
                 delay_ms(5000);
             }
@@ -146,6 +140,7 @@ void main(void) {
             LCD_write_message("capacita':");
             sprintf(str, "%.3f", sommatoriaCorrente);
             str[5] = '\0';
+            LCD_write_string(str);
             while (1);
         }
     }
@@ -154,7 +149,7 @@ void main(void) {
 void display_voltage(unsigned char line) {
     read_adc();
     LCD_goto_line(line);
-    sprintf(str, "V:%.3f", voltage); //convert float to char
+    sprintf(str, "V:%.2f", voltage); //convert float to char
     str[7] = '\0'; //add null character
     LCD_write_string(str); //write Voltage in LCD
     sprintf(str, " I:%.3f", current); //convert float to char
@@ -178,7 +173,7 @@ void read_adc(void) {
     current = current / 0.200;
     voltage = (lettura[0]);
     voltage = (voltage * 5) / 1024;
-    voltage = voltage / rapporto; //Conversione in tensione reale
+    voltage = (float) voltage / rapporto ; //Conversione in tensione reale
 }
 
 void inizializzazione(void) {

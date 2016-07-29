@@ -41,11 +41,11 @@
 [v _isr_bassa isr_bassa `IIL(v  1 e 1 0 ]
 "62
 [v _main main `(v  1 e 1 0 ]
-"154
+"149
 [v _display_voltage display_voltage `(v  1 e 1 0 ]
-"166
+"161
 [v _read_adc read_adc `(v  1 e 1 0 ]
-"184
+"179
 [v _inizializzazione inizializzazione `(v  1 e 1 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
@@ -210,21 +210,21 @@
 [v _LATDbits LATDbits `VES53  1 e 1 @3980 ]
 "29377
 [v _LATE LATE `VEuc  1 e 1 @3981 ]
-[s S303 . 1 `uc 1 LATE0 1 0 :1:0 
+[s S297 . 1 `uc 1 LATE0 1 0 :1:0 
 `uc 1 LATE1 1 0 :1:1 
 `uc 1 LATE2 1 0 :1:2 
 ]
 "29400
-[s S307 . 1 `uc 1 LE0 1 0 :1:0 
+[s S301 . 1 `uc 1 LE0 1 0 :1:0 
 ]
-[s S309 . 1 `uc 1 . 1 0 :1:0 
+[s S303 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 LE1 1 0 :1:1 
 ]
-[s S312 . 1 `uc 1 . 1 0 :2:0 
+[s S306 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 LE2 1 0 :1:2 
 ]
-[u S315 . 1 `S303 1 . 1 0 `S307 1 . 1 0 `S309 1 . 1 0 `S312 1 . 1 0 ]
-[v _LATEbits LATEbits `VES315  1 e 1 @3981 ]
+[u S309 . 1 `S297 1 . 1 0 `S301 1 . 1 0 `S303 1 . 1 0 `S306 1 . 1 0 ]
+[v _LATEbits LATEbits `VES309  1 e 1 @3981 ]
 "29434
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 "29655
@@ -433,12 +433,12 @@
 "62 C:\Users\simone\Documents\GitHub\batteria4480.X\batterua.c
 [v _main main `(v  1 e 1 0 ]
 {
-"152
+"147
 } 0
-"184
+"179
 [v _inizializzazione inizializzazione `(v  1 e 1 0 ]
 {
-"230
+"225
 } 0
 "283 C:\Users\simone/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
 [v _LCD_initialize LCD_initialize `(v  1 e 1 0 ]
@@ -482,22 +482,22 @@
 [v LCD_backlight@active active `uc  1 a 1 31 ]
 "278
 } 0
-"154 C:\Users\simone\Documents\GitHub\batteria4480.X\batterua.c
+"149 C:\Users\simone\Documents\GitHub\batteria4480.X\batterua.c
 [v _display_voltage display_voltage `(v  1 e 1 0 ]
 {
 [v display_voltage@line line `uc  1 a 1 wreg ]
 [v display_voltage@line line `uc  1 a 1 wreg ]
 [v display_voltage@line line `uc  1 a 1 105 ]
-"164
+"159
 } 0
 "492 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 "516
 [v sprintf@fval fval `d  1 a 4 20 ]
-[u S787 . 4 `ul 1 vd 4 0 `d 1 integ 4 0 ]
+[u S785 . 4 `ul 1 vd 4 0 `d 1 integ 4 0 ]
 "526
-[v sprintf@tmpval tmpval `S787  1 a 4 14 ]
+[v sprintf@tmpval tmpval `S785  1 a 4 14 ]
 "528
 [v sprintf@val val `ul  1 a 4 8 ]
 "504
@@ -660,12 +660,12 @@
 [v ___flge@ff2 ff2 `d  1 p 4 35 ]
 "19
 } 0
-"166 C:\Users\simone\Documents\GitHub\batteria4480.X\batterua.c
+"161 C:\Users\simone\Documents\GitHub\batteria4480.X\batterua.c
 [v _read_adc read_adc `(v  1 e 1 0 ]
 {
-"167
+"162
 [v read_adc@i i `uc  1 a 1 41 ]
-"182
+"177
 } 0
 "10 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
@@ -685,17 +685,17 @@
 "8 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1094 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1092 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1099 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S1102 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1094 1 fAsBytes 4 0 `S1099 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1102  1 a 4 70 ]
+[s S1097 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S1100 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1092 1 fAsBytes 4 0 `S1097 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1100  1 a 4 70 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 65 ]
-[s S1170 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1168 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1173 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S1170 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1173  1 a 2 74 ]
+[u S1171 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S1168 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1171  1 a 2 74 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 69 ]
 "11
