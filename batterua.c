@@ -9,17 +9,15 @@
 #include <stdio.h>
 #include <math.h>
 
-#define R1 67050 //INSERIRE VALORE Ohm PARTITORE
-#define R2 33060 //INSERIRE VALORE Ohm PARTITORE
+#define rapporto 0.3302367395864549 // R2/(R1+R2)
 #define load LATEbits.LATE0
 #define batteryCharger LATBbits.LATB7
-
 volatile int lettura [3] = 0;
 volatile unsigned int ore, minuti, secondi = 0;
 volatile unsigned long tempo, somme, tempo_old = 0;
 volatile unsigned char str [8] = 0;
 volatile unsigned char stati = 0;
-volatile float rapporto, current, voltage, sommatoriaCorrente = 0;
+float current, voltage, sommatoriaCorrente = 0;
 
 void inizializzazione(void);
 void read_adc(void);
@@ -62,11 +60,6 @@ __interrupt(low_priority) void isr_bassa(void) {
 }
 
 void main(void) {
-
-    //Calcolo il rapporto delle resistenze all'inizio  //
-    rapporto = (R1 + R2); //
-    rapporto = R2 / rapporto; //
-    //===================================================
 
     //Funzione di inizializzazione periferiche e I/O
     inizializzazione();
@@ -205,7 +198,7 @@ void inizializzazione(void) {
     TRISE = 0b00000110;
 
     LCD_initialize(16);
-    LCD_write_message("TESTER BATTERIE");
+    //LCD_write_message("TESTER BATTERIE");
     delay_ms(500);
     LCD_backlight(LCD_TURN_ON_LED);
     //LCD_clear();

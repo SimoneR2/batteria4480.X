@@ -1,41 +1,41 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"29251 C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic18f4480.h
-[s S1821 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1821 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
-"29261
-[s S1822 :1 `uc 1 ]
-[n S1822 . LD0 ]
-"29264
-[s S1823 :1 `uc 1 :1 `uc 1 ]
-[n S1823 . . LD1 ]
-"29268
-[s S1824 :2 `uc 1 :1 `uc 1 ]
-[n S1824 . . LD2 ]
-"29272
-[s S1825 :3 `uc 1 :1 `uc 1 ]
-[n S1825 . . LD3 ]
-"29276
-[s S1826 :4 `uc 1 :1 `uc 1 ]
-[n S1826 . . LD4 ]
-"29280
-[s S1827 :5 `uc 1 :1 `uc 1 ]
-[n S1827 . . LD5 ]
-"29284
-[s S1828 :6 `uc 1 :1 `uc 1 ]
-[n S1828 . . LD6 ]
-"29288
-[s S1829 :7 `uc 1 :1 `uc 1 ]
-[n S1829 . . LD7 ]
-"29250
-[u S1820 `S1821 1 `S1822 1 `S1823 1 `S1824 1 `S1825 1 `S1826 1 `S1827 1 `S1828 1 `S1829 1 ]
-[n S1820 . . . . . . . . . . ]
-"29293
-[v _LATDbits `VS1820 ~T0 @X0 0 e@3980 ]
-"74 ../../../Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/inc\delay.h
+"28987 C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic18f4480.h
+[s S1801 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1801 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
+"28997
+[s S1802 :1 `uc 1 ]
+[n S1802 . LB0 ]
+"29000
+[s S1803 :1 `uc 1 :1 `uc 1 ]
+[n S1803 . . LB1 ]
+"29004
+[s S1804 :2 `uc 1 :1 `uc 1 ]
+[n S1804 . . LB2 ]
+"29008
+[s S1805 :3 `uc 1 :1 `uc 1 ]
+[n S1805 . . LB3 ]
+"29012
+[s S1806 :4 `uc 1 :1 `uc 1 ]
+[n S1806 . . LB4 ]
+"29016
+[s S1807 :5 `uc 1 :1 `uc 1 ]
+[n S1807 . . LB5 ]
+"29020
+[s S1808 :6 `uc 1 :1 `uc 1 ]
+[n S1808 . . LB6 ]
+"29024
+[s S1809 :7 `uc 1 :1 `uc 1 ]
+[n S1809 . . LB7 ]
+"28986
+[u S1800 `S1801 1 `S1802 1 `S1803 1 `S1804 1 `S1805 1 `S1806 1 `S1807 1 `S1808 1 `S1809 1 ]
+[n S1800 . . . . . . . . . . ]
+"29029
+[v _LATBbits `VS1800 ~T0 @X0 0 e@3978 ]
+"74 C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/inc\delay.h
 [v _delay_ms `(v ~T0 @X0 0 ef1`ui ]
 "95 C:\Program Files (x86)\Microchip\xc8\v1.37\include\stdlib.h
 [v _itoa `(*uc ~T0 @X0 0 ef3`*uc`i`i ]
-"102 ../../../Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/inc\delay.h
+"102 C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/inc\delay.h
 [v _delay_set_quartz `(v ~T0 @X0 0 ef1`uc ]
 [v F15908 `(v ~T0 @X0 1 tf1`ul ]
 "157 C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic18.h
@@ -83,47 +83,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 "33618
 [v _T1CON `Vuc ~T0 @X0 0 e@4045 ]
 [p mainexit ]
-"24 batterua.c
+"22 batterua.c
 [v _inizializzazione `(v ~T0 @X0 0 ef ]
-"25
+"23
 [v _read_adc `(v ~T0 @X0 0 ef ]
-"28987 C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic18f4480.h
-[s S1801 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1801 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
-"28997
-[s S1802 :1 `uc 1 ]
-[n S1802 . LB0 ]
-"29000
-[s S1803 :1 `uc 1 :1 `uc 1 ]
-[n S1803 . . LB1 ]
-"29004
-[s S1804 :2 `uc 1 :1 `uc 1 ]
-[n S1804 . . LB2 ]
-"29008
-[s S1805 :3 `uc 1 :1 `uc 1 ]
-[n S1805 . . LB3 ]
-"29012
-[s S1806 :4 `uc 1 :1 `uc 1 ]
-[n S1806 . . LB4 ]
-"29016
-[s S1807 :5 `uc 1 :1 `uc 1 ]
-[n S1807 . . LB5 ]
-"29020
-[s S1808 :6 `uc 1 :1 `uc 1 ]
-[n S1808 . . LB6 ]
-"29024
-[s S1809 :7 `uc 1 :1 `uc 1 ]
-[n S1809 . . LB7 ]
-"28986
-[u S1800 `S1801 1 `S1802 1 `S1803 1 `S1804 1 `S1805 1 `S1806 1 `S1807 1 `S1808 1 `S1809 1 ]
-[n S1800 . . . . . . . . . . ]
-"29029
-[v _LATBbits `VS1800 ~T0 @X0 0 e@3978 ]
-"26 batterua.c
-[v _display_voltage `(v ~T0 @X0 0 ef1`uc ]
-"34253 C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic18f4480.h
-[v _T0CON `Vuc ~T0 @X0 0 e@4053 ]
-"29383
+"25
+[v _ricarica `(v ~T0 @X0 0 ef ]
+"26
+[v _stabilizzazione `(v ~T0 @X0 0 ef ]
+"27
+[v _scarica `(v ~T0 @X0 0 ef ]
+"29383 C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic18f4480.h
 [s S1831 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1831 . LATE0 LATE1 LATE2 ]
 "29388
@@ -142,7 +112,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _LATEbits `VS1830 ~T0 @X0 0 e@3981 ]
 "194 C:\Program Files (x86)\Microchip\xc8\v1.37\include\stdio.h
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"32897 C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic18f4480.h
+"24 batterua.c
+[v _display_voltage `(v ~T0 @X0 0 ef1`uc ]
+"34253 C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic18f4480.h
+[v _T0CON `Vuc ~T0 @X0 0 e@4053 ]
+"32897
 [v _ADCON0 `Vuc ~T0 @X0 0 e@4034 ]
 "32903
 [s S1997 :1 `uc 1 :1 `uc 1 ]
@@ -197,7 +171,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _LATE `Vuc ~T0 @X0 0 e@3981 ]
 "30318
 [v _TRISE `Vuc ~T0 @X0 0 e@3990 ]
-"32807
+"356 C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/inc\LCD_44780.h
+[v _LCD_backlight `(v ~T0 @X0 0 ef1`uc ]
+"32807 C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic18f4480.h
 [v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
 "32737
 [v _ADCON2 `Vuc ~T0 @X0 0 e@4032 ]
@@ -14856,21 +14832,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;inc\LCD_44780.h: 341: void LCD_cursor(unsigned char active, unsigned char blinking);
 [; ;inc\LCD_44780.h: 356: void LCD_backlight(unsigned char active);
 [; ;inc\LCD_44780.h: 370: void LCD_initialize(unsigned char quartz_frequency);
-"49 ../../../Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+"49 C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
 [v _LCD_enable_pulse `(v ~T0 @X0 1 ef ]
 {
 [; ;src\LCD_44780.c: 49: void LCD_enable_pulse (void) {
 [e :U _LCD_enable_pulse ]
 [f ]
-[; ;src\LCD_44780.c: 51: LATDbits.LATD2 = 1;
+[; ;src\LCD_44780.c: 51: LATBbits.LATB3 = 1;
 "51
-[e = . . _LATDbits 0 2 -> -> 1 `i `uc ]
+[e = . . _LATBbits 0 3 -> -> 1 `i `uc ]
 [; ;src\LCD_44780.c: 52: delay_ms (1);
 "52
 [e ( _delay_ms (1 -> -> 1 `i `ui ]
-[; ;src\LCD_44780.c: 53: LATDbits.LATD2 = 0;
+[; ;src\LCD_44780.c: 53: LATBbits.LATB3 = 0;
 "53
-[e = . . _LATDbits 0 2 -> -> 0 `i `uc ]
+[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
 [; ;src\LCD_44780.c: 54: delay_ms (1);
 "54
 [e ( _delay_ms (1 -> -> 1 `i `ui ]
@@ -14888,18 +14864,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _D1 `uc ~T0 @X0 1 r3 ]
 [v _D0 `uc ~T0 @X0 1 r4 ]
 [f ]
-[; ;src\LCD_44780.c: 63: LATDbits.LATD3 = D0;
+[; ;src\LCD_44780.c: 63: LATBbits.LATB4 = D0;
 "63
-[e = . . _LATDbits 0 3 _D0 ]
-[; ;src\LCD_44780.c: 64: LATDbits.LATD4 = D1;
+[e = . . _LATBbits 0 4 _D0 ]
+[; ;src\LCD_44780.c: 64: LATBbits.LATB5 = D1;
 "64
-[e = . . _LATDbits 0 4 _D1 ]
-[; ;src\LCD_44780.c: 65: LATDbits.LATD5 = D2;
+[e = . . _LATBbits 0 5 _D1 ]
+[; ;src\LCD_44780.c: 65: LATBbits.LATB6 = D2;
 "65
-[e = . . _LATDbits 0 5 _D2 ]
-[; ;src\LCD_44780.c: 66: LATDbits.LATD6 = D3;
+[e = . . _LATBbits 0 6 _D2 ]
+[; ;src\LCD_44780.c: 66: LATBbits.LATB7 = D3;
 "66
-[e = . . _LATDbits 0 6 _D3 ]
+[e = . . _LATBbits 0 7 _D3 ]
 [; ;src\LCD_44780.c: 67: LCD_enable_pulse ();
 "67
 [e ( _LCD_enable_pulse ..  ]
@@ -15095,9 +15071,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _D1 `uc ~T0 @X0 1 a ]
 [v _D0 `uc ~T0 @X0 1 a ]
 [; ;src\LCD_44780.c: 147: unsigned char D3,D2,D1,D0;
-[; ;src\LCD_44780.c: 149: LATDbits.LATD0 = 1;
+[; ;src\LCD_44780.c: 149: LATBbits.LATB1 = 1;
 "149
-[e = . . _LATDbits 0 0 -> -> 1 `i `uc ]
+[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
 [; ;src\LCD_44780.c: 152: D3 = (value & 0b10000000) >> 7;
 "152
 [e = _D3 -> >> & -> _value `i -> 128 `i -> 7 `i `uc ]
@@ -15128,9 +15104,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;src\LCD_44780.c: 165: LCD_send_command (D3,D2,D1,D0);
 "165
 [e ( _LCD_send_command (4 , , , _D3 _D2 _D1 _D0 ]
-[; ;src\LCD_44780.c: 167: LATDbits.LATD0 = 0;
+[; ;src\LCD_44780.c: 167: LATBbits.LATB1 = 0;
 "167
-[e = . . _LATDbits 0 0 -> -> 0 `i `uc ]
+[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
 [; ;src\LCD_44780.c: 168: }
 "168
 [e :UE 2122 ]
@@ -15327,20 +15303,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 "270
 [e :UE 2142 ]
 }
-"275
-[v _LCD_backlight `(v ~T0 @X0 1 ef1`uc ]
-{
-[; ;src\LCD_44780.c: 275: void LCD_backlight (unsigned char active) {
-[e :U _LCD_backlight ]
-[v _active `uc ~T0 @X0 1 r1 ]
-[f ]
-[; ;src\LCD_44780.c: 277: LATDbits.LATD7 = active;
-"277
-[e = . . _LATDbits 0 7 _active ]
-[; ;src\LCD_44780.c: 278: }
-"278
-[e :UE 2143 ]
-}
 "283
 [v _LCD_initialize `(v ~T0 @X0 1 ef1`uc ]
 {
@@ -15351,15 +15313,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;src\LCD_44780.c: 285: delay_set_quartz (quartz_frequency);
 "285
 [e ( _delay_set_quartz (1 _quartz_frequency ]
-[; ;src\LCD_44780.c: 287: LATDbits.LATD0 = 0x00;
+[; ;src\LCD_44780.c: 287: LATBbits.LATB1 = 0x00;
 "287
-[e = . . _LATDbits 0 0 -> -> 0 `i `uc ]
-[; ;src\LCD_44780.c: 288: LATDbits.LATD2 = 0x00;
+[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
+[; ;src\LCD_44780.c: 288: LATBbits.LATB3 = 0x00;
 "288
-[e = . . _LATDbits 0 2 -> -> 0 `i `uc ]
-[; ;src\LCD_44780.c: 289: LATDbits.LATD1 = 0x00;
+[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
+[; ;src\LCD_44780.c: 289: LATBbits.LATB2 = 0x00;
 "289
-[e = . . _LATDbits 0 1 -> -> 0 `i `uc ]
+[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
 [; ;src\LCD_44780.c: 291: delay_ms (100);
 "291
 [e ( _delay_ms (1 -> -> 100 `i `ui ]
@@ -15413,14 +15375,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _LCD_cursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
 [; ;src\LCD_44780.c: 316: }
 "316
-[e :UE 2144 ]
+[e :UE 2143 ]
 }
-"49 ../../../Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+"49 C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
 [v _delay_quartz_frequency_value `Vuc ~T0 @X0 1 e ]
 [i _delay_quartz_frequency_value
--> -> 16 `i `uc
+-> -> 20 `i `uc
 ]
-[; ;src\delay.c: 49: volatile unsigned char delay_quartz_frequency_value = 16;
+[; ;src\delay.c: 49: volatile unsigned char delay_quartz_frequency_value = 20;
 "50
 [v _clock_counter_reference `Vui ~T0 @X0 1 e ]
 [i _clock_counter_reference
@@ -15439,8 +15401,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _clock_counter_reference * _value_ms -> _delay_quartz_frequency_value `ui ]
 [; ;src\delay.c: 75: while (clock_counter_reference) {
 "75
-[e $U 2146  ]
-[e :U 2147 ]
+[e $U 2145  ]
+[e :U 2146 ]
 {
 [; ;src\delay.c: 85: _delay(240);
 "85
@@ -15450,14 +15412,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e -- _clock_counter_reference -> -> 1 `i `ui ]
 "89
 }
-[e :U 2146 ]
+[e :U 2145 ]
 "75
-[e $ != _clock_counter_reference -> -> 0 `i `Vui 2147  ]
-[e :U 2148 ]
+[e $ != _clock_counter_reference -> -> 0 `i `Vui 2146  ]
+[e :U 2147 ]
 [; ;src\delay.c: 89: }
 [; ;src\delay.c: 96: }
 "96
-[e :UE 2145 ]
+[e :UE 2144 ]
 }
 "102
 [v _delay_s `(v ~T0 @X0 1 ef1`uc ]
@@ -15473,21 +15435,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 "106
 {
 [e = _repeat_loop -> -> 0 `i `uc ]
-[e $U 2153  ]
+[e $U 2152  ]
 "107
-[e :U 2150 ]
+[e :U 2149 ]
 [; ;src\delay.c: 107: delay_ms (1000);
 [e ( _delay_ms (1 -> -> 1000 `i `ui ]
 "106
 [e ++ _repeat_loop -> -> 1 `i `uc ]
-[e :U 2153 ]
-[e $ < -> _repeat_loop `i -> _value_s `i 2150  ]
-[e :U 2151 ]
+[e :U 2152 ]
+[e $ < -> _repeat_loop `i -> _value_s `i 2149  ]
+[e :U 2150 ]
 "107
 }
 [; ;src\delay.c: 108: }
 "108
-[e :UE 2149 ]
+[e :UE 2148 ]
 }
 "115
 [v _delay_set_quartz `(v ~T0 @X0 1 ef1`uc ]
@@ -15501,7 +15463,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _delay_quartz_frequency_value _frequency ]
 [; ;src\delay.c: 119: }
 "119
-[e :UE 2154 ]
+[e :UE 2153 ]
 }
 [; ;stdarg.h: 7: typedef void * va_list[1];
 [; ;stdarg.h: 10: extern void * __va_start(void);
@@ -15558,56 +15520,58 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;math.h: 53: extern double fmod(double, double);
 [; ;math.h: 54: extern double trunc(double);
 [; ;math.h: 55: extern double round(double);
-"17 batterua.c
+"15 batterua.c
 [v _lettura `Vi ~T0 @X0 -> 3 `i e ]
 [i _lettura
 :U ..
 -> 0 `i
 ..
 ]
-[; ;batterua.c: 17: volatile int lettura [3] = 0;
-"18
+[; ;batterua.c: 15: volatile int lettura [3] = 0;
+"16
 [v _ore `Vui ~T0 @X0 1 e ]
 [v _minuti `Vui ~T0 @X0 1 e ]
 [v _secondi `Vui ~T0 @X0 1 e ]
 [i _secondi
 -> -> 0 `i `ui
 ]
-[; ;batterua.c: 18: volatile unsigned int ore, minuti, secondi = 0;
-"19
+[; ;batterua.c: 16: volatile unsigned int ore, minuti, secondi = 0;
+"17
 [v _tempo `Vul ~T0 @X0 1 e ]
 [v _somme `Vul ~T0 @X0 1 e ]
 [v _tempo_old `Vul ~T0 @X0 1 e ]
 [i _tempo_old
 -> -> -> 0 `i `l `ul
 ]
-[; ;batterua.c: 19: volatile unsigned long tempo, somme, tempo_old = 0;
-"20
+[; ;batterua.c: 17: volatile unsigned long tempo, somme, tempo_old = 0;
+"18
 [v _str `Vuc ~T0 @X0 -> 8 `i e ]
 [i _str
 :U ..
 -> -> 0 `i `uc
 ..
 ]
-[; ;batterua.c: 20: volatile unsigned char str [8] = 0;
-"21
+[; ;batterua.c: 18: volatile unsigned char str [8] = 0;
+"19
 [v _stati `Vuc ~T0 @X0 1 e ]
 [i _stati
 -> -> 0 `i `uc
 ]
-[; ;batterua.c: 21: volatile unsigned char stati = 0;
-"22
-[v _rapporto `Vf ~T0 @X0 1 e ]
-[v _current `Vf ~T0 @X0 1 e ]
-[v _voltage `Vf ~T0 @X0 1 e ]
-[v _sommatoriaCorrente `Vf ~T0 @X0 1 e ]
+[; ;batterua.c: 19: volatile unsigned char stati = 0;
+"20
+[v _current `f ~T0 @X0 1 e ]
+[v _voltage `f ~T0 @X0 1 e ]
+[v _sommatoriaCorrente `f ~T0 @X0 1 e ]
 [i _sommatoriaCorrente
 -> -> 0 `i `f
 ]
-[; ;batterua.c: 22: volatile float rapporto, current, voltage, sommatoriaCorrente = 0;
-[; ;batterua.c: 24: void inizializzazione(void);
-[; ;batterua.c: 25: void read_adc(void);
-[; ;batterua.c: 26: void display_voltage(unsigned char line);
+[; ;batterua.c: 20: float current, voltage, sommatoriaCorrente = 0;
+[; ;batterua.c: 22: void inizializzazione(void);
+[; ;batterua.c: 23: void read_adc(void);
+[; ;batterua.c: 24: void display_voltage(unsigned char line);
+[; ;batterua.c: 25: void ricarica(void);
+[; ;batterua.c: 26: void stabilizzazione(void);
+[; ;batterua.c: 27: void scarica (void);
 "29
 [v _combinazioni `uc ~T0 @X0 -> 0 `x e ]
 [i _combinazioni
@@ -15628,9 +15592,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;batterua.c: 32: 0b00001001,
 [; ;batterua.c: 33: 0b00001101
 [; ;batterua.c: 34: };
-[v F16262 `(v ~T0 @X0 1 tf ]
+[v F16266 `(v ~T0 @X0 1 tf ]
 "36
-[v _isr_alta `IF16262 ~T54 @X0 1 e ]
+[v _isr_alta `IF16266 ~T54 @X0 1 e ]
 {
 [; ;batterua.c: 36: __attribute__((interrupt("__high_priority"))) void isr_alta(void) {
 [e :U _isr_alta ]
@@ -15652,7 +15616,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ++ _secondi -> -> 1 `i `ui ]
 [; ;batterua.c: 42: if (secondi == 60) {
 "42
-[e $ ! == _secondi -> -> 60 `i `ui 2157  ]
+[e $ ! == _secondi -> -> 60 `i `ui 2156  ]
 {
 [; ;batterua.c: 43: secondi = 0;
 "43
@@ -15662,7 +15626,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ++ _minuti -> -> 1 `i `ui ]
 [; ;batterua.c: 45: if (minuti == 60) {
 "45
-[e $ ! == _minuti -> -> 60 `i `ui 2158  ]
+[e $ ! == _minuti -> -> 60 `i `ui 2157  ]
 {
 [; ;batterua.c: 46: minuti = 0;
 "46
@@ -15672,26 +15636,26 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ++ _ore -> -> 1 `i `ui ]
 "48
 }
-[e :U 2158 ]
+[e :U 2157 ]
 "49
 }
-[e :U 2157 ]
+[e :U 2156 ]
 [; ;batterua.c: 48: }
 [; ;batterua.c: 49: }
 [; ;batterua.c: 50: }
 "50
-[e :UE 2156 ]
+[e :UE 2155 ]
 }
-[v F16265 `(v ~T0 @X0 1 tf ]
+[v F16269 `(v ~T0 @X0 1 tf ]
 "52
-[v _isr_bassa `IF16265 ~T55 @X0 1 e ]
+[v _isr_bassa `IF16269 ~T55 @X0 1 e ]
 {
 [; ;batterua.c: 52: __attribute__((interrupt("__low_priority"))) void isr_bassa(void) {
 [e :U _isr_bassa ]
 [f ]
 [; ;batterua.c: 53: if (PIR1bits.TMR1IF == 1) {
 "53
-[e $ ! == -> . . _PIR1bits 0 0 `i -> 1 `i 2160  ]
+[e $ ! == -> . . _PIR1bits 0 0 `i -> 1 `i 2159  ]
 {
 [; ;batterua.c: 55: TMR1H = 0x3C;
 "55
@@ -15707,11 +15671,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _T1CON -> -> 49 `i `uc ]
 "59
 }
-[e :U 2160 ]
+[e :U 2159 ]
 [; ;batterua.c: 59: }
 [; ;batterua.c: 60: }
 "60
-[e :UE 2159 ]
+[e :UE 2158 ]
 }
 "62
 [v _main `(v ~T0 @X0 1 ef ]
@@ -15719,538 +15683,538 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;batterua.c: 62: void main(void) {
 [e :U _main ]
 [f ]
-[; ;batterua.c: 63: delay_set_quartz(16);
-"63
-[e ( _delay_set_quartz (1 -> -> 16 `i `uc ]
-[; ;batterua.c: 64: rapporto = (67050 + 33060);
-"64
-[e = _rapporto -> + -> 67050 `l -> 33060 `l `f ]
-[; ;batterua.c: 65: rapporto = 33060 / rapporto;
+[; ;batterua.c: 65: inizializzazione();
 "65
-[e = _rapporto / -> -> 33060 `l `f _rapporto ]
-[; ;batterua.c: 66: inizializzazione();
-"66
 [e ( _inizializzazione ..  ]
-[; ;batterua.c: 67: stati = 0;
-"67
-[e = _stati -> -> 0 `i `uc ]
-[; ;batterua.c: 68: while (1) {
-"68
-[e :U 2163 ]
-{
-[; ;batterua.c: 69: read_adc();
-"69
+[; ;batterua.c: 66: read_adc();
+"66
 [e ( _read_adc ..  ]
-[; ;batterua.c: 70: if (stati == 0) {
-"70
-[e $ ! == -> _stati `i -> 0 `i 2165  ]
+[; ;batterua.c: 67: while (1) {
+"67
+[e :U 2162 ]
 {
-[; ;batterua.c: 71: while ((current < -0.5) || (voltage < 14)) {
+[; ;batterua.c: 68: ricarica();
+"68
+[e ( _ricarica ..  ]
+[; ;batterua.c: 69: stabilizzazione();
+"69
+[e ( _stabilizzazione ..  ]
+[; ;batterua.c: 70: scarica();
+"70
+[e ( _scarica ..  ]
+[; ;batterua.c: 71: if (stati == 4) {
 "71
+[e $ ! == -> _stati `i -> 4 `i 2164  ]
+{
+[; ;batterua.c: 72: LATEbits.LATE0 = 0;
+"72
+[e = . . _LATEbits 0 0 -> -> 0 `i `uc ]
+[; ;batterua.c: 73: sommatoriaCorrente = sommatoriaCorrente / somme;
+"73
+[e = _sommatoriaCorrente / _sommatoriaCorrente -> _somme `f ]
+[; ;batterua.c: 74: sommatoriaCorrente = sommatoriaCorrente * (ore + ((float) minuti / 60)+((float) secondi / 3600));
+"74
+[e = _sommatoriaCorrente * _sommatoriaCorrente + + -> _ore `f / -> _minuti `f -> -> 60 `i `f / -> _secondi `f -> -> 3600 `i `f ]
+[; ;batterua.c: 75: LCD_home();
+"75
+[e ( _LCD_home ..  ]
+[; ;batterua.c: 76: LCD_write_message("test completato:");
+"76
+[e ( _LCD_write_message (1 :s 1C ]
+[; ;batterua.c: 77: LCD_goto_line(2);
+"77
+[e ( _LCD_goto_line (1 -> -> 2 `i `uc ]
+[; ;batterua.c: 78: LCD_write_message("capacita':");
+"78
+[e ( _LCD_write_message (1 :s 2C ]
+[; ;batterua.c: 79: sprintf(str, "%.3f", sommatoriaCorrente);
+"79
+[e ( _sprintf (1 , (. , -> &U _str `*uc :s 3C -> _sommatoriaCorrente `d ]
+[; ;batterua.c: 80: str[5] = '\0';
+"80
+[e = *U + &U _str * -> -> -> 5 `i `ui `ux -> -> # *U &U _str `ui `ux -> -> 0 `ui `uc ]
+[; ;batterua.c: 81: LCD_write_string(str);
+"81
+[e ( _LCD_write_string (1 -> &U _str `*uc ]
+[; ;batterua.c: 82: while (1);
+"82
+[e :U 2166 ]
+[e :U 2165 ]
 [e $U 2166  ]
 [e :U 2167 ]
-{
-[; ;batterua.c: 72: LATBbits.LATB7 = 1;
-"72
-[e = . . _LATBbits 0 7 -> -> 1 `i `uc ]
-[; ;batterua.c: 73: LCD_goto_line(1);
-"73
-[e ( _LCD_goto_line (1 -> -> 1 `i `uc ]
-[; ;batterua.c: 74: LCD_write_message("Ciclo ricarica..");
-"74
-[e ( _LCD_write_message (1 :s 1C ]
-[; ;batterua.c: 75: display_voltage(2);
-"75
-[e ( _display_voltage (1 -> -> 2 `i `uc ]
-[; ;batterua.c: 76: delay_s(1);
-"76
-[e ( _delay_s (1 -> -> 1 `i `uc ]
-[; ;batterua.c: 77: read_adc();
-"77
-[e ( _read_adc ..  ]
-"78
-}
-[e :U 2166 ]
-"71
-[e $ || < -> _current `d -U .0.5 < _voltage -> -> 14 `i `f 2167  ]
-[e :U 2168 ]
-[; ;batterua.c: 78: }
-[; ;batterua.c: 79: stati = 1;
-"79
-[e = _stati -> -> 1 `i `uc ]
-"80
-}
-[e :U 2165 ]
-[; ;batterua.c: 80: }
-[; ;batterua.c: 81: if (stati == 1) {
-"81
-[e $ ! == -> _stati `i -> 1 `i 2169  ]
-{
-[; ;batterua.c: 82: if ((current > -0.5)&&(voltage > 14.2)) {
-"82
-[e $ ! && > -> _current `d -U .0.5 > -> _voltage `d .14.2 2170  ]
-{
-[; ;batterua.c: 83: LCD_home();
 "83
-[e ( _LCD_home ..  ]
-[; ;batterua.c: 84: LCD_write_message("Carica terminata");
-"84
-[e ( _LCD_write_message (1 :s 2C ]
-[; ;batterua.c: 85: display_voltage(2);
-"85
-[e ( _display_voltage (1 -> -> 2 `i `uc ]
-[; ;batterua.c: 86: LATBbits.LATB7 = 0;
-"86
-[e = . . _LATBbits 0 7 -> -> 0 `i `uc ]
-[; ;batterua.c: 87: delay_ms(5000);
-"87
-[e ( _delay_ms (1 -> -> 5000 `i `ui ]
-"88
 }
+[e :U 2164 ]
+"84
+}
+[e :U 2161 ]
+"67
+[e $U 2162  ]
+[e :U 2163 ]
+[; ;batterua.c: 83: }
+[; ;batterua.c: 84: }
+[; ;batterua.c: 85: }
+"85
+[e :UE 2160 ]
+}
+"87
+[v _ricarica `(v ~T0 @X0 1 ef ]
+{
+[; ;batterua.c: 87: void ricarica(void) {
+[e :U _ricarica ]
+[f ]
+[; ;batterua.c: 88: while ((current < -0.5) || (voltage < 14)) {
+"88
+[e $U 2169  ]
 [e :U 2170 ]
-[; ;batterua.c: 88: }
-[; ;batterua.c: 89: stati = 2;
+{
+[; ;batterua.c: 89: LATBbits.LATB7 = 1;
 "89
-[e = _stati -> -> 2 `i `uc ]
+[e = . . _LATBbits 0 7 -> -> 1 `i `uc ]
+[; ;batterua.c: 90: LCD_goto_line(1);
 "90
+[e ( _LCD_goto_line (1 -> -> 1 `i `uc ]
+[; ;batterua.c: 91: LCD_write_message("Carica in corso:");
+"91
+[e ( _LCD_write_message (1 :s 4C ]
+[; ;batterua.c: 92: display_voltage(2);
+"92
+[e ( _display_voltage (1 -> -> 2 `i `uc ]
+[; ;batterua.c: 93: delay_s(1);
+"93
+[e ( _delay_s (1 -> -> 1 `i `uc ]
+[; ;batterua.c: 94: read_adc();
+"94
+[e ( _read_adc ..  ]
+"95
 }
 [e :U 2169 ]
-[; ;batterua.c: 90: }
-[; ;batterua.c: 91: if (stati == 2) {
-"91
-[e $ ! == -> _stati `i -> 2 `i 2171  ]
-{
-[; ;batterua.c: 92: while (voltage > 13) {
-"92
-[e $U 2172  ]
-[e :U 2173 ]
-{
-[; ;batterua.c: 93: LCD_goto_line(1);
-"93
-[e ( _LCD_goto_line (1 -> -> 1 `i `uc ]
-[; ;batterua.c: 94: LCD_write_message("     Attesa     ");
-"94
-[e ( _LCD_write_message (1 :s 3C ]
-[; ;batterua.c: 95: LCD_goto_line(2);
-"95
-[e ( _LCD_goto_line (1 -> -> 2 `i `uc ]
-[; ;batterua.c: 96: LCD_write_message("Stabilizzazione.");
-"96
-[e ( _LCD_write_message (1 :s 4C ]
-[; ;batterua.c: 97: delay_s(1);
-"97
-[e ( _delay_s (1 -> -> 1 `i `uc ]
-[; ;batterua.c: 98: delay_ms(500);
-"98
-[e ( _delay_ms (1 -> -> 500 `i `ui ]
-[; ;batterua.c: 99: display_voltage(2);
-"99
-[e ( _display_voltage (1 -> -> 2 `i `uc ]
-[; ;batterua.c: 100: delay_s(1);
-"100
-[e ( _delay_s (1 -> -> 1 `i `uc ]
-[; ;batterua.c: 101: delay_ms(500);
-"101
-[e ( _delay_ms (1 -> -> 500 `i `ui ]
-"102
-}
-[e :U 2172 ]
-"92
-[e $ > _voltage -> -> 13 `i `f 2173  ]
-[e :U 2174 ]
-[; ;batterua.c: 102: }
-[; ;batterua.c: 103: stati = 3;
-"103
-[e = _stati -> -> 3 `i `uc ]
-"104
-}
+"88
+[e $ || < -> _current `d -U .0.5 < _voltage -> -> 14 `i `f 2170  ]
 [e :U 2171 ]
-[; ;batterua.c: 104: }
-[; ;batterua.c: 105: if (stati == 3) {
-"105
-[e $ ! == -> _stati `i -> 3 `i 2175  ]
-{
-[; ;batterua.c: 106: tempo = 0;
-"106
-[e = _tempo -> -> -> 0 `i `l `ul ]
-[; ;batterua.c: 107: secondi = 0;
-"107
-[e = _secondi -> -> 0 `i `ui ]
-[; ;batterua.c: 108: minuti = 0;
-"108
-[e = _minuti -> -> 0 `i `ui ]
-[; ;batterua.c: 109: ore = 0;
-"109
-[e = _ore -> -> 0 `i `ui ]
-[; ;batterua.c: 110: T0CON = 0x85;
-"110
-[e = _T0CON -> -> 133 `i `uc ]
-[; ;batterua.c: 111: TMR0H = 0x0B;
-"111
-[e = _TMR0H -> -> 11 `i `uc ]
-[; ;batterua.c: 112: TMR0L = 0xDC;
-"112
-[e = _TMR0L -> -> 220 `i `uc ]
-[; ;batterua.c: 113: LATEbits.LATE0 = 1;
-"113
-[e = . . _LATEbits 0 0 -> -> 1 `i `uc ]
-[; ;batterua.c: 114: somme = 0;
-"114
-[e = _somme -> -> -> 0 `i `l `ul ]
-[; ;batterua.c: 115: while (voltage > 10) {
-"115
-[e $U 2176  ]
-[e :U 2177 ]
-{
-[; ;batterua.c: 116: LCD_home();
-"116
-[e ( _LCD_home ..  ]
-[; ;batterua.c: 117: LCD_write_message("tempo:");
-"117
+[; ;batterua.c: 95: }
+[; ;batterua.c: 96: LATBbits.LATB7 = 0;
+"96
+[e = . . _LATBbits 0 7 -> -> 0 `i `uc ]
+[; ;batterua.c: 97: LCD_clear();
+"97
+[e ( _LCD_clear ..  ]
+[; ;batterua.c: 98: LCD_write_message("Carica terminata");
+"98
 [e ( _LCD_write_message (1 :s 5C ]
-[; ;batterua.c: 118: LCD_write_integer(ore, 2, 0x00);
-"118
-[e ( _LCD_write_integer (3 , , -> _ore `i -> -> 2 `i `uc -> -> 0 `i `uc ]
-[; ;batterua.c: 119: LCD_write_message(":");
-"119
-[e ( _LCD_write_message (1 :s 6C ]
-[; ;batterua.c: 120: LCD_write_integer(minuti, 2, 0x00);
-"120
-[e ( _LCD_write_integer (3 , , -> _minuti `i -> -> 2 `i `uc -> -> 0 `i `uc ]
-[; ;batterua.c: 121: LCD_write_message(":");
-"121
-[e ( _LCD_write_message (1 :s 7C ]
-[; ;batterua.c: 122: LCD_write_integer(secondi, 2, 0x00);
-"122
-[e ( _LCD_write_integer (3 , , -> _secondi `i -> -> 2 `i `uc -> -> 0 `i `uc ]
-[; ;batterua.c: 123: display_voltage(2);
-"123
-[e ( _display_voltage (1 -> -> 2 `i `uc ]
-[; ;batterua.c: 124: delay_ms(100);
-"124
-[e ( _delay_ms (1 -> -> 100 `i `ui ]
-[; ;batterua.c: 125: if (tempo - tempo_old >= 59) {
-"125
-[e $ ! >= - _tempo _tempo_old -> -> -> 59 `i `l `ul 2179  ]
+[; ;batterua.c: 99: stati = 1;
+"99
+[e = _stati -> -> 1 `i `uc ]
+[; ;batterua.c: 100: delay_s(5);
+"100
+[e ( _delay_s (1 -> -> 5 `i `uc ]
+[; ;batterua.c: 101: }
+"101
+[e :UE 2168 ]
+}
+"103
+[v _stabilizzazione `(v ~T0 @X0 1 ef ]
 {
-[; ;batterua.c: 126: tempo_old = tempo;
-"126
-[e = _tempo_old _tempo ]
-[; ;batterua.c: 127: somme++;
-"127
-[e ++ _somme -> -> -> 1 `i `l `ul ]
-[; ;batterua.c: 128: sommatoriaCorrente = current + sommatoriaCorrente;
-"128
-[e = _sommatoriaCorrente + _current _sommatoriaCorrente ]
-"129
-}
-[e :U 2179 ]
-"130
-}
-[e :U 2176 ]
-"115
-[e $ > _voltage -> -> 10 `i `f 2177  ]
-[e :U 2178 ]
-[; ;batterua.c: 129: }
-[; ;batterua.c: 130: }
-[; ;batterua.c: 131: stati = 4;
-"131
-[e = _stati -> -> 4 `i `uc ]
-"132
-}
+[; ;batterua.c: 103: void stabilizzazione(void) {
+[e :U _stabilizzazione ]
+[f ]
+[; ;batterua.c: 104: if (stati == 1) {
+"104
+[e $ ! == -> _stati `i -> 1 `i 2173  ]
+{
+[; ;batterua.c: 105: while (voltage > 13) {
+"105
+[e $U 2174  ]
 [e :U 2175 ]
-[; ;batterua.c: 132: }
-[; ;batterua.c: 133: if (stati == 4) {
-"133
-[e $ ! == -> _stati `i -> 4 `i 2180  ]
 {
-[; ;batterua.c: 134: LATEbits.LATE0 = 0;
-"134
-[e = . . _LATEbits 0 0 -> -> 0 `i `uc ]
-[; ;batterua.c: 135: sommatoriaCorrente = sommatoriaCorrente / somme;
-"135
-[e = _sommatoriaCorrente / _sommatoriaCorrente -> _somme `f ]
-[; ;batterua.c: 136: sommatoriaCorrente = sommatoriaCorrente * (ore + ((float) minuti / 60)+((float) secondi / 3600));
-"136
-[e = _sommatoriaCorrente * _sommatoriaCorrente + + -> _ore `f / -> _minuti `f -> -> 60 `i `f / -> _secondi `f -> -> 3600 `i `f ]
-[; ;batterua.c: 137: LCD_home();
-"137
-[e ( _LCD_home ..  ]
-[; ;batterua.c: 138: LCD_write_message("test completato:");
-"138
-[e ( _LCD_write_message (1 :s 8C ]
-[; ;batterua.c: 139: LCD_goto_line(2);
-"139
+[; ;batterua.c: 106: LCD_goto_line(1);
+"106
+[e ( _LCD_goto_line (1 -> -> 1 `i `uc ]
+[; ;batterua.c: 107: LCD_write_message("     Attesa     ");
+"107
+[e ( _LCD_write_message (1 :s 6C ]
+[; ;batterua.c: 108: LCD_goto_line(2);
+"108
 [e ( _LCD_goto_line (1 -> -> 2 `i `uc ]
-[; ;batterua.c: 140: LCD_write_message("capacita':");
-"140
+[; ;batterua.c: 109: LCD_write_message("Stabilizzazione.");
+"109
+[e ( _LCD_write_message (1 :s 7C ]
+[; ;batterua.c: 110: delay_s(3);
+"110
+[e ( _delay_s (1 -> -> 3 `i `uc ]
+[; ;batterua.c: 111: LCD_goto_line(1);
+"111
+[e ( _LCD_goto_line (1 -> -> 1 `i `uc ]
+[; ;batterua.c: 112: LCD_write_message("  Informazioni  ");
+"112
+[e ( _LCD_write_message (1 :s 8C ]
+[; ;batterua.c: 113: display_voltage(2);
+"113
+[e ( _display_voltage (1 -> -> 2 `i `uc ]
+[; ;batterua.c: 114: delay_s(2);
+"114
+[e ( _delay_s (1 -> -> 2 `i `uc ]
+"115
+}
+[e :U 2174 ]
+"105
+[e $ > _voltage -> -> 13 `i `f 2175  ]
+[e :U 2176 ]
+[; ;batterua.c: 115: }
+[; ;batterua.c: 116: stati = 2;
+"116
+[e = _stati -> -> 2 `i `uc ]
+"117
+}
+[e :U 2173 ]
+[; ;batterua.c: 117: }
+[; ;batterua.c: 118: }
+"118
+[e :UE 2172 ]
+}
+"120
+[v _scarica `(v ~T0 @X0 1 ef ]
+{
+[; ;batterua.c: 120: void scarica (void){
+[e :U _scarica ]
+[f ]
+[; ;batterua.c: 121: if (stati == 2){
+"121
+[e $ ! == -> _stati `i -> 2 `i 2178  ]
+{
+[; ;batterua.c: 122: tempo = 0;
+"122
+[e = _tempo -> -> -> 0 `i `l `ul ]
+[; ;batterua.c: 123: secondi = 0;
+"123
+[e = _secondi -> -> 0 `i `ui ]
+[; ;batterua.c: 124: minuti = 0;
+"124
+[e = _minuti -> -> 0 `i `ui ]
+[; ;batterua.c: 125: ore = 0;
+"125
+[e = _ore -> -> 0 `i `ui ]
+[; ;batterua.c: 126: T0CON = 0x85;
+"126
+[e = _T0CON -> -> 133 `i `uc ]
+[; ;batterua.c: 127: TMR0H = 0x0B;
+"127
+[e = _TMR0H -> -> 11 `i `uc ]
+[; ;batterua.c: 128: TMR0L = 0xDC;
+"128
+[e = _TMR0L -> -> 220 `i `uc ]
+[; ;batterua.c: 129: LATEbits.LATE0 = 1;
+"129
+[e = . . _LATEbits 0 0 -> -> 1 `i `uc ]
+[; ;batterua.c: 130: somme = 0;
+"130
+[e = _somme -> -> -> 0 `i `l `ul ]
+[; ;batterua.c: 131: while (voltage > 10) {
+"131
+[e $U 2179  ]
+[e :U 2180 ]
+{
+[; ;batterua.c: 132: LCD_home();
+"132
+[e ( _LCD_home ..  ]
+[; ;batterua.c: 133: LCD_write_message("tempo:");
+"133
 [e ( _LCD_write_message (1 :s 9C ]
-[; ;batterua.c: 141: sprintf(str, "%.3f", sommatoriaCorrente);
+[; ;batterua.c: 134: LCD_write_integer(ore, 2, 0x00);
+"134
+[e ( _LCD_write_integer (3 , , -> _ore `i -> -> 2 `i `uc -> -> 0 `i `uc ]
+[; ;batterua.c: 135: LCD_write_message(":");
+"135
+[e ( _LCD_write_message (1 :s 10C ]
+[; ;batterua.c: 136: LCD_write_integer(minuti, 2, 0x00);
+"136
+[e ( _LCD_write_integer (3 , , -> _minuti `i -> -> 2 `i `uc -> -> 0 `i `uc ]
+[; ;batterua.c: 137: LCD_write_message(":");
+"137
+[e ( _LCD_write_message (1 :s 11C ]
+[; ;batterua.c: 138: LCD_write_integer(secondi, 2, 0x00);
+"138
+[e ( _LCD_write_integer (3 , , -> _secondi `i -> -> 2 `i `uc -> -> 0 `i `uc ]
+[; ;batterua.c: 139: display_voltage(2);
+"139
+[e ( _display_voltage (1 -> -> 2 `i `uc ]
+[; ;batterua.c: 140: delay_ms(100);
+"140
+[e ( _delay_ms (1 -> -> 100 `i `ui ]
+[; ;batterua.c: 141: if (tempo - tempo_old >= 59) {
 "141
-[e ( _sprintf (1 , (. , -> &U _str `*uc :s 10C -> _sommatoriaCorrente `d ]
-[; ;batterua.c: 142: str[5] = '\0';
+[e $ ! >= - _tempo _tempo_old -> -> -> 59 `i `l `ul 2182  ]
+{
+[; ;batterua.c: 142: tempo_old = tempo;
 "142
-[e = *U + &U _str * -> -> -> 5 `i `ui `ux -> -> # *U &U _str `ui `ux -> -> 0 `ui `uc ]
-[; ;batterua.c: 143: LCD_write_string(str);
+[e = _tempo_old _tempo ]
+[; ;batterua.c: 143: somme++;
 "143
-[e ( _LCD_write_string (1 -> &U _str `*uc ]
-[; ;batterua.c: 144: while (1);
+[e ++ _somme -> -> -> 1 `i `l `ul ]
+[; ;batterua.c: 144: sommatoriaCorrente = current + sommatoriaCorrente;
 "144
-[e :U 2182 ]
-[e :U 2181 ]
-[e $U 2182  ]
-[e :U 2183 ]
+[e = _sommatoriaCorrente + _current _sommatoriaCorrente ]
 "145
 }
-[e :U 2180 ]
+[e :U 2182 ]
 "146
 }
-[e :U 2162 ]
-"68
-[e $U 2163  ]
-[e :U 2164 ]
+[e :U 2179 ]
+"131
+[e $ > _voltage -> -> 10 `i `f 2180  ]
+[e :U 2181 ]
 [; ;batterua.c: 145: }
 [; ;batterua.c: 146: }
-[; ;batterua.c: 147: }
+[; ;batterua.c: 147: stati = 4;
 "147
-[e :UE 2161 ]
+[e = _stati -> -> 4 `i `uc ]
+"148
 }
+[e :U 2178 ]
+[; ;batterua.c: 148: }
+[; ;batterua.c: 149: }
 "149
+[e :UE 2177 ]
+}
+"151
 [v _display_voltage `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;batterua.c: 149: void display_voltage(unsigned char line) {
+[; ;batterua.c: 151: void display_voltage(unsigned char line) {
 [e :U _display_voltage ]
 [v _line `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;batterua.c: 150: read_adc();
-"150
-[e ( _read_adc ..  ]
-[; ;batterua.c: 151: LCD_goto_line(line);
-"151
-[e ( _LCD_goto_line (1 _line ]
-[; ;batterua.c: 152: sprintf(str, "V:%.2f", voltage);
+[; ;batterua.c: 152: read_adc();
 "152
-[e ( _sprintf (1 , (. , -> &U _str `*uc :s 11C -> _voltage `d ]
-[; ;batterua.c: 153: str[7] = '\0';
+[e ( _read_adc ..  ]
+[; ;batterua.c: 153: LCD_goto_line(line);
 "153
-[e = *U + &U _str * -> -> -> 7 `i `ui `ux -> -> # *U &U _str `ui `ux -> -> 0 `ui `uc ]
-[; ;batterua.c: 154: LCD_write_string(str);
+[e ( _LCD_goto_line (1 _line ]
+[; ;batterua.c: 154: sprintf(str, "V:%.2f", voltage);
 "154
-[e ( _LCD_write_string (1 -> &U _str `*uc ]
-[; ;batterua.c: 155: sprintf(str, " I:%.3f", current);
+[e ( _sprintf (1 , (. , -> &U _str `*uc :s 12C -> _voltage `d ]
+[; ;batterua.c: 155: str[7] = '\0';
 "155
-[e ( _sprintf (1 , (. , -> &U _str `*uc :s 12C -> _current `d ]
-[; ;batterua.c: 156: str[7] = '\0';
-"156
 [e = *U + &U _str * -> -> -> 7 `i `ui `ux -> -> # *U &U _str `ui `ux -> -> 0 `ui `uc ]
-[; ;batterua.c: 157: LCD_write_string(str);
-"157
+[; ;batterua.c: 156: LCD_write_string(str);
+"156
 [e ( _LCD_write_string (1 -> &U _str `*uc ]
-[; ;batterua.c: 158: LCD_write_message("  ");
+[; ;batterua.c: 157: sprintf(str, " I:%.3f", current);
+"157
+[e ( _sprintf (1 , (. , -> &U _str `*uc :s 13C -> _current `d ]
+[; ;batterua.c: 158: str[7] = '\0';
 "158
-[e ( _LCD_write_message (1 :s 13C ]
-[; ;batterua.c: 159: }
+[e = *U + &U _str * -> -> -> 7 `i `ui `ux -> -> # *U &U _str `ui `ux -> -> 0 `ui `uc ]
+[; ;batterua.c: 159: LCD_write_string(str);
 "159
-[e :UE 2184 ]
-}
+[e ( _LCD_write_string (1 -> &U _str `*uc ]
+[; ;batterua.c: 160: LCD_write_message("  ");
+"160
+[e ( _LCD_write_message (1 :s 14C ]
+[; ;batterua.c: 161: }
 "161
+[e :UE 2183 ]
+}
+"163
 [v _read_adc `(v ~T0 @X0 1 ef ]
 {
-[; ;batterua.c: 161: void read_adc(void) {
+[; ;batterua.c: 163: void read_adc(void) {
 [e :U _read_adc ]
 [f ]
-[; ;batterua.c: 162: for (char i = 0; i < 4; i++) {
-"162
+[; ;batterua.c: 164: for (char i = 0; i < 4; i++) {
+"164
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 4 `i 2186  ]
-[e $U 2187  ]
-[e :U 2186 ]
+[e $ < -> _i `i -> 4 `i 2185  ]
+[e $U 2186  ]
+[e :U 2185 ]
 {
-[; ;batterua.c: 163: ADCON0 = combinazioni[i];
-"163
-[e = _ADCON0 *U + &U _combinazioni * -> _i `ux -> -> # *U &U _combinazioni `ui `ux ]
-[; ;batterua.c: 164: ADCON0bits.GO = 1;
-"164
-[e = . . _ADCON0bits 4 1 -> -> 1 `i `uc ]
-[; ;batterua.c: 165: while (ADCON0bits.GODONE == 1);
+[; ;batterua.c: 165: ADCON0 = combinazioni[i];
 "165
-[e $U 2189  ]
-[e :U 2190 ]
-[e :U 2189 ]
-[e $ == -> . . _ADCON0bits 7 1 `i -> 1 `i 2190  ]
-[e :U 2191 ]
-[; ;batterua.c: 166: lettura [i] = ADRESH;
+[e = _ADCON0 *U + &U _combinazioni * -> _i `ux -> -> # *U &U _combinazioni `ui `ux ]
+[; ;batterua.c: 166: ADCON0bits.GO = 1;
 "166
-[e = *U + &U _lettura * -> _i `ux -> -> # *U &U _lettura `ui `ux -> _ADRESH `i ]
-[; ;batterua.c: 167: lettura [i] = ((lettura[i] << 8) | ADRESL);
+[e = . . _ADCON0bits 4 1 -> -> 1 `i `uc ]
+[; ;batterua.c: 167: while (ADCON0bits.GODONE == 1);
 "167
-[e = *U + &U _lettura * -> _i `ux -> -> # *U &U _lettura `ui `ux | << *U + &U _lettura * -> _i `ux -> -> # *U &U _lettura `ui `ux -> 8 `i -> _ADRESL `i ]
-[; ;batterua.c: 168: delay_ms(5);
+[e $U 2188  ]
+[e :U 2189 ]
+[e :U 2188 ]
+[e $ == -> . . _ADCON0bits 7 1 `i -> 1 `i 2189  ]
+[e :U 2190 ]
+[; ;batterua.c: 168: lettura [i] = ADRESH;
 "168
-[e ( _delay_ms (1 -> -> 5 `i `ui ]
+[e = *U + &U _lettura * -> _i `ux -> -> # *U &U _lettura `ui `ux -> _ADRESH `i ]
+[; ;batterua.c: 169: lettura [i] = ((lettura[i] << 8) | ADRESL);
 "169
-}
-"162
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 4 `i 2186  ]
-[e :U 2187 ]
-"169
-}
-[; ;batterua.c: 169: }
-[; ;batterua.c: 170: current = (lettura[2] - lettura[1]);
+[e = *U + &U _lettura * -> _i `ux -> -> # *U &U _lettura `ui `ux | << *U + &U _lettura * -> _i `ux -> -> # *U &U _lettura `ui `ux -> 8 `i -> _ADRESL `i ]
+[; ;batterua.c: 170: delay_ms(5);
 "170
-[e = _current -> - *U + &U _lettura * -> -> -> 2 `i `ui `ux -> -> # *U &U _lettura `ui `ux *U + &U _lettura * -> -> -> 1 `i `ui `ux -> -> # *U &U _lettura `ui `ux `f ]
-[; ;batterua.c: 171: current = (current * 5);
+[e ( _delay_ms (1 -> -> 5 `i `ui ]
 "171
-[e = _current * _current -> -> 5 `i `f ]
-[; ;batterua.c: 172: current = current / 1024;
-"172
-[e = _current / _current -> -> 1024 `i `f ]
-[; ;batterua.c: 173: current = current / 0.200;
-"173
-[e = _current -> / -> _current `d .0.200 `f ]
-[; ;batterua.c: 174: voltage = (lettura[0]);
-"174
-[e = _voltage -> *U + &U _lettura * -> -> -> 0 `i `ui `ux -> -> # *U &U _lettura `ui `ux `f ]
-[; ;batterua.c: 175: voltage = (voltage * 5) / 1024;
-"175
-[e = _voltage / * _voltage -> -> 5 `i `f -> -> 1024 `i `f ]
-[; ;batterua.c: 176: voltage = (float) voltage / rapporto ;
-"176
-[e = _voltage / _voltage _rapporto ]
-[; ;batterua.c: 177: }
-"177
-[e :UE 2185 ]
 }
+"164
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 4 `i 2185  ]
+[e :U 2186 ]
+"171
+}
+[; ;batterua.c: 171: }
+[; ;batterua.c: 172: current = (lettura[2] - lettura[1]);
+"172
+[e = _current -> - *U + &U _lettura * -> -> -> 2 `i `ui `ux -> -> # *U &U _lettura `ui `ux *U + &U _lettura * -> -> -> 1 `i `ui `ux -> -> # *U &U _lettura `ui `ux `f ]
+[; ;batterua.c: 173: current = (current * 5);
+"173
+[e = _current * _current -> -> 5 `i `f ]
+[; ;batterua.c: 174: current = current / 1024;
+"174
+[e = _current / _current -> -> 1024 `i `f ]
+[; ;batterua.c: 175: current = current / 0.200;
+"175
+[e = _current -> / -> _current `d .0.200 `f ]
+[; ;batterua.c: 176: voltage = (lettura[0]);
+"176
+[e = _voltage -> *U + &U _lettura * -> -> -> 0 `i `ui `ux -> -> # *U &U _lettura `ui `ux `f ]
+[; ;batterua.c: 177: voltage = (voltage * 5) / 1024;
+"177
+[e = _voltage / * _voltage -> -> 5 `i `f -> -> 1024 `i `f ]
+[; ;batterua.c: 178: voltage = (float) voltage / 0.3302367395864549;
+"178
+[e = _voltage -> / -> _voltage `d .0.3302367395864549 `f ]
+[; ;batterua.c: 179: }
 "179
+[e :UE 2184 ]
+}
+"181
 [v _inizializzazione `(v ~T0 @X0 1 ef ]
 {
-[; ;batterua.c: 179: void inizializzazione(void) {
+[; ;batterua.c: 181: void inizializzazione(void) {
 [e :U _inizializzazione ]
 [f ]
-[; ;batterua.c: 180: LATA = 0x00;
-"180
-[e = _LATA -> -> 0 `i `uc ]
-[; ;batterua.c: 181: TRISA = 0xFF;
-"181
-[e = _TRISA -> -> 255 `i `uc ]
-[; ;batterua.c: 183: LATB = 0x00;
+[; ;batterua.c: 182: stati = 0;
+"182
+[e = _stati -> -> 0 `i `uc ]
+[; ;batterua.c: 183: delay_set_quartz(16);
 "183
-[e = _LATB -> -> 0 `i `uc ]
-[; ;batterua.c: 184: TRISB = 0b01111111;
-"184
-[e = _TRISB -> -> 127 `i `uc ]
-[; ;batterua.c: 186: LATC = 0x00;
+[e ( _delay_set_quartz (1 -> -> 16 `i `uc ]
+[; ;batterua.c: 185: LATA = 0x00;
+"185
+[e = _LATA -> -> 0 `i `uc ]
+[; ;batterua.c: 186: TRISA = 0xFF;
 "186
-[e = _LATC -> -> 0 `i `uc ]
-[; ;batterua.c: 187: TRISC = 0x00;
-"187
-[e = _TRISC -> -> 0 `i `uc ]
-[; ;batterua.c: 189: LATD = 0x00;
+[e = _TRISA -> -> 255 `i `uc ]
+[; ;batterua.c: 188: LATB = 0x00;
+"188
+[e = _LATB -> -> 0 `i `uc ]
+[; ;batterua.c: 189: TRISB = 0b01111111;
 "189
-[e = _LATD -> -> 0 `i `uc ]
-[; ;batterua.c: 190: TRISD = 0x00;
-"190
-[e = _TRISD -> -> 0 `i `uc ]
-[; ;batterua.c: 192: LATE = 0x00;
+[e = _TRISB -> -> 127 `i `uc ]
+[; ;batterua.c: 191: LATC = 0x00;
+"191
+[e = _LATC -> -> 0 `i `uc ]
+[; ;batterua.c: 192: TRISC = 0x00;
 "192
-[e = _LATE -> -> 0 `i `uc ]
-[; ;batterua.c: 193: TRISE = 0b00000110;
-"193
-[e = _TRISE -> -> 6 `i `uc ]
-[; ;batterua.c: 195: LCD_initialize(16);
+[e = _TRISC -> -> 0 `i `uc ]
+[; ;batterua.c: 194: LATD = 0x00;
+"194
+[e = _LATD -> -> 0 `i `uc ]
+[; ;batterua.c: 195: TRISD = 0x00;
 "195
-[e ( _LCD_initialize (1 -> -> 16 `i `uc ]
-[; ;batterua.c: 196: LCD_write_message("TESTER BATTERIE");
-"196
-[e ( _LCD_write_message (1 :s 14C ]
-[; ;batterua.c: 197: delay_ms(500);
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;batterua.c: 197: LATE = 0x00;
 "197
-[e ( _delay_ms (1 -> -> 500 `i `ui ]
-[; ;batterua.c: 198: LCD_backlight(1);
+[e = _LATE -> -> 0 `i `uc ]
+[; ;batterua.c: 198: TRISE = 0b00000110;
 "198
-[e ( _LCD_backlight (1 -> -> 1 `i `uc ]
-[; ;batterua.c: 200: ADCON0 = 0b00000000;
+[e = _TRISE -> -> 6 `i `uc ]
+[; ;batterua.c: 200: LCD_initialize(16);
 "200
-[e = _ADCON0 -> -> 0 `i `uc ]
-[; ;batterua.c: 201: ADCON1 = 0b00001011;
-"201
-[e = _ADCON1 -> -> 11 `i `uc ]
-[; ;batterua.c: 202: ADCON2 = 0b10110101;
+[e ( _LCD_initialize (1 -> -> 16 `i `uc ]
+[; ;batterua.c: 202: delay_ms(500);
 "202
-[e = _ADCON2 -> -> 181 `i `uc ]
-[; ;batterua.c: 203: ADCON0bits.CHS3 = 0;
+[e ( _delay_ms (1 -> -> 500 `i `ui ]
+[; ;batterua.c: 203: LCD_backlight(1);
 "203
-[e = . . _ADCON0bits 2 5 -> -> 0 `i `uc ]
-[; ;batterua.c: 204: ADCON0bits.CHS2 = 0;
-"204
-[e = . . _ADCON0bits 2 4 -> -> 0 `i `uc ]
-[; ;batterua.c: 205: ADCON0bits.CHS1 = 0;
+[e ( _LCD_backlight (1 -> -> 1 `i `uc ]
+[; ;batterua.c: 205: ADCON0 = 0b00000000;
 "205
-[e = . . _ADCON0bits 2 3 -> -> 0 `i `uc ]
-[; ;batterua.c: 207: T0CON = 0x85;
+[e = _ADCON0 -> -> 0 `i `uc ]
+[; ;batterua.c: 206: ADCON1 = 0b00001011;
+"206
+[e = _ADCON1 -> -> 11 `i `uc ]
+[; ;batterua.c: 207: ADCON2 = 0b10110101;
 "207
-[e = _T0CON -> -> 133 `i `uc ]
-[; ;batterua.c: 208: TMR0H = 0x0B;
+[e = _ADCON2 -> -> 181 `i `uc ]
+[; ;batterua.c: 208: ADCON0bits.CHS3 = 0;
 "208
-[e = _TMR0H -> -> 11 `i `uc ]
-[; ;batterua.c: 209: TMR0L = 0xDC;
+[e = . . _ADCON0bits 2 5 -> -> 0 `i `uc ]
+[; ;batterua.c: 209: ADCON0bits.CHS2 = 0;
 "209
-[e = _TMR0L -> -> 220 `i `uc ]
-[; ;batterua.c: 211: T1CON = 0x31;
-"211
-[e = _T1CON -> -> 49 `i `uc ]
-[; ;batterua.c: 212: TMR1H = 0x3C;
+[e = . . _ADCON0bits 2 4 -> -> 0 `i `uc ]
+[; ;batterua.c: 210: ADCON0bits.CHS1 = 0;
+"210
+[e = . . _ADCON0bits 2 3 -> -> 0 `i `uc ]
+[; ;batterua.c: 212: T0CON = 0x85;
 "212
-[e = _TMR1H -> -> 60 `i `uc ]
-[; ;batterua.c: 213: TMR1L = 0xB0;
+[e = _T0CON -> -> 133 `i `uc ]
+[; ;batterua.c: 213: TMR0H = 0x0B;
 "213
-[e = _TMR1L -> -> 176 `i `uc ]
-[; ;batterua.c: 215: PIR1bits.TMR1IF = 0;
-"215
-[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
-[; ;batterua.c: 216: PIE1bits.TMR1IE = 1;
+[e = _TMR0H -> -> 11 `i `uc ]
+[; ;batterua.c: 214: TMR0L = 0xDC;
+"214
+[e = _TMR0L -> -> 220 `i `uc ]
+[; ;batterua.c: 216: T1CON = 0x31;
 "216
-[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
-[; ;batterua.c: 217: IPR1bits.TMR1IP = 0;
+[e = _T1CON -> -> 49 `i `uc ]
+[; ;batterua.c: 217: TMR1H = 0x3C;
 "217
-[e = . . _IPR1bits 0 0 -> -> 0 `i `uc ]
-[; ;batterua.c: 219: RCONbits.IPEN = 1;
-"219
-[e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
-[; ;batterua.c: 220: INTCONbits.GIEH = 1;
+[e = _TMR1H -> -> 60 `i `uc ]
+[; ;batterua.c: 218: TMR1L = 0xB0;
+"218
+[e = _TMR1L -> -> 176 `i `uc ]
+[; ;batterua.c: 220: PIR1bits.TMR1IF = 0;
 "220
-[e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
-[; ;batterua.c: 221: INTCONbits.GIEL = 1;
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+[; ;batterua.c: 221: PIE1bits.TMR1IE = 1;
 "221
-[e = . . _INTCONbits 2 1 -> -> 1 `i `uc ]
-[; ;batterua.c: 222: INTCONbits.TMR0IF = 0;
+[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
+[; ;batterua.c: 222: IPR1bits.TMR1IP = 0;
 "222
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-[; ;batterua.c: 223: INTCONbits.TMR0IE = 1;
-"223
-[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-[; ;batterua.c: 224: ADCON0bits.ADON = 1;
+[e = . . _IPR1bits 0 0 -> -> 0 `i `uc ]
+[; ;batterua.c: 224: RCONbits.IPEN = 1;
 "224
-[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-[; ;batterua.c: 225: }
+[e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
+[; ;batterua.c: 225: INTCONbits.GIEH = 1;
 "225
-[e :UE 2192 ]
+[e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
+[; ;batterua.c: 226: INTCONbits.GIEL = 1;
+"226
+[e = . . _INTCONbits 2 1 -> -> 1 `i `uc ]
+[; ;batterua.c: 227: INTCONbits.TMR0IF = 0;
+"227
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+[; ;batterua.c: 228: INTCONbits.TMR0IE = 1;
+"228
+[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
+[; ;batterua.c: 229: ADCON0bits.ADON = 1;
+"229
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+[; ;batterua.c: 230: }
+"230
+[e :UE 2191 ]
 }
 [p f _sprintf 8462336 ]
-[a 12C 32 73 58 37 46 51 102 0 ]
-[a 10C 37 46 51 102 0 ]
-[a 11C 86 58 37 46 50 102 0 ]
-[a 2C 67 97 114 105 99 97 32 116 101 114 109 105 110 97 116 97 0 ]
-[a 14C 84 69 83 84 69 82 32 66 65 84 84 69 82 73 69 0 ]
-[a 8C 116 101 115 116 32 99 111 109 112 108 101 116 97 116 111 58 0 ]
-[a 5C 116 101 109 112 111 58 0 ]
-[a 9C 99 97 112 97 99 105 116 97 39 58 0 ]
-[a 6C 58 0 ]
-[a 7C 58 0 ]
-[a 4C 83 116 97 98 105 108 105 122 122 97 122 105 111 110 101 46 0 ]
-[a 1C 67 105 99 108 111 32 114 105 99 97 114 105 99 97 46 46 0 ]
-[a 3C 32 32 32 32 32 65 116 116 101 115 97 32 32 32 32 32 0 ]
-[a 13C 32 32 0 ]
+[a 13C 32 73 58 37 46 51 102 0 ]
+[a 3C 37 46 51 102 0 ]
+[a 12C 86 58 37 46 50 102 0 ]
+[a 5C 67 97 114 105 99 97 32 116 101 114 109 105 110 97 116 97 0 ]
+[a 1C 116 101 115 116 32 99 111 109 112 108 101 116 97 116 111 58 0 ]
+[a 4C 67 97 114 105 99 97 32 105 110 32 99 111 114 115 111 58 0 ]
+[a 9C 116 101 109 112 111 58 0 ]
+[a 2C 99 97 112 97 99 105 116 97 39 58 0 ]
+[a 10C 58 0 ]
+[a 11C 58 0 ]
+[a 7C 83 116 97 98 105 108 105 122 122 97 122 105 111 110 101 46 0 ]
+[a 8C 32 32 73 110 102 111 114 109 97 122 105 111 110 105 32 32 0 ]
+[a 6C 32 32 32 32 32 65 116 116 101 115 97 32 32 32 32 32 0 ]
+[a 14C 32 32 0 ]
