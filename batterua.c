@@ -26,7 +26,7 @@ void read_adc(void);
 void display_voltage(unsigned char line);
 void ricarica(void);
 void stabilizzazione(void);
-
+void scarica (void);
 
 unsigned char combinazioni[] = {
     0b00000001, //AN0
@@ -70,37 +70,63 @@ void main(void) {
 
     //Funzione di inizializzazione periferiche e I/O
     inizializzazione();
-
+    read_adc();
     while (1) {
-        read_adc();
-        if (stati == 0) {
+        ricarica();
+        stabilizzazione();
+        scarica();
+        if (stati == 4) {
+            load = 0;
+            sommatoriaCorrente = sommatoriaCorrente / somme;
+            sommatoriaCorrente = sommatoriaCorrente * (ore + ((float) minuti / 60)+((float) secondi / 3600));
+            LCD_home();
+            LCD_write_message("test completato:");
+            LCD_goto_line(2);
+            LCD_write_message("capacita':");
+            sprintf(str, "%.3f", sommatoriaCorrente);
+            str[5] = '\0';
+            LCD_write_string(str);
+            while (1);
+        }
+    }
+}
 
-            
+void ricarica(void) {
+    while ((current < -0.5) || (voltage < 14)) {
+        batteryCharger = 1; //attivo ciclo ricarica
+        LCD_goto_line(1);
+        LCD_write_message("Carica in corso:");
+        display_voltage(2);
+        delay_s(1);
+        read_adc();
+    }
+    batteryCharger = 0;
+    LCD_clear();
+    LCD_write_message("Carica terminata");
+    stati = 1;
+    delay_s(5);
+}
+
+void stabilizzazione(void) {
+    if (stati == 1) {
+        while (voltage > 13) {
+            LCD_goto_line(1);
+            LCD_write_message("     Attesa     ");
+            LCD_goto_line(2);
+            LCD_write_message("Stabilizzazione.");
+            delay_s(3);
+            LCD_goto_line(1);
+            LCD_write_message("  Informazioni  ");
+            display_voltage(2);
+            delay_s(2);
         }
-        if (stati == 1) {
-                LCD_clear();
-                LCD_write_message("Carica terminata");
-                batteryCharger = 0; //attivo ciclo ricarica
-                delay_ms(5000);
-            }
-            stati = 2;
-        }
-        if (stati == 2) {
-            while (voltage > 13) {
-                LCD_goto_line(1);
-                LCD_write_message("     Attesa     ");
-                LCD_goto_line(2);
-                LCD_write_message("Stabilizzazione.");
-                delay_s(1);
-                delay_ms(500);
-                display_voltage(2);
-                delay_s(1);
-                delay_ms(500);
-            }
-            stati = 3;
-        }
-        if (stati == 3) {
-            tempo = 0;
+        stati = 2;
+    }
+}
+
+void scarica (void){
+    if (stati == 2){
+        tempo = 0;
             secondi = 0;
             minuti = 0;
             ore = 0;
@@ -127,36 +153,7 @@ void main(void) {
             }
             stati = 4;
         }
-        if (stati == 4) {
-            load = 0;
-            sommatoriaCorrente = sommatoriaCorrente / somme;
-            sommatoriaCorrente = sommatoriaCorrente * (ore + ((float) minuti / 60)+((float) secondi / 3600));
-            LCD_home();
-            LCD_write_message("test completato:");
-            LCD_goto_line(2);
-            LCD_write_message("capacita':");
-            sprintf(str, "%.3f", sommatoriaCorrente);
-            str[5] = '\0';
-            LCD_write_string(str);
-            while (1);
-        }
     }
-
-void ricarica(void) {
-    while ((current < -0.5) || (voltage < 14)) {
-        batteryCharger = 1; //attivo ciclo ricarica
-        LCD_goto_line(1);
-        LCD_write_message("Carica in corso:");
-        display_voltage(2);
-        delay_s(1);
-        read_adc();
-    }
-    stati = 1; 
-}
-
-void stabilizzazione(void) {
-
-}
 
 void display_voltage(unsigned char line) {
     read_adc();
