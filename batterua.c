@@ -24,6 +24,8 @@ volatile float rapporto, current, voltage, sommatoriaCorrente = 0;
 void inizializzazione(void);
 void read_adc(void);
 void display_voltage(unsigned char line);
+void ricarica(void);
+void stabilizzazione(void);
 
 
 unsigned char combinazioni[] = {
@@ -60,29 +62,24 @@ __interrupt(low_priority) void isr_bassa(void) {
 }
 
 void main(void) {
-    delay_set_quartz(16);
-    rapporto = (R1 + R2);
-    rapporto = R2 / rapporto;
+
+    //Calcolo il rapporto delle resistenze all'inizio  //
+    rapporto = (R1 + R2); //
+    rapporto = R2 / rapporto; //
+    //===================================================
+
+    //Funzione di inizializzazione periferiche e I/O
     inizializzazione();
-    stati = 0;
+
     while (1) {
         read_adc();
         if (stati == 0) {
-            while ((current < -0.5) || (voltage < 14)) {
-                batteryCharger = 1; //attivo ciclo ricarica
-                LCD_goto_line(1);
-                LCD_write_message("Ciclo ricarica..");
-                display_voltage(2);
-                delay_s(1);
-                read_adc();
-            }
-            stati = 1;
+
+            
         }
         if (stati == 1) {
-            if ((current > -0.5)&&(voltage > 14.2)) {
-                LCD_home();
+                LCD_clear();
                 LCD_write_message("Carica terminata");
-                display_voltage(2);
                 batteryCharger = 0; //attivo ciclo ricarica
                 delay_ms(5000);
             }
@@ -144,6 +141,21 @@ void main(void) {
             while (1);
         }
     }
+
+void ricarica(void) {
+    while ((current < -0.5) || (voltage < 14)) {
+        batteryCharger = 1; //attivo ciclo ricarica
+        LCD_goto_line(1);
+        LCD_write_message("Carica in corso:");
+        display_voltage(2);
+        delay_s(1);
+        read_adc();
+    }
+    stati = 1; 
+}
+
+void stabilizzazione(void) {
+
 }
 
 void display_voltage(unsigned char line) {
@@ -173,10 +185,13 @@ void read_adc(void) {
     current = current / 0.200;
     voltage = (lettura[0]);
     voltage = (voltage * 5) / 1024;
-    voltage = (float) voltage / rapporto ; //Conversione in tensione reale
+    voltage = (float) voltage / rapporto; //Conversione in tensione reale
 }
 
 void inizializzazione(void) {
+    stati = 0; //Funzione di sicurezza
+    delay_set_quartz(16);
+
     LATA = 0x00;
     TRISA = 0xFF; //PORTA all input
 
