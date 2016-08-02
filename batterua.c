@@ -12,6 +12,8 @@
 #define rapporto 0.3302367395864549 // R2/(R1+R2)
 #define load LATEbits.LATE0
 #define batteryCharger LATBbits.LATB7
+#define led_green LATCbits.LATC0
+#define led_red LATCbits.LATC1 
 volatile int lettura [3] = 0;
 volatile unsigned int ore, minuti, secondi = 0;
 volatile unsigned long tempo, somme, tempo_old = 0;
