@@ -19,14 +19,14 @@ volatile unsigned int ore, minuti, secondi = 0;
 volatile unsigned long tempo, somme, tempo_old = 0;
 volatile unsigned char str [8] = 0;
 volatile unsigned char stati = 0;
-float current, voltage, sommatoriaCorrente = 0;
+volatile float current, voltage, sommatoriaCorrente = 0;
 
 void inizializzazione(void);
 void read_adc(void);
 void display_voltage(unsigned char line);
 void ricarica(void);
 void stabilizzazione(void);
-void scarica (void);
+void scarica(void);
 
 unsigned char combinazioni[] = {
     0b00000001, //AN0
@@ -72,7 +72,9 @@ void main(void) {
         scarica();
         if (stati == 4) {
             load = 0;
-            sommatoriaCorrente = sommatoriaCorrente / somme;
+            if (somme != 0) {
+                sommatoriaCorrente = sommatoriaCorrente / somme;
+            }
             sommatoriaCorrente = sommatoriaCorrente * (ore + ((float) minuti / 60)+((float) secondi / 3600));
             LCD_home();
             LCD_write_message("test completato:");
@@ -119,36 +121,36 @@ void stabilizzazione(void) {
     }
 }
 
-void scarica (void){
-    if (stati == 2){
+void scarica(void) {
+    if (stati == 2) {
         tempo = 0;
-            secondi = 0;
-            minuti = 0;
-            ore = 0;
-            T0CON = 0x85;
-            TMR0H = 0x0B;
-            TMR0L = 0xDC;
-            load = 1;
-            somme = 0;
-            while (voltage > 10) {
-                LCD_home();
-                LCD_write_message("tempo:");
-                LCD_write_integer(ore, 2, ZERO_CLEANING_OFF);
-                LCD_write_message(":");
-                LCD_write_integer(minuti, 2, ZERO_CLEANING_OFF);
-                LCD_write_message(":");
-                LCD_write_integer(secondi, 2, ZERO_CLEANING_OFF);
-                display_voltage(2);
-                delay_ms(100);
-                if (tempo - tempo_old >= 59) {
-                    tempo_old = tempo;
-                    somme++;
-                    sommatoriaCorrente = current + sommatoriaCorrente;
-                }
+        secondi = 0;
+        minuti = 0;
+        ore = 0;
+        T0CON = 0x85;
+        TMR0H = 0x0B;
+        TMR0L = 0xDC;
+        load = 1;
+        somme = 0;
+        while (voltage > 10) {
+            LCD_home();
+            LCD_write_message("tempo:");
+            LCD_write_integer(ore, 2, ZERO_CLEANING_OFF);
+            LCD_write_message(":");
+            LCD_write_integer(minuti, 2, ZERO_CLEANING_OFF);
+            LCD_write_message(":");
+            LCD_write_integer(secondi, 2, ZERO_CLEANING_OFF);
+            display_voltage(2);
+            delay_ms(100);
+            if (tempo - tempo_old >= 59) {
+                tempo_old = tempo;
+                somme++;
+                sommatoriaCorrente = current + sommatoriaCorrente;
             }
-            stati = 4;
         }
+        stati = 4;
     }
+}
 
 void display_voltage(unsigned char line) {
     read_adc();
