@@ -106,6 +106,7 @@ void ricarica(void) {
 
 void stabilizzazione(void) {
     if (stati == 1) {
+        LCD_initialize(16);
         while (voltage > 13) {
             LCD_goto_line(1);
             LCD_write_message("     Attesa     ");
@@ -132,6 +133,7 @@ void scarica(void) {
         TMR0L = 0xDC;
         load = 1;
         somme = 0;
+        LCD_initialize(16);
         while (voltage > 10) {
             LCD_home();
             LCD_write_message("tempo:");
