@@ -14,8 +14,10 @@
 #define batteryCharger LATBbits.LATB7
 #define led_green LATCbits.LATC0
 #define led_red LATCbits.LATC1 
+
+volatile bit inizio = 0;
 volatile int lettura [3] = 0;
-volatile unsigned int ore, minuti, secondi = 0;
+volatile unsigned int ore, minuti, secondi, battery = 0;
 volatile unsigned long tempo, somme, tempo_old = 0;
 volatile unsigned char str [8] = 0;
 volatile unsigned char stati = 0;
@@ -36,18 +38,30 @@ unsigned char combinazioni[] = {
 };
 
 __interrupt(high_priority) void isr_alta(void) { //incremento ogni secondo
-    INTCONbits.TMR0IF = 0;
-    TMR0H = 0x0B;
-    TMR0L = 0xDC;
-    tempo++;
-    secondi++;
-    if (secondi == 60) {
-        secondi = 0;
-        minuti++;
-        if (minuti == 60) {
-            minuti = 0;
-            ore++;
+    if (INTCONbits.TMR0IF == 1) {
+        TMR0H = 0x0B;
+        TMR0L = 0xDC;
+        tempo++;
+        secondi++;
+        if (secondi == 60) {
+            secondi = 0;
+            minuti++;
+            if (minuti == 60) {
+                minuti = 0;
+                ore++;
+            }
         }
+        INTCONbits.TMR0IF = 0;
+    }
+
+    if (INTCONbits.INT0IF == 1) {
+        if (PORTBbits.RB2 == 1) {
+            battery += 5;
+        }
+        if (PORTBbits.RB2 == 0) {
+            battery -= 5;
+        }
+        INTCONbits.INT0IF = 0;
     }
 }
 
@@ -66,10 +80,24 @@ void main(void) {
     //Funzione di inizializzazione periferiche e I/O
     inizializzazione();
     read_adc();
+    LCD_write_message("selezionare capacità");
+    LCD_goto_line(2);
+    LCD_write_message("batteria:");
     while (1) {
+        while (inizio != 1) {
+            LCD_goto_xy(2, 10);
+            LCD_write_integer(capacity, 3, ZERO_CLEANING_OFF);
+            LCD_write_message("Ah");
+            delay_ms(10);
+            if (PORTBbits.RB2 == 0) {
+                inizio = 1;
+            }
+        }
+
         ricarica();
         stabilizzazione();
         scarica();
+
         if (stati == 4) {
             load = 0;
             if (somme != 0) {
@@ -205,32 +233,32 @@ void inizializzazione(void) {
 
     LCD_initialize(16);
     //LCD_write_message("TESTER BATTERIE");
-    delay_ms(500);
-    LCD_backlight(LCD_TURN_ON_LED);
+    //delay_ms(500);
+    //LCD_backlight(LCD_TURN_ON_LED);
     //LCD_clear();
+
+    //IMPOSTAZIONE ADC
     ADCON0 = 0b00000000; //DISABILITO TUTTO
     ADCON1 = 0b00001011;
     ADCON2 = 0b10110101;
     ADCON0bits.CHS3 = 0; //IMPOSTAZIONE DI SICUREZZA
     ADCON0bits.CHS2 = 0; //IMPOSTAZIONE DI SICUREZZA
     ADCON0bits.CHS1 = 0; //IMPOSTAZIONE DI SICUREZZA
+    //----------------------------------
 
     T0CON = 0x85;
     TMR0H = 0x0B;
     TMR0L = 0xDC;
 
-    T1CON = 0x31;
-    TMR1H = 0x3C;
-    TMR1L = 0xB0;
-
-    PIR1bits.TMR1IF = 0;
-    PIE1bits.TMR1IE = 1;
-    IPR1bits.TMR1IP = 0;
-
+    INTCONbits.INT0IF = 0;
+    INTCONbits.INT0IE = 1; //già in alta priorità
+    INTCON2bits.INTEDG0 = 1; //rising edge
+    INTCON2bits.TMR0IP = 1; //alta priorità
     RCONbits.IPEN = 1;
     INTCONbits.GIEH = 1;
     INTCONbits.GIEL = 1;
     INTCONbits.TMR0IF = 0;
     INTCONbits.TMR0IE = 1;
+
     ADCON0bits.ADON = 1; //attivo ADC
 }
