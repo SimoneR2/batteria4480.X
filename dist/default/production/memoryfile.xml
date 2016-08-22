@@ -3,15 +3,15 @@
   <executable name="dist/default/production\batteria4480.X.production.hex">
     <memory name="program">
       <units>bytes</units>
-      <length>16384</length>
-      <used>14081</used>
-      <free>2303</free>
+      <length>98304</length>
+      <used>17019</used>
+      <free>81285</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
-      <length>768</length>
-      <used>242</used>
-      <free>526</free>
+      <length>3328</length>
+      <used>252</used>
+      <free>3076</free>
     </memory>
   </executable>
 </project>
