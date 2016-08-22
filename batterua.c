@@ -20,7 +20,7 @@
 #define  B 4300//coefficente beta
 
 volatile bit inizio = 0;
-volatile int lettura [4] = 0;
+volatile int lettura [3] = 0;
 volatile unsigned int ore, minuti, secondi, battery = 0;
 volatile unsigned long tempo, somme, tempo_old = 0;
 volatile unsigned char str [8] = 0;
@@ -63,12 +63,8 @@ __interrupt(high_priority) void isr_alta(void) { //incremento ogni secondo
             battery += 5;
         }
         if (PORTBbits.RB2 == 0) {
-            if (battery>4){
-            battery -= 5;
-            
-        }
-            else{
-                battery = 0;
+            if (battery > 4) {
+                battery -= 5;
             }
         }
         INTCONbits.INT0IF = 0;
@@ -76,13 +72,13 @@ __interrupt(high_priority) void isr_alta(void) { //incremento ogni secondo
 }
 
 __interrupt(low_priority) void isr_bassa(void) {
-//    if (PIR1bits.TMR1IF == 1) {
-//        //read_adc();
-//        TMR1H = 0x3C;
-//        TMR1L = 0xB0;
-//        PIR1bits.TMR1IF = 0;
-//        T1CON = 0x31;
-//    }
+    if (PIR1bits.TMR1IF == 1) {
+        //read_adc();
+        TMR1H = 0x3C;
+        TMR1L = 0xB0;
+        PIR1bits.TMR1IF = 0;
+        T1CON = 0x31;
+    }
 }
 
 void main(void) {
@@ -95,13 +91,12 @@ void main(void) {
     LCD_write_message("batteria:");
     while (1) {
         while (inizio != 1) {
-            LCD_goto_xy(10, 2);
-            LCD_write_integer(battery, 3, ZERO_CLEANING_OFF);
+            LCD_goto_xy(2, 10);
+            LCD_write_integer(capacity, 3, ZERO_CLEANING_OFF);
             LCD_write_message("Ah");
             delay_ms(10);
-            if (PORTBbits.RB1 == 0) {
+            if (PORTBbits.RB2 == 0) {
                 inizio = 1;
-                INTCONbits.INT0IE = 0;
             }
         }
 
@@ -110,7 +105,7 @@ void main(void) {
         scarica();
 
         if (stati == 4) {
-            LCD_initialize(16);
+            lcd_initialize(16);
             load = 0;
             if (somme != 0) {
                 sommatoriaCorrente = sommatoriaCorrente / somme;
@@ -203,7 +198,6 @@ void scarica(void) {
 void display_voltage(unsigned char line) {
     read_adc();
     LCD_goto_line(line);
-    LCD_goto_xy(1,line);
     sprintf(str, "V:%.2f", voltage); //convert float to char
     str[7] = '\0'; //add null character
     LCD_write_string(str); //write Voltage in LCD
@@ -211,7 +205,7 @@ void display_voltage(unsigned char line) {
     str[7] = '\0'; //add null character
     LCD_write_string(str); //write Current in LCD
     sprintf(str, "T:%.1f", temperature);
-    str[4] = '\0';
+    str[5] = '\0';
     LCD_write_string(str);
 
 }
@@ -223,13 +217,12 @@ void read_adc(void) {
         while (ADCON0bits.GODONE == 1); //attendo fine conversione
         lettura [i] = ADRESH; //salvo il dato
         lettura [i] = ((lettura[i] << 8) | ADRESL); //salvo il dato
-        delay_ms(1); //attesa random
+        delay_ms(5); //attesa random
     }
     current = (lettura[2] - lettura[1]);
     current = (current * 5);
     current = current / 1024;
     current = current / 0.200;
-    current = 3.0;
     voltage = (lettura[0]);
     voltage = (voltage * 5) / 1024;
     voltage = (float) voltage / rapporto; //Conversione in tensione reale
@@ -260,7 +253,7 @@ void inizializzazione(void) {
 
     LATC = 0x00;
     TRISC = 0x00;
-
+    UCONbits.USBEN = 0;
     LATD = 0x00;
     TRISD = 0x00;
 
@@ -276,7 +269,7 @@ void inizializzazione(void) {
     //IMPOSTAZIONE ADC
     ADCON0 = 0b00000000; //DISABILITO TUTTO
     ADCON1 = 0b00001011;
-    ADCON2 = 0b10110101;
+    ADCON2 = 0b10110010;
     ADCON0bits.CHS3 = 0; //IMPOSTAZIONE DI SICUREZZA
     ADCON0bits.CHS2 = 0; //IMPOSTAZIONE DI SICUREZZA
     ADCON0bits.CHS1 = 0; //IMPOSTAZIONE DI SICUREZZA
