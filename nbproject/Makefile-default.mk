@@ -39,7 +39,7 @@ FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/batteria4480.X.${IMAGE_TYPE}.${OUTPUT
 endif
 
 ifeq ($(COMPARE_BUILD), true)
-COMPARISON_BUILD=
+COMPARISON_BUILD=--mafrlcsj
 else
 COMPARISON_BUILD=
 endif
