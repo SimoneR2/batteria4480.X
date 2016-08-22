@@ -9,11 +9,15 @@
 #include <stdio.h>
 #include <math.h>
 
+#define fan LATCbits.LATC2
 #define rapporto 0.3302367395864549 // R2/(R1+R2)
 #define load LATEbits.LATE0
 #define batteryCharger LATBbits.LATB7
 #define led_green LATCbits.LATC0
 #define led_red LATCbits.LATC1 
+#define R0 10000 //valore NTC a Tnom
+#define Tnom 25
+#define  B 4300//coefficente beta
 
 volatile bit inizio = 0;
 volatile int lettura [3] = 0;
@@ -21,7 +25,7 @@ volatile unsigned int ore, minuti, secondi, battery = 0;
 volatile unsigned long tempo, somme, tempo_old = 0;
 volatile unsigned char str [8] = 0;
 volatile unsigned char stati = 0;
-volatile float current, voltage, sommatoriaCorrente = 0;
+volatile float current, voltage, sommatoriaCorrente, temperature = 0;
 
 void inizializzazione(void);
 void read_adc(void);
@@ -99,6 +103,7 @@ void main(void) {
         scarica();
 
         if (stati == 4) {
+            lcd_initialize(16);
             load = 0;
             if (somme != 0) {
                 sommatoriaCorrente = sommatoriaCorrente / somme;
@@ -117,6 +122,7 @@ void main(void) {
 }
 
 void ricarica(void) {
+    LCD_initialize(16);
     while ((current < -0.5) || (voltage < 14)) {
         batteryCharger = 1; //attivo ciclo ricarica
         LCD_goto_line(1);
@@ -133,9 +139,10 @@ void ricarica(void) {
 }
 
 void stabilizzazione(void) {
+    LCD_initialize(16);
     if (stati == 1) {
         LCD_initialize(16);
-        while (voltage > 13) {
+        while (voltage > 13.2) {
             LCD_goto_line(1);
             LCD_write_message("     Attesa     ");
             LCD_goto_line(2);
@@ -145,12 +152,16 @@ void stabilizzazione(void) {
             LCD_write_message("  Informazioni  ");
             display_voltage(2);
             delay_s(2);
+            load = 1;
+            delay_ms(10);
+            load = 0;
         }
         stati = 2;
     }
 }
 
 void scarica(void) {
+    LCD_initialize(16);
     if (stati == 2) {
         tempo = 0;
         secondi = 0;
@@ -191,7 +202,10 @@ void display_voltage(unsigned char line) {
     sprintf(str, " I:%.3f", current); //convert float to char
     str[7] = '\0'; //add null character
     LCD_write_string(str); //write Current in LCD
-    LCD_write_message("  ");
+    sprintf(str, "T:%.1f", temperature);
+    str[5] = '\0';
+    LCD_write_string(str);
+
 }
 
 void read_adc(void) {
@@ -210,6 +224,19 @@ void read_adc(void) {
     voltage = (lettura[0]);
     voltage = (voltage * 5) / 1024;
     voltage = (float) voltage / rapporto; //Conversione in tensione reale
+    temperature = lettura[3];
+    temperature = R0 / ((1023 / temperature) - 1);
+    temperature = temperature / R0; // (R/Ro)
+    temperature = log(temperature); // ln(R/Ro)
+    temperature = temperature / B; // 1/B * ln(R/Ro)
+    temperature = temperature + 1.0 / (Tnom + 273.15); // + (1/To)
+    temperature = 1.0 / temperature; // Invert
+    temperature = temperature - 273.15; // convert to C
+    if (temperature > 40.0) {
+        fan = 1;
+    } else {
+        fan = 0;
+    }
 }
 
 void inizializzazione(void) {
