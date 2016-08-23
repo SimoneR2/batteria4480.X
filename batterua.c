@@ -107,7 +107,7 @@ void main(void) {
                     LCD_write_message("Carico a fine test?");
                     LCD_goto_line(2);
                     if (ricaricaFineCiclo == 1) {
-                        LCD_write_message("         Sì         ");
+                        LCD_write_message("         Si         ");
                     } else {
                         LCD_write_message("         No         ");
                     }
@@ -172,6 +172,11 @@ void main(void) {
                         LCD_clear();
                         LCD_write_message("  Batteria carica!  ");
                         delay_s(1);
+                        LCD_goto_line(1);
+                        LCD_write_message("scollegare per nuovo")
+                        LCD_goto_line(2);
+                        LCD_write_message("        test.       ");
+                        delay_s(1);
                     }
                 }
             }
@@ -181,7 +186,9 @@ void main(void) {
 
 void ricarica(void) {
     LCD_initialize(16);
+    batteryCharger = 1;
     while ((current < -0.5) || (voltage < 14)) {
+        read_adc();
         if ((voltage > 13) || (current < 0)) {
             batteryCharger = 1; //attivo ciclo ricarica
             LCD_goto_line(1);
@@ -214,9 +221,6 @@ void stabilizzazione(void) {
             LCD_write_message(" Attesa Stabilizzaz.");
             display_voltage(2);
             delay_s(2);
-            load = 1;
-            delay_ms(10);
-            load = 0;
         }
         stati = 2;
     }
@@ -261,10 +265,10 @@ void display_voltage(unsigned char line) {
     sprintf(str, "V:%.2f", voltage); //convert float to char
     str[7] = '\0'; //add null character
     LCD_write_string(str); //write Voltage in LCD
-    sprintf(str, " I:%.3f", current); //convert float to char
+    sprintf(str, "I:%.3f", current); //convert float to char
     str[7] = '\0'; //add null character
     LCD_write_string(str); //write Current in LCD
-    sprintf(str, " T:%.2f", temperature); //convert float to char
+    sprintf(str, "T:%.2f", temperature); //convert float to char
     str[7] = '\0'; //add null character
     LCD_write_string(str); //write Current in LCD
 }
@@ -305,7 +309,7 @@ void read_adc(void) {
         SetDCPWM1(300);
     } else if (temperature > 30.0) {
         SetDCPWM1(100);
-    } else if (temperature < 20) {
+    } else if (temperature < 30) {
         SetDCPWM1(0);
     }
 }
@@ -330,10 +334,7 @@ void inizializzazione(void) {
     TRISE = 0b00000110;
 
     LCD_initialize(16);
-    //LCD_write_message("TESTER BATTERIE");
-    //delay_ms(500);
-    //LCD_backlight(LCD_TURN_ON_LED);
-    //LCD_clear();
+
 
     //IMPOSTAZIONE ADC
     ADCON0 = 0b00000000; //DISABILITO TUTTO
@@ -360,6 +361,6 @@ void inizializzazione(void) {
 
     T2CON = 0b00000111;
     OpenPWM1(0xff);
-
+    SetDCPWM1(0);
     //ADCON0bits.ADON = 1; //attivo ADC
 }

@@ -11,15 +11,15 @@
 [v _main main `(v  1 e 1 0 ]
 "182
 [v _ricarica ricarica `(v  1 e 1 0 ]
-"208
+"210
 [v _stabilizzazione stabilizzazione `(v  1 e 1 0 ]
-"225
+"227
 [v _scarica scarica `(v  1 e 1 0 ]
-"258
+"260
 [v _display_voltage display_voltage `(v  1 e 1 0 ]
-"272
+"274
 [v _read_adc read_adc `(v  1 e 1 0 ]
-"313
+"315
 [v _inizializzazione inizializzazione `(v  1 e 1 0 ]
 "61 C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
 [v _delay_ms delay_ms `(v  1 e 1 0 ]
@@ -475,15 +475,15 @@
 [v main@minuti minuti `ui  1 a 2 41 ]
 "180
 } 0
-"208
+"210
 [v _stabilizzazione stabilizzazione `(v  1 e 1 0 ]
 {
-"223
-} 0
 "225
+} 0
+"227
 [v _scarica scarica `(v  1 e 1 0 ]
 {
-"256
+"258
 } 0
 "210 C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
 [v _LCD_write_integer LCD_write_integer `(v  1 e 1 0 ]
@@ -548,15 +548,15 @@
 "182 D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
 [v _ricarica ricarica `(v  1 e 1 0 ]
 {
-"206
+"208
 } 0
-"258
+"260
 [v _display_voltage display_voltage `(v  1 e 1 0 ]
 {
 [v display_voltage@line line `uc  1 a 1 wreg ]
 [v display_voltage@line line `uc  1 a 1 wreg ]
 [v display_voltage@line line `uc  1 a 1 134 ]
-"270
+"272
 } 0
 "492 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -705,18 +705,18 @@
 [v ___flneg@f1 f1 `d  1 p 4 0 ]
 "20
 } 0
-"272 D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+"274 D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
 [v _read_adc read_adc `(v  1 e 1 0 ]
 {
-"274
+"276
 [v read_adc@i i `uc  1 a 1 125 ]
-"273
+"275
 [v read_adc@lettura lettura `VE[4]i  1 a 8 126 ]
-"295
+"297
 [v read_adc@logaritmo logaritmo `f  1 a 4 121 ]
-"272
+"274
 [v read_adc@F5407 F5407 `VE[4]i  1 s 8 F5407 ]
-"311
+"313
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\log.c
 [v _log log `(d  1 e 4 0 ]
@@ -830,16 +830,6 @@
 [v ___fldiv@a a `d  1 p 4 31 ]
 "184
 } 0
-"7 sources\pic18\plib\PWM\pw1setdc.c
-[v _SetDCPWM1 SetDCPWM1 `(v  1 e 1 0 ]
-{
-[u S909 PWMDC 2 `ui 1 lpwm 2 0 `[2]uc 1 bpwm 2 0 ]
-"9
-[v SetDCPWM1@DCycle DCycle `S909  1 a 2 4 ]
-"7
-[v SetDCPWM1@dutycycle dutycycle `ui  1 p 2 0 ]
-"19
-} 0
 "194 C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
 [v _LCD_write_string LCD_write_string `(v  1 e 1 0 ]
 {
@@ -884,10 +874,20 @@
 {
 "78
 } 0
-"313 D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+"315 D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
 [v _inizializzazione inizializzazione `(v  1 e 1 0 ]
 {
-"365
+"367
+} 0
+"7 sources\pic18\plib\PWM\pw1setdc.c
+[v _SetDCPWM1 SetDCPWM1 `(v  1 e 1 0 ]
+{
+[u S909 PWMDC 2 `ui 1 lpwm 2 0 `[2]uc 1 bpwm 2 0 ]
+"9
+[v SetDCPWM1@DCycle DCycle `S909  1 a 2 4 ]
+"7
+[v SetDCPWM1@dutycycle dutycycle `ui  1 p 2 0 ]
+"19
 } 0
 "8 sources\pic18\plib\PWM\pw1open.c
 [v _OpenPWM1 OpenPWM1 `(v  1 e 1 0 ]

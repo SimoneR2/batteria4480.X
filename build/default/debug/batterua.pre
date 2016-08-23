@@ -6763,7 +6763,9 @@ delay_s(1);
 
 void ricarica(void) {
 LCD_initialize(16);
+LATBbits.LATB7 = 1;
 while ((current < -0.5) || (voltage < 14)) {
+read_adc();
 if ((voltage > 13) || (current < 0)) {
 LATBbits.LATB7 = 1;
 LCD_goto_line(1);
@@ -6887,7 +6889,7 @@ SetDCPWM1(500);
 SetDCPWM1(300);
 } else if (temperature > 30.0) {
 SetDCPWM1(100);
-} else if (temperature < 20) {
+} else if (temperature < 30) {
 SetDCPWM1(0);
 }
 }
@@ -6913,7 +6915,7 @@ TRISE = 0b00000110;
 
 LCD_initialize(16);
 
-# 339
+# 341
 ADCON0 = 0b00000000;
 ADCON1 = 0b00001011;
 ADCON2 = 0b10101101;
@@ -6938,6 +6940,6 @@ INTCONbits.TMR0IE = 1;
 
 T2CON = 0b00000111;
 OpenPWM1(0xff);
-
+SetDCPWM1(0);
 
 }
