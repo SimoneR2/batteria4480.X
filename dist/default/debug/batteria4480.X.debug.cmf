@@ -1,0 +1,2090 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\simon\AppData\Local\Temp\s9fc.obj
+idloc IDLOC 0 200000 200000 8 1
+reset_vec CODE 0 0 0 4 1
+end_init CODE 0 B8 B8 4 1
+config CONFIG 0 300000 300000 E 1
+$dist/default/debug\batteria4480.X.debug.obj
+intcodelo CODE 0 18 18 A0 1
+cinit CODE 0 422A 422A 66 1
+intcode_body CODE 0 395E 395E EE 1
+text0 CODE 0 924 924 5AA 1
+text1 CODE 0 40C4 40C4 7A 1
+text2 CODE 0 2922 2922 1D2 1
+text3 CODE 0 2CC2 2CC2 1C0 1
+text4 CODE 0 4338 4338 48 1
+text5 CODE 0 3C0A 3C0A BE 1
+text6 CODE 0 4290 4290 5C 1
+text7 CODE 0 413E 413E 78 1
+text8 CODE 0 362C 362C 116 1
+text9 CODE 0 3B38 3B38 D2 1
+text10 CODE 0 BC BC 868 1
+text11 CODE 0 1470 1470 4D2 1
+text12 CODE 0 45D8 45D8 28 1
+text13 CODE 0 2650 2650 2D2 1
+text14 CODE 0 3EF8 3EF8 A2 1
+text15 CODE 0 3CC8 3CC8 BE 1
+text16 CODE 0 2E82 2E82 19E 1
+text17 CODE 0 31B0 31B0 188 1
+text18 CODE 0 4030 4030 94 1
+text19 CODE 0 3D86 3D86 BC 1
+text20 CODE 0 3852 3852 10C 1
+text21 CODE 0 4380 4380 48 1
+text22 CODE 0 4446 4446 38 1
+text23 CODE 0 ECE ECE 5A2 1
+text24 CODE 0 3338 3338 186 1
+text25 CODE 0 3E42 3E42 B6 1
+text26 CODE 0 3742 3742 110 1
+text27 CODE 0 1DEA 1DEA 4A6 1
+text28 CODE 0 1942 1942 4A8 1
+text29 CODE 0 2AF4 2AF4 1CE 1
+text30 CODE 0 3020 3020 190 1
+text31 CODE 0 2290 2290 3C0 1
+text32 CODE 0 43C8 43C8 44 1
+text33 CODE 0 4600 4600 26 1
+text34 CODE 0 4580 4580 2C 1
+text35 CODE 0 45AC 45AC 2C 1
+text36 CODE 0 3F9A 3F9A 96 1
+text37 CODE 0 44EA 44EA 32 1
+text38 CODE 0 41B6 41B6 74 1
+text39 CODE 0 4664 4664 12 1
+text40 CODE 0 34BE 34BE 16E 1
+text41 CODE 0 4676 4676 8 1
+text42 CODE 0 451C 451C 32 1
+text43 CODE 0 454E 454E 32 1
+text44 CODE 0 4648 4648 1C 1
+text45 CODE 0 42EC 42EC 4C 1
+text46 CODE 0 3A4C 3A4C EC 1
+text47 CODE 0 447E 447E 36 1
+text48 CODE 0 4626 4626 22 1
+text49 CODE 0 440C 440C 3A 1
+text50 CODE 0 44B4 44B4 36 1
+nvBANK1 BANK1 1 13F 13F 2 1
+idataCOMRAM CODE 0 4682 4682 1 1
+cstackCOMRAM COMRAM 1 1 1 20 1
+cstackBANK0 BANK0 1 60 60 89 1
+cstackBANK1 BANK1 1 100 100 2D 1
+temp COMRAM 1 40 40 1 1
+bitbssCOMRAM COMRAM 1 1F0 3E 2 1
+bssBANK0 BANK0 1 E9 E9 12 1
+bssBANK1 BANK1 1 12D 12D E 1
+intcode CODE 0 8 8 E 1
+idataBANK1 CODE 0 467E 467E 4 1
+dataBANK1 BANK1 1 13B 13B 4 1
+dataCOMRAM COMRAM 1 3F 3F 1 1
+bssCOMRAM COMRAM 1 21 21 1D 1
+mediumconst MEDIUMCONST 0 7E18 7E18 1E8 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM FB-FF 1
+RAM 141-7FF 1
+SFR F60-FFF 1
+BANK0 FB-FF 1
+BANK1 141-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+CONST 4-7 1
+CONST 16-17 1
+CONST 4683-7E17 1
+STACK 141-7FF 1
+SMALLCONST 4683-7E17 1
+CODE 4-7 1
+CODE 16-17 1
+CODE 4683-7E17 1
+BIGRAM 41-5F 1
+BIGRAM FB-FF 1
+BIGRAM 141-7FF 1
+COMRAM 41-5F 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 4683-7E17 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/debug\batteria4480.X.debug.obj
+18 intcodelo CODE >53:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\Umul16.c
+18 intcodelo CODE >78:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+5E intcodelo CODE >79:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+62 intcodelo CODE >81:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+66 intcodelo CODE >82:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+6A intcodelo CODE >83:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+6C intcodelo CODE >84:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+70 intcodelo CODE >86:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+8 intcode CODE >46:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+8 intcode CODE >86:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+395E intcode_body CODE >46:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3990 intcode_body CODE >47:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3994 intcode_body CODE >48:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3998 intcode_body CODE >49:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+399C intcode_body CODE >50:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+39A8 intcode_body CODE >51:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+39AC intcode_body CODE >52:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+39B6 intcode_body CODE >53:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+39BE intcode_body CODE >54:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+39C2 intcode_body CODE >55:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+39CC intcode_body CODE >56:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+39D4 intcode_body CODE >57:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+39D8 intcode_body CODE >60:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+39DA intcode_body CODE >63:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+39DE intcode_body CODE >64:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+39E2 intcode_body CODE >65:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+39EC intcode_body CODE >66:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+39EE intcode_body CODE >68:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+39F2 intcode_body CODE >69:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3A02 intcode_body CODE >70:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3A0C intcode_body CODE >71:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3A0E intcode_body CODE >74:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3A10 intcode_body CODE >76:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+44B4 text50 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\Umul16.c
+44B4 text50 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\Umul16.c
+44C4 text50 CODE >38:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\Umul16.c
+44D2 text50 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\Umul16.c
+44E0 text50 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\Umul16.c
+440C text49 CODE >61:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+440C text49 CODE >73:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+4428 text49 CODE >75:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+442A text49 CODE >85:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+4430 text49 CODE >88:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+4438 text49 CODE >75:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+4438 text49 CODE >89:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+4626 text48 CODE >49:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4626 text48 CODE >51:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4628 text48 CODE >52:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4636 text48 CODE >53:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4638 text48 CODE >54:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4646 text48 CODE >55:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+447E text47 CODE >61:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4480 text47 CODE >63:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+448C text47 CODE >64:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4498 text47 CODE >65:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+44A4 text47 CODE >66:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+44AE text47 CODE >67:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+44B2 text47 CODE >68:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3A4C text46 CODE >111:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3A50 text46 CODE >113:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3A52 text46 CODE >115:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3A6A text46 CODE >116:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3A82 text46 CODE >117:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3A84 text46 CODE >119:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3A9C text46 CODE >120:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3AB4 text46 CODE >121:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3AB6 text46 CODE >123:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3ACE text46 CODE >124:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3AE6 text46 CODE >125:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3AE8 text46 CODE >127:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3B00 text46 CODE >128:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3B18 text46 CODE >129:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3B1A text46 CODE >113:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+42EC text45 CODE >98:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+42F0 text45 CODE >102:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+42F8 text45 CODE >103:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4310 text45 CODE >104:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4326 text45 CODE >102:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4648 text44 CODE >136:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+464C text44 CODE >138:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4654 text44 CODE >139:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4662 text44 CODE >140:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+454E text43 CODE >257:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+454E text43 CODE >259:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4566 text43 CODE >260:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+457E text43 CODE >261:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+451C text42 CODE >266:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4520 text42 CODE >268:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4538 text42 CODE >269:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+454C text42 CODE >270:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4676 text41 CODE >115:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+4678 text41 CODE >117:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+467C text41 CODE >119:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+34BE text40 CODE >283:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+34C2 text40 CODE >285:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+34CA text40 CODE >287:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+34CC text40 CODE >288:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+34CE text40 CODE >289:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+34D0 text40 CODE >291:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+34DE text40 CODE >292:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+34F6 text40 CODE >293:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3504 text40 CODE >294:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+351C text40 CODE >295:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+352A text40 CODE >296:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3542 text40 CODE >298:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+355A text40 CODE >300:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3572 text40 CODE >301:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+358A text40 CODE >303:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+35A2 text40 CODE >304:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+35BA text40 CODE >306:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+35D2 text40 CODE >307:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+35EA text40 CODE >309:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3602 text40 CODE >310:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+361A text40 CODE >312:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+361E text40 CODE >314:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+362A text40 CODE >316:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4664 text39 CODE >8:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\sources\pic18\plib\PWM\pw1open.c
+4666 text39 CODE >11:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\sources\pic18\plib\PWM\pw1open.c
+466A text39 CODE >13:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\sources\pic18\plib\PWM\pw1open.c
+466C text39 CODE >15:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\sources\pic18\plib\PWM\pw1open.c
+466E text39 CODE >16:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\sources\pic18\plib\PWM\pw1open.c
+4672 text39 CODE >17:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\sources\pic18\plib\PWM\pw1open.c
+4674 text39 CODE >19:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\sources\pic18\plib\PWM\pw1open.c
+41B6 text38 CODE >313:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+41B6 text38 CODE >314:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+41BA text38 CODE >315:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+41C0 text38 CODE >317:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+41C4 text38 CODE >318:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+41C6 text38 CODE >320:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+41CA text38 CODE >321:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+41CE text38 CODE >323:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+41D2 text38 CODE >324:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+41D6 text38 CODE >325:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+41D8 text38 CODE >326:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+41DC text38 CODE >327:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+41E0 text38 CODE >329:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+41E4 text38 CODE >330:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+41E8 text38 CODE >332:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+41EE text38 CODE >339:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+41F2 text38 CODE >340:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+41F6 text38 CODE >341:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+41FA text38 CODE >342:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+41FC text38 CODE >343:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+41FE text38 CODE >344:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+4200 text38 CODE >347:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+4204 text38 CODE >348:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+4208 text38 CODE >349:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+420C text38 CODE >351:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+420E text38 CODE >352:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+4210 text38 CODE >353:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+4212 text38 CODE >354:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+4214 text38 CODE >355:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+4216 text38 CODE >356:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+4218 text38 CODE >357:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+421A text38 CODE >358:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+421C text38 CODE >359:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+421E text38 CODE >361:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+4222 text38 CODE >362:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+4228 text38 CODE >365:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+44EA text37 CODE >74:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+44EA text37 CODE >76:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4502 text37 CODE >77:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+451A text37 CODE >78:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3F9A text36 CODE >145:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3F9E text36 CODE >149:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3FA0 text36 CODE >152:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3FAA text36 CODE >153:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3FB8 text36 CODE >154:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3FC6 text36 CODE >155:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3FD2 text36 CODE >157:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3FE6 text36 CODE >160:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+3FF4 text36 CODE >161:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4002 text36 CODE >162:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+400E text36 CODE >163:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4018 text36 CODE >165:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+402C text36 CODE >167:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+402E text36 CODE >168:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+45AC text35 CODE >178:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+45AC text35 CODE >181:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+45AE text35 CODE >184:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+45BE text35 CODE >186:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+45C4 text35 CODE >181:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4580 text34 CODE >102:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+4584 text34 CODE >106:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+458C text34 CODE >107:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+459A text34 CODE >106:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\delay.c
+4600 text33 CODE >194:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4600 text33 CODE >197:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4602 text33 CODE >200:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4610 text33 CODE >202:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+4616 text33 CODE >197:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+43C8 text32 CODE >7:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\sources\pic18\plib\PWM\pw1setdc.c
+43C8 text32 CODE >12:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\sources\pic18\plib\PWM\pw1setdc.c
+43E6 text32 CODE >15:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\sources\pic18\plib\PWM\pw1setdc.c
+43EA text32 CODE >18:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\sources\pic18\plib\PWM\pw1setdc.c
+440A text32 CODE >19:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\sources\pic18\plib\PWM\pw1setdc.c
+2290 text31 CODE >11:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2290 text31 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+229A text31 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+22A4 text31 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+22AA text31 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+22AE text31 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+22B8 text31 CODE >35:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+22C0 text31 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+22D2 text31 CODE >40:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+22D6 text31 CODE >42:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+22DC text31 CODE >46:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+22EE text31 CODE >49:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+22F8 text31 CODE >50:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2302 text31 CODE >51:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2308 text31 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+230C text31 CODE >56:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2316 text31 CODE >58:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+231E text31 CODE >60:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2330 text31 CODE >63:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2334 text31 CODE >65:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+233A text31 CODE >69:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+234C text31 CODE >75:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2360 text31 CODE >76:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2372 text31 CODE >77:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+237C text31 CODE >78:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+238E text31 CODE >82:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2398 text31 CODE >83:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+23AA text31 CODE >84:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+23BC text31 CODE >88:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+23FE text31 CODE >91:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+240E text31 CODE >92:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2420 text31 CODE >93:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2432 text31 CODE >95:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2438 text31 CODE >96:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+243A text31 CODE >99:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2444 text31 CODE >100:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2450 text31 CODE >101:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+245C text31 CODE >102:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2462 text31 CODE >103:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2466 text31 CODE >104:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2466 text31 CODE >105:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2472 text31 CODE >111:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2496 text31 CODE >114:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+249A text31 CODE >115:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+24BA text31 CODE >117:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+24BE text31 CODE >96:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+24BE text31 CODE >118:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+24C6 text31 CODE >121:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+24DA text31 CODE >122:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+24DE text31 CODE >126:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+24E0 text31 CODE >127:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+24EC text31 CODE >128:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+24F2 text31 CODE >129:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+24F6 text31 CODE >130:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+24F6 text31 CODE >131:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2502 text31 CODE >132:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+250A text31 CODE >126:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2510 text31 CODE >138:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2516 text31 CODE >139:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+251C text31 CODE >140:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2556 text31 CODE >141:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2558 text31 CODE >144:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+255E text31 CODE >145:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2564 text31 CODE >148:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2564 text31 CODE >149:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+256E text31 CODE >150:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+257C text31 CODE >151:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2582 text31 CODE >152:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+25AE text31 CODE >153:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+25B4 text31 CODE >158:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+25C8 text31 CODE >159:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+25D0 text31 CODE >160:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+25E2 text31 CODE >164:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+25F6 text31 CODE >165:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2600 text31 CODE >166:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2612 text31 CODE >168:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2618 text31 CODE >172:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+261C text31 CODE >174:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2622 text31 CODE >175:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2626 text31 CODE >176:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2628 text31 CODE >179:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+262C text31 CODE >181:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+2636 text31 CODE >182:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+263E text31 CODE >183:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcdiv.c
+3020 text30 CODE >4:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\flge.c
+3020 text30 CODE >7:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\flge.c
+305C text30 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\flge.c
+306E text30 CODE >9:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\flge.c
+30AA text30 CODE >10:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\flge.c
+30BC text30 CODE >12:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\flge.c
+30C2 text30 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\flge.c
+310E text30 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\flge.c
+3114 text30 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\flge.c
+3160 text30 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\flge.c
+3172 text30 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\flge.c
+3184 text30 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\flge.c
+2AF4 text29 CODE >10:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2AF8 text29 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2B08 text29 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2B3C text29 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2B3E text29 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2B3E text29 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2B4E text29 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2B62 text29 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2B76 text29 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2B7C text29 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2B7E text29 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2B82 text29 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2B8E text29 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2BCC text29 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2BD0 text29 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2BDE text29 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2BEA text29 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2BEA text29 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2C28 text29 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2C2C text29 CODE >35:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2C38 text29 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2C46 text29 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2C4C text29 CODE >38:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2C5E text29 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2C64 text29 CODE >40:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2C9C text29 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2CAC text29 CODE >42:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+2CB0 text29 CODE >43:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\xxtofl.c
+1942 text28 CODE >10:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1942 text28 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+194C text28 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1956 text28 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+195C text28 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1960 text28 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+196A text28 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1972 text28 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1984 text28 CODE >35:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1988 text28 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+198E text28 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+19A0 text28 CODE >44:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+19AA text28 CODE >46:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+19B6 text28 CODE >47:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+19BA text28 CODE >49:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+19C4 text28 CODE >50:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+19CA text28 CODE >51:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+19CE text28 CODE >55:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+19D8 text28 CODE >57:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+19E0 text28 CODE >59:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+19F2 text28 CODE >62:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+19F6 text28 CODE >64:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+19FC text28 CODE >68:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1A0E text28 CODE >75:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1A1A text28 CODE >77:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1A20 text28 CODE >78:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1A26 text28 CODE >81:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1A2A text28 CODE >82:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1A2E text28 CODE >83:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1A32 text28 CODE >84:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1A36 text28 CODE >85:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1A3A text28 CODE >86:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1A3E text28 CODE >87:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1A42 text28 CODE >88:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1A46 text28 CODE >89:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1A4A text28 CODE >90:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1A4E text28 CODE >91:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1A52 text28 CODE >92:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1A56 text28 CODE >93:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1A5A text28 CODE >94:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1A5E text28 CODE >95:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1A62 text28 CODE >98:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1A68 text28 CODE >100:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1AAC text28 CODE >101:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1ACA text28 CODE >102:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1ADC text28 CODE >103:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1AE0 text28 CODE >104:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1AE2 text28 CODE >106:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1AE2 text28 CODE >109:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1AE8 text28 CODE >110:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1AF4 text28 CODE >111:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1AF6 text28 CODE >113:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1AFC text28 CODE >115:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1B02 text28 CODE >116:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1B06 text28 CODE >118:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1B12 text28 CODE >119:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1B16 text28 CODE >106:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1B16 text28 CODE >120:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1B22 text28 CODE >121:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1B22 text28 CODE >124:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1B28 text28 CODE >127:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1B32 text28 CODE >128:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1B46 text28 CODE >132:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1B66 text28 CODE >134:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1B6C text28 CODE >135:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1B72 text28 CODE >136:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1B82 text28 CODE >137:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1B84 text28 CODE >139:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1B8A text28 CODE >141:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1B90 text28 CODE >142:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1B94 text28 CODE >144:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1BA0 text28 CODE >145:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1BA4 text28 CODE >148:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1BA6 text28 CODE >153:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1BD6 text28 CODE >154:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1C52 text28 CODE >155:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1C58 text28 CODE >156:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1C5C text28 CODE >157:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1C66 text28 CODE >158:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1C74 text28 CODE >160:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1C76 text28 CODE >162:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1C96 text28 CODE >163:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1C96 text28 CODE >166:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1CB4 text28 CODE >167:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1CC8 text28 CODE >172:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1CD4 text28 CODE >173:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1CDA text28 CODE >174:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1CDE text28 CODE >176:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1CE4 text28 CODE >177:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1CEA text28 CODE >180:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1CF0 text28 CODE >182:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1CFA text28 CODE >183:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1CFE text28 CODE >171:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1D04 text28 CODE >192:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1D0A text28 CODE >193:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1D10 text28 CODE >194:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1D1C text28 CODE >195:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1D1E text28 CODE >198:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1D24 text28 CODE >199:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1D2A text28 CODE >202:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1D2A text28 CODE >203:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1D34 text28 CODE >204:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1D42 text28 CODE >205:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1D48 text28 CODE >206:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1D74 text28 CODE >207:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1D7C text28 CODE >208:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1D80 text28 CODE >215:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1D92 text28 CODE >216:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1DA4 text28 CODE >218:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1DAE text28 CODE >219:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1DB4 text28 CODE >225:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1DBA text28 CODE >226:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1DBE text28 CODE >227:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1DC0 text28 CODE >230:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1DC4 text28 CODE >232:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1DCE text28 CODE >233:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1DD4 text28 CODE >234:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1DD8 text28 CODE >236:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+1DEA text27 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1DEA text27 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1DF4 text27 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1DFE text27 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1E04 text27 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1E08 text27 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1E12 text27 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1E1A text27 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1E2C text27 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1E30 text27 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1E32 text27 CODE >36:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1E44 text27 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1E4E text27 CODE >40:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1E58 text27 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1E5E text27 CODE >42:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1E62 text27 CODE >45:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1E6C text27 CODE >48:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1E74 text27 CODE >50:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1E86 text27 CODE >53:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1E8A text27 CODE >54:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1E8C text27 CODE >57:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1E9E text27 CODE >58:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1E9E text27 CODE >65:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1EB2 text27 CODE >66:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1EC6 text27 CODE >95:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1ED6 text27 CODE >96:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1EE4 text27 CODE >97:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1EF2 text27 CODE >98:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1F02 text27 CODE >99:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1F12 text27 CODE >100:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1F22 text27 CODE >101:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1F32 text27 CODE >102:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1F42 text27 CODE >103:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1F52 text27 CODE >104:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1F62 text27 CODE >105:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1F72 text27 CODE >106:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1F8E text27 CODE >107:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1F9E text27 CODE >108:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1FBA text27 CODE >109:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1FCA text27 CODE >110:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1FDA text27 CODE >111:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+1FF6 text27 CODE >112:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+2006 text27 CODE >113:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+2022 text27 CODE >114:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+2032 text27 CODE >115:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+204E text27 CODE >116:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+205E text27 CODE >117:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+20A6 text27 CODE >145:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+20EA text27 CODE >146:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+20FA text27 CODE >149:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+2122 text27 CODE >152:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+2124 text27 CODE >153:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+2130 text27 CODE >154:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+2136 text27 CODE >155:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+213A text27 CODE >156:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+213A text27 CODE >157:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+2146 text27 CODE >158:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+214E text27 CODE >152:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+2154 text27 CODE >163:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+215A text27 CODE >164:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+2160 text27 CODE >165:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+219A text27 CODE >166:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+219C text27 CODE >169:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+21A2 text27 CODE >170:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+21A8 text27 CODE >173:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+21A8 text27 CODE >174:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+21B2 text27 CODE >175:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+21C0 text27 CODE >176:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+21C6 text27 CODE >177:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+21F2 text27 CODE >178:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+21F8 text27 CODE >183:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+220C text27 CODE >184:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+221E text27 CODE >187:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+2232 text27 CODE >188:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+2244 text27 CODE >190:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+224A text27 CODE >191:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+224C text27 CODE >192:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+224C text27 CODE >194:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+2250 text27 CODE >195:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+2262 text27 CODE >196:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+2268 text27 CODE >197:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+226C text27 CODE >199:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+2276 text27 CODE >201:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+227E text27 CODE >203:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcmul.c
+3742 text26 CODE >4:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\evalpoly.c
+3742 text26 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\evalpoly.c
+3792 text26 CODE >9:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\evalpoly.c
+3794 text26 CODE >10:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\evalpoly.c
+3834 text26 CODE >9:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\evalpoly.c
+3840 text26 CODE >11:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\evalpoly.c
+3850 text26 CODE >12:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\evalpoly.c
+3E42 text25 CODE >254:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\frexp.c
+3E42 text25 CODE >256:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\frexp.c
+3E56 text25 CODE >257:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\frexp.c
+3E66 text25 CODE >258:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\frexp.c
+3E7A text25 CODE >261:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\frexp.c
+3E9E text25 CODE >262:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\frexp.c
+3EC2 text25 CODE >263:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\frexp.c
+3ED2 text25 CODE >268:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\frexp.c
+3EE2 text25 CODE >269:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\frexp.c
+3EE6 text25 CODE >273:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\frexp.c
+3338 text24 CODE >5:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\log.c
+3338 text24 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\log.c
+333E text24 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\log.c
+3346 text24 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\log.c
+335A text24 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\log.c
+336E text24 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\log.c
+3376 text24 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\log.c
+338A text24 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\log.c
+3406 text24 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\log.c
+340E text24 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\log.c
+3448 text24 CODE >35:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\log.c
+ECE text23 CODE >272:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+ECE text23 CODE >273:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+EE0 text23 CODE >274:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+EF0 text23 CODE >275:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+EF2 text23 CODE >276:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+F08 text23 CODE >277:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+F0A text23 CODE >278:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+F0E text23 CODE >279:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+F30 text23 CODE >280:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+F76 text23 CODE >281:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+F78 text23 CODE >282:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+F86 text23 CODE >274:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+F8C text23 CODE >284:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+FDC text23 CODE >285:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+1012 text23 CODE >286:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+1048 text23 CODE >287:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+107E text23 CODE >288:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+10A8 text23 CODE >289:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+1104 text23 CODE >290:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+113A text23 CODE >291:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+1168 text23 CODE >293:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+11C4 text23 CODE >294:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+1220 text23 CODE >295:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+1232 text23 CODE >296:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+127C text23 CODE >297:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+12D8 text23 CODE >298:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+130E text23 CODE >299:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+1344 text23 CODE >300:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+1370 text23 CODE >301:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+137E text23 CODE >302:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+13AC text23 CODE >303:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+13BA text23 CODE >304:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+13E8 text23 CODE >305:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+13F6 text23 CODE >306:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+1424 text23 CODE >307:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+1432 text23 CODE >308:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+1460 text23 CODE >309:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+146E text23 CODE >311:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+4446 text22 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\flneg.c
+4446 text22 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\flneg.c
+445A text22 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\flneg.c
+446C text22 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\flneg.c
+4380 text21 CODE >245:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+4380 text21 CODE >248:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+4392 text21 CODE >249:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\sprcadd.c
+3852 text20 CODE >43:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+3852 text20 CODE >47:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+3864 text20 CODE >48:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+3878 text20 CODE >49:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+38A4 text20 CODE >50:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+38A8 text20 CODE >51:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+38BA text20 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+38C0 text20 CODE >53:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+38C6 text20 CODE >54:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+38D2 text20 CODE >55:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+38E6 text20 CODE >57:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+38F2 text20 CODE >58:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+38F8 text20 CODE >59:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+38FA text20 CODE >60:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+3902 text20 CODE >61:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+3916 text20 CODE >63:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+3922 text20 CODE >64:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+3926 text20 CODE >62:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+3930 text20 CODE >67:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+393A text20 CODE >68:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+394C text20 CODE >69:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fltol.c
+3D86 text19 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lldiv.c
+3D86 text19 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lldiv.c
+3D98 text19 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lldiv.c
+3DAC text19 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lldiv.c
+3DB2 text19 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lldiv.c
+3DB4 text19 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lldiv.c
+3DC0 text19 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lldiv.c
+3DC4 text19 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lldiv.c
+3DCA text19 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lldiv.c
+3DD6 text19 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lldiv.c
+3DFA text19 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lldiv.c
+3E1A text19 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lldiv.c
+3E1E text19 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lldiv.c
+3E2A text19 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lldiv.c
+3E30 text19 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lldiv.c
+3E30 text19 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lldiv.c
+3E40 text19 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lldiv.c
+4030 text18 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\llmod.c
+4030 text18 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\llmod.c
+4044 text18 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\llmod.c
+4048 text18 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\llmod.c
+404A text18 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\llmod.c
+4056 text18 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\llmod.c
+4058 text18 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\llmod.c
+405E text18 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\llmod.c
+4082 text18 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\llmod.c
+40A2 text18 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\llmod.c
+40AE text18 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\llmod.c
+40B2 text18 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\llmod.c
+40B2 text18 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\llmod.c
+40C2 text18 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\llmod.c
+31B0 text17 CODE >60:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+31B0 text17 CODE >66:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+31C2 text17 CODE >67:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+31D6 text17 CODE >68:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+31E8 text17 CODE >69:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+31FC text17 CODE >70:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+3200 text17 CODE >71:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+3212 text17 CODE >72:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+3216 text17 CODE >73:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+3228 text17 CODE >74:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+323A text17 CODE >75:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+3240 text17 CODE >76:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+324A text17 CODE >77:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+3250 text17 CODE >79:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+325C text17 CODE >80:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+3280 text17 CODE >81:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+32A0 text17 CODE >82:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+32A4 text17 CODE >84:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+32B0 text17 CODE >85:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+32B6 text17 CODE >86:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+32BC text17 CODE >87:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+32C8 text17 CODE >88:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+32DC text17 CODE >90:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+32E8 text17 CODE >91:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+32EE text17 CODE >92:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+32F0 text17 CODE >93:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+32F8 text17 CODE >94:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+330C text17 CODE >96:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+3318 text17 CODE >97:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+331C text17 CODE >95:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+3326 text17 CODE >99:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+3326 text17 CODE >100:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+3336 text17 CODE >101:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\fldivl.c
+2E82 text16 CODE >60:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2E82 text16 CODE >66:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2EA8 text16 CODE >67:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2EBC text16 CODE >68:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2EE2 text16 CODE >69:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2EF6 text16 CODE >70:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2EFA text16 CODE >71:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2F0C text16 CODE >72:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2F10 text16 CODE >73:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2F22 text16 CODE >74:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2F34 text16 CODE >75:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2F3A text16 CODE >76:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2F44 text16 CODE >77:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2F4A text16 CODE >78:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2F4A text16 CODE >79:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2F56 text16 CODE >80:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2F72 text16 CODE >81:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2F8A text16 CODE >82:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2F8E text16 CODE >83:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2F8E text16 CODE >84:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2F98 text16 CODE >85:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2F9E text16 CODE >86:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2FA4 text16 CODE >87:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2FB0 text16 CODE >88:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2FC4 text16 CODE >90:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2FD0 text16 CODE >91:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2FD6 text16 CODE >92:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2FD8 text16 CODE >93:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2FE0 text16 CODE >94:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+2FF4 text16 CODE >96:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+3000 text16 CODE >97:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+3004 text16 CODE >95:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+300E text16 CODE >99:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+300E text16 CODE >100:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+301E text16 CODE >101:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\ftdivl.c
+3CC8 text15 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3CC8 text15 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3CCE text15 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3CD4 text15 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3CDE text15 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3CE4 text15 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3CEA text15 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3CF4 text15 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3CFA text15 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3D04 text15 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3D10 text15 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3D16 text15 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3D18 text15 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3D20 text15 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3D24 text15 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3D2A text15 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3D32 text15 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3D46 text15 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3D56 text15 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3D5A text15 CODE >36:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3D62 text15 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3D68 text15 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3D72 text15 CODE >40:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3D7C text15 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awdiv.c
+3EF8 text14 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+3EF8 text14 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+3EFE text14 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+3F04 text14 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+3F0E text14 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+3F14 text14 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+3F1A text14 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+3F24 text14 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+3F30 text14 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+3F36 text14 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+3F38 text14 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+3F40 text14 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+3F44 text14 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+3F4A text14 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+3F5E text14 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+3F6E text14 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+3F76 text14 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+3F7C text14 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+3F86 text14 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+3F90 text14 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\awmod.c
+2650 text13 CODE >409:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+2654 text13 CODE >413:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+265C text13 CODE >414:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+27E4 text13 CODE >415:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+27EC text13 CODE >416:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+28D0 text13 CODE >417:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+45D8 text12 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\isdigit.c
+45DC text12 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\isdigit.c
+1470 text11 CODE >425:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+1474 text11 CODE >428:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+147A text11 CODE >429:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+147E text11 CODE >430:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+148A text11 CODE >431:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+15EE text11 CODE >432:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+15FA text11 CODE >433:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+16B4 text11 CODE >434:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+16E0 text11 CODE >436:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+16EC text11 CODE >437:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+1850 text11 CODE >438:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+185C text11 CODE >439:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+1916 text11 CODE >440:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+BC text10 CODE >492:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+BC text10 CODE >533:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+C8 text10 CODE >536:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+CC text10 CODE >538:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+D6 text10 CODE >541:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+E6 text10 CODE >548:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+F0 text10 CODE >611:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+102 text10 CODE >612:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+106 text10 CODE >613:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+10C text10 CODE >621:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+116 text10 CODE >622:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+118 text10 CODE >623:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+15E text10 CODE >622:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+174 text10 CODE >626:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+17E text10 CODE >628:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+182 text10 CODE >635:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+184 text10 CODE >663:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+188 text10 CODE >664:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+18A text10 CODE >635:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+1B0 text10 CODE >825:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+1BA text10 CODE >827:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+1C0 text10 CODE >829:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+1CA text10 CODE >830:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+1EC text10 CODE >831:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+1F2 text10 CODE >832:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+216 text10 CODE >833:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+21C text10 CODE >835:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+226 text10 CODE >836:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+23A text10 CODE >837:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+24E text10 CODE >838:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+256 text10 CODE >839:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+274 text10 CODE >840:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+292 text10 CODE >841:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+298 text10 CODE >842:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+2A0 text10 CODE >846:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+2BA text10 CODE >847:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+2EE text10 CODE >848:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+31A text10 CODE >849:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+324 text10 CODE >850:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+350 text10 CODE >851:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+356 text10 CODE >1112:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+36C text10 CODE >1113:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+3A8 text10 CODE >1116:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+410 text10 CODE >1120:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+43C text10 CODE >1121:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+442 text10 CODE >1123:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+44C text10 CODE >1125:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+464 text10 CODE >1126:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+498 text10 CODE >1129:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+4AA text10 CODE >1130:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+4AC text10 CODE >1131:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+4D0 text10 CODE >1132:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+51A text10 CODE >1133:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+524 text10 CODE >1136:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+534 text10 CODE >1137:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+56A text10 CODE >1136:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+570 text10 CODE >1188:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+590 text10 CODE >1190:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+5A2 text10 CODE >1196:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+5A4 text10 CODE >1201:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+5F2 text10 CODE >1202:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+628 text10 CODE >1203:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+63A text10 CODE >1196:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+648 text10 CODE >1208:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+65A text10 CODE >1209:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+662 text10 CODE >1207:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+676 text10 CODE >1211:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+68C text10 CODE >1212:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+694 text10 CODE >1213:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+694 text10 CODE >1214:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+698 text10 CODE >1215:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+6AC text10 CODE >1219:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+6B6 text10 CODE >1221:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+6C8 text10 CODE >1227:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+728 text10 CODE >1228:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+72A text10 CODE >1229:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+778 text10 CODE >1230:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+7AE text10 CODE >1231:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+7C4 text10 CODE >1232:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+812 text10 CODE >1228:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+820 text10 CODE >1236:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+832 text10 CODE >1237:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+83A text10 CODE >1235:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+848 text10 CODE >1290:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+868 text10 CODE >1291:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+86E text10 CODE >1339:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+890 text10 CODE >1340:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+896 text10 CODE >1341:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+8B8 text10 CODE >1342:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+8C6 text10 CODE >1438:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+8E6 text10 CODE >1439:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+8F8 text10 CODE >536:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+916 text10 CODE >1538:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\doprnt.c
+3B38 text9 CODE >258:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3B3C text9 CODE >259:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3B40 text9 CODE >260:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3B48 text9 CODE >261:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3B74 text9 CODE >262:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3B78 text9 CODE >263:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3B88 text9 CODE >264:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3BB4 text9 CODE >265:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3BB8 text9 CODE >266:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3BC8 text9 CODE >267:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3BF4 text9 CODE >268:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3BF8 text9 CODE >269:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3C08 text9 CODE >270:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+362C text8 CODE >182:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+362C text8 CODE >183:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3632 text8 CODE >184:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3634 text8 CODE >185:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3666 text8 CODE >186:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3668 text8 CODE >187:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+366E text8 CODE >188:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+367E text8 CODE >189:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3684 text8 CODE >190:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+368A text8 CODE >191:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+368E text8 CODE >192:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3690 text8 CODE >193:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3694 text8 CODE >194:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+36A4 text8 CODE >195:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+36AA text8 CODE >196:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+36BA text8 CODE >197:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+36C8 text8 CODE >184:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3720 text8 CODE >201:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3722 text8 CODE >202:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3726 text8 CODE >203:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3736 text8 CODE >204:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+373A text8 CODE >205:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+3740 text8 CODE >206:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+413E text7 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwdiv.c
+413E text7 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwdiv.c
+4148 text7 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwdiv.c
+4154 text7 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwdiv.c
+415A text7 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwdiv.c
+415C text7 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwdiv.c
+4164 text7 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwdiv.c
+4168 text7 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwdiv.c
+416E text7 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwdiv.c
+4176 text7 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwdiv.c
+418A text7 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwdiv.c
+419A text7 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwdiv.c
+419E text7 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwdiv.c
+41A6 text7 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwdiv.c
+41AC text7 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwdiv.c
+41AC text7 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwdiv.c
+41B4 text7 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwdiv.c
+4290 text6 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwmod.c
+4290 text6 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwmod.c
+429C text6 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwmod.c
+42A0 text6 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwmod.c
+42A2 text6 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwmod.c
+42AA text6 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwmod.c
+42AC text6 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwmod.c
+42B2 text6 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwmod.c
+42C6 text6 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwmod.c
+42D6 text6 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwmod.c
+42DE text6 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwmod.c
+42E2 text6 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwmod.c
+42E2 text6 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwmod.c
+42EA text6 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\lwmod.c
+3C0A text5 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\itoa.c
+3C0A text5 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\itoa.c
+3C12 text5 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\itoa.c
+3C2E text5 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\itoa.c
+3C34 text5 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\itoa.c
+3C40 text5 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\itoa.c
+3C54 text5 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\itoa.c
+3C70 text5 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\itoa.c
+3C8C text5 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\itoa.c
+3C94 text5 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\itoa.c
+3C9A text5 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\itoa.c
+3CA0 text5 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\itoa.c
+3CB4 text5 CODE >35:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\itoa.c
+3CC0 text5 CODE >36:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\itoa.c
+4338 text4 CODE >4:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\itoa.c
+4338 text4 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\itoa.c
+4340 text4 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\itoa.c
+4346 text4 CODE >9:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\itoa.c
+4358 text4 CODE >10:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\itoa.c
+4362 text4 CODE >12:C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\itoa.c
+2CC2 text3 CODE >210:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+2CC2 text3 CODE >213:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+2CD4 text3 CODE >224:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+2CF6 text3 CODE >228:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+2D00 text3 CODE >230:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+2D16 text3 CODE >234:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+2D18 text3 CODE >236:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+2D2A text3 CODE >237:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+2D76 text3 CODE >239:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+2D7E text3 CODE >240:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+2DB8 text3 CODE >242:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+2DF2 text3 CODE >236:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+2DF8 text3 CODE >234:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+2E70 text3 CODE >249:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+2E80 text3 CODE >251:C:/Users/simon/Desktop/LaurTec_PIC_libraries_v_3.3.1 - Copia/src\LCD_44780.c
+2922 text2 CODE >225:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+2922 text2 CODE >226:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+2928 text2 CODE >227:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+2930 text2 CODE >228:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+2940 text2 CODE >229:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+2948 text2 CODE >230:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+2950 text2 CODE >231:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+2958 text2 CODE >232:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+295C text2 CODE >233:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+2960 text2 CODE >234:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+2964 text2 CODE >235:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+2966 text2 CODE >236:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+2976 text2 CODE >237:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+297C text2 CODE >238:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+297E text2 CODE >239:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+2982 text2 CODE >240:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+2992 text2 CODE >241:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+29AA text2 CODE >242:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+29BA text2 CODE >243:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+29D2 text2 CODE >244:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+29E2 text2 CODE >245:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+29FA text2 CODE >246:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+2A00 text2 CODE >247:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+2A0E text2 CODE >248:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+2A72 text2 CODE >249:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+2A82 text2 CODE >250:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+2A8E text2 CODE >251:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+2AC2 text2 CODE >238:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+2AEE text2 CODE >254:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+40C4 text1 CODE >208:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+40C4 text1 CODE >209:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+40CA text1 CODE >210:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+40D0 text1 CODE >211:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+40D6 text1 CODE >212:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+40D8 text1 CODE >213:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+40DE text1 CODE >214:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+40EE text1 CODE >215:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+40F4 text1 CODE >216:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+40FA text1 CODE >217:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+40FC text1 CODE >218:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+410A text1 CODE >219:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+410C text1 CODE >212:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+4138 text1 CODE >221:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+924 text0 CODE >88:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+924 text0 CODE >91:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+928 text0 CODE >92:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+92C text0 CODE >93:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+93C text0 CODE >94:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+942 text0 CODE >95:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+952 text0 CODE >97:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+954 text0 CODE >98:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+960 text0 CODE >99:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+978 text0 CODE >100:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+988 text0 CODE >101:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+996 text0 CODE >102:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+99A text0 CODE >103:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+99E text0 CODE >104:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+9A2 text0 CODE >105:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+9A4 text0 CODE >106:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+9A8 text0 CODE >107:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+9B8 text0 CODE >108:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+9BE text0 CODE >109:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+9C2 text0 CODE >110:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+9D2 text0 CODE >111:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+9D4 text0 CODE >112:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+9E4 text0 CODE >114:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+9E8 text0 CODE >115:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+9EA text0 CODE >116:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+9EC text0 CODE >105:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+9EC text0 CODE >118:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+9F0 text0 CODE >120:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+9FA text0 CODE >121:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+A18 text0 CODE >122:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+AD6 text0 CODE >123:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+ADA text0 CODE >124:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+AEA text0 CODE >125:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+AF0 text0 CODE >126:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+B00 text0 CODE >127:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+B18 text0 CODE >128:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+B28 text0 CODE >129:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+B40 text0 CODE >130:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+B50 text0 CODE >131:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+B56 text0 CODE >97:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+B5A text0 CODE >135:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+B5E text0 CODE >136:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+B62 text0 CODE >137:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+B66 text0 CODE >139:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+B6E text0 CODE >140:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+B74 text0 CODE >141:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+B76 text0 CODE >142:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+B82 text0 CODE >143:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+BCC text0 CODE >144:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+BCC text0 CODE >145:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+CE0 text0 CODE >148:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+CE4 text0 CODE >149:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+CF4 text0 CODE >150:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+CFA text0 CODE >151:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+D0A text0 CODE >152:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+D36 text0 CODE >153:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+D3A text0 CODE >154:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+D4A text0 CODE >155:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+D58 text0 CODE >157:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+D5C text0 CODE >158:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+D6C text0 CODE >159:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+D7E text0 CODE >160:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+DEC text0 CODE >161:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+DF2 text0 CODE >162:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+E1E text0 CODE >163:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+E22 text0 CODE >164:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+E32 text0 CODE >165:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+E42 text0 CODE >166:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+E50 text0 CODE >167:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+E54 text0 CODE >168:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+EAC text0 CODE >169:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+EAE text0 CODE >170:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+EB0 text0 CODE >171:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+EB2 text0 CODE >172:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+EB6 text0 CODE >173:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+EC6 text0 CODE >174:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+ECC text0 CODE >146:D:\DOCUMENTI LUIGINO\GitHub\batteria4480.X\batterua.c
+422A cinit CODE >1291:C:\Users\simon\AppData\Local\Temp\s9fc.
+422A cinit CODE >1293:C:\Users\simon\AppData\Local\Temp\s9fc.
+422A cinit CODE >1296:C:\Users\simon\AppData\Local\Temp\s9fc.
+422A cinit CODE >1382:C:\Users\simon\AppData\Local\Temp\s9fc.
+422E cinit CODE >1383:C:\Users\simon\AppData\Local\Temp\s9fc.
+4230 cinit CODE >1384:C:\Users\simon\AppData\Local\Temp\s9fc.
+4230 cinit CODE >1385:C:\Users\simon\AppData\Local\Temp\s9fc.
+4232 cinit CODE >1386:C:\Users\simon\AppData\Local\Temp\s9fc.
+4234 cinit CODE >1387:C:\Users\simon\AppData\Local\Temp\s9fc.
+4236 cinit CODE >1390:C:\Users\simon\AppData\Local\Temp\s9fc.
+423A cinit CODE >1391:C:\Users\simon\AppData\Local\Temp\s9fc.
+423C cinit CODE >1392:C:\Users\simon\AppData\Local\Temp\s9fc.
+423C cinit CODE >1393:C:\Users\simon\AppData\Local\Temp\s9fc.
+423E cinit CODE >1394:C:\Users\simon\AppData\Local\Temp\s9fc.
+4240 cinit CODE >1395:C:\Users\simon\AppData\Local\Temp\s9fc.
+4242 cinit CODE >1398:C:\Users\simon\AppData\Local\Temp\s9fc.
+4244 cinit CODE >1401:C:\Users\simon\AppData\Local\Temp\s9fc.
+4248 cinit CODE >1402:C:\Users\simon\AppData\Local\Temp\s9fc.
+424A cinit CODE >1403:C:\Users\simon\AppData\Local\Temp\s9fc.
+424A cinit CODE >1404:C:\Users\simon\AppData\Local\Temp\s9fc.
+424C cinit CODE >1405:C:\Users\simon\AppData\Local\Temp\s9fc.
+424E cinit CODE >1406:C:\Users\simon\AppData\Local\Temp\s9fc.
+4250 cinit CODE >1411:C:\Users\simon\AppData\Local\Temp\s9fc.
+4252 cinit CODE >1412:C:\Users\simon\AppData\Local\Temp\s9fc.
+4254 cinit CODE >1413:C:\Users\simon\AppData\Local\Temp\s9fc.
+4256 cinit CODE >1414:C:\Users\simon\AppData\Local\Temp\s9fc.
+4258 cinit CODE >1415:C:\Users\simon\AppData\Local\Temp\s9fc.
+425A cinit CODE >1416:C:\Users\simon\AppData\Local\Temp\s9fc.
+425C cinit CODE >1417:C:\Users\simon\AppData\Local\Temp\s9fc.
+4260 cinit CODE >1418:C:\Users\simon\AppData\Local\Temp\s9fc.
+4264 cinit CODE >1419:C:\Users\simon\AppData\Local\Temp\s9fc.
+4264 cinit CODE >1420:C:\Users\simon\AppData\Local\Temp\s9fc.
+4266 cinit CODE >1421:C:\Users\simon\AppData\Local\Temp\s9fc.
+426A cinit CODE >1422:C:\Users\simon\AppData\Local\Temp\s9fc.
+426C cinit CODE >1423:C:\Users\simon\AppData\Local\Temp\s9fc.
+426E cinit CODE >1424:C:\Users\simon\AppData\Local\Temp\s9fc.
+4270 cinit CODE >1428:C:\Users\simon\AppData\Local\Temp\s9fc.
+4272 cinit CODE >1429:C:\Users\simon\AppData\Local\Temp\s9fc.
+4274 cinit CODE >1430:C:\Users\simon\AppData\Local\Temp\s9fc.
+4276 cinit CODE >1431:C:\Users\simon\AppData\Local\Temp\s9fc.
+4278 cinit CODE >1432:C:\Users\simon\AppData\Local\Temp\s9fc.
+427A cinit CODE >1433:C:\Users\simon\AppData\Local\Temp\s9fc.
+427C cinit CODE >1434:C:\Users\simon\AppData\Local\Temp\s9fc.
+427E cinit CODE >1435:C:\Users\simon\AppData\Local\Temp\s9fc.
+4282 cinit CODE >1441:C:\Users\simon\AppData\Local\Temp\s9fc.
+4282 cinit CODE >1443:C:\Users\simon\AppData\Local\Temp\s9fc.
+4284 cinit CODE >1444:C:\Users\simon\AppData\Local\Temp\s9fc.
+4286 cinit CODE >1446:C:\Users\simon\AppData\Local\Temp\s9fc.
+4288 cinit CODE >1447:C:\Users\simon\AppData\Local\Temp\s9fc.
+428A cinit CODE >1448:C:\Users\simon\AppData\Local\Temp\s9fc.
+428C cinit CODE >1449:C:\Users\simon\AppData\Local\Temp\s9fc.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___awdiv@counter 6A 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___lwmod@counter 20 0 COMRAM 1 cstackCOMRAM dist/default/debug\batteria4480.X.debug.obj
+__LdataBANK1 0 0 ABS 0 dataBANK1 dist/default/debug\batteria4480.X.debug.obj
+__Lmediumconst 7E18 0 MEDIUMCONST 0 mediumconst dist/default/debug\batteria4480.X.debug.obj
+__Hspace_0 30000E 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__Hspace_1 1F2 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__Hspace_2 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__CFG_IESO$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_ricaricaFineCiclo 1F1 -1B2 COMRAM 1 bitbssCOMRAM dist/default/debug\batteria4480.X.debug.obj
+__HidataBANK1 0 0 ABS 0 idataBANK1 dist/default/debug\batteria4480.X.debug.obj
+__end_of_LCD_send_command 44B4 0 CODE 0 text47 dist/default/debug\batteria4480.X.debug.obj
+__end_of__tdiv_to_l_ 3020 0 CODE 0 text16 dist/default/debug\batteria4480.X.debug.obj
+LCD_write_integer@convertedInt 87 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+_current E9 0 BANK0 1 bssBANK0 dist/default/debug\batteria4480.X.debug.obj
+frexp@eptr 64 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/debug\batteria4480.X.debug.obj
+__mediumconst 7E18 0 MEDIUMCONST 0 mediumconst C:\Users\simon\AppData\Local\Temp\s9fc.obj
+LCD_write_char@value 6F 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+main@percentuale 125 0 BANK1 1 cstackBANK1 dist/default/debug\batteria4480.X.debug.obj
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\batteria4480.X.debug.obj
+__size_of_LCD_send_command 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of_LCD_write_message 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+?_log D1 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+SetDCPWM1@DCycle 64 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+itoa@base 7A 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/debug\batteria4480.X.debug.obj
+_LATA F89 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_LATB F8A 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_LATC F8B 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_LATD F8C 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_LATE F8D 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+___sp 0 0 STACK 2 stack C:\Users\simon\AppData\Local\Temp\s9fc.obj
+_itoa 4338 0 CODE 0 text4 dist/default/debug\batteria4480.X.debug.obj
+_main 924 0 CODE 0 text0 dist/default/debug\batteria4480.X.debug.obj
+_utoa 3C0A 0 CODE 0 text5 dist/default/debug\batteria4480.X.debug.obj
+btemp 40 0 COMRAM 1 temp dist/default/debug\batteria4480.X.debug.obj
+log@x D1 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+start B8 0 CODE 0 init C:\Users\simon\AppData\Local\Temp\s9fc.obj
+___flmul@aexp B5 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___flmul@bexp BA 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___flmul@prod BB 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___flmul@sign B4 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___flmul@temp BF 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__size_of___awdiv 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of___awmod 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of___fladd 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of___fldiv 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of___flmul 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of___flneg 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of___flsub 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of___fltol 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of_itoa 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of_main 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of_utoa 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of___lldiv 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of___llmod 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of___lwdiv 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of___lwmod 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+LCD_shift_cursor@i 6D 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__size_of_LCD_initialize 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug\batteria4480.X.debug.obj
+__size_of_LCD_write_char 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+?___wmul 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__LidataBANK1 0 0 ABS 0 idataBANK1 dist/default/debug\batteria4480.X.debug.obj
+_LCD_home 44EA 0 CODE 0 text37 dist/default/debug\batteria4480.X.debug.obj
+__Hpowerup B8 0 CODE 0 powerup dist/default/debug\batteria4480.X.debug.obj
+__pbitbssCOMRAM 1F0 -1B2 COMRAM 1 bitbssCOMRAM dist/default/debug\batteria4480.X.debug.obj
+delay_s@value_s 68 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+log@coeff 7EA9 0 MEDIUMCONST 0 mediumconst dist/default/debug\batteria4480.X.debug.obj
+___awmod@sign 65 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__size_of_scarica 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__end_of__npowers_ 7E4D 0 MEDIUMCONST 0 mediumconst dist/default/debug\batteria4480.X.debug.obj
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug\batteria4480.X.debug.obj
+__end_of_LCD_write_string 4626 0 CODE 0 text33 dist/default/debug\batteria4480.X.debug.obj
+_sprintf$1581 100 0 BANK1 1 cstackBANK1 dist/default/debug\batteria4480.X.debug.obj
+utoa@c 75 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+utoa@v 73 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__accesstop 60 0 ABS 0 - C:\Users\simon\AppData\Local\Temp\s9fc.obj
+intlevel0 0 0 CODE 0 text C:\Users\simon\AppData\Local\Temp\s9fc.obj
+intlevel1 0 0 CODE 0 text C:\Users\simon\AppData\Local\Temp\s9fc.obj
+intlevel2 0 0 CODE 0 text C:\Users\simon\AppData\Local\Temp\s9fc.obj
+intlevel3 0 0 CODE 0 text C:\Users\simon\AppData\Local\Temp\s9fc.obj
+__end_of_LCD_home 451C 0 CODE 0 text37 dist/default/debug\batteria4480.X.debug.obj
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug\batteria4480.X.debug.obj
+__size_of__div_to_l_ 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__CFG_USBDIV$1 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__end_oflog@coeff 7ECD 0 MEDIUMCONST 0 mediumconst dist/default/debug\batteria4480.X.debug.obj
+LCD_goto_line@line 6B 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\batteria4480.X.debug.obj
+__CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__CFG_EBTR1$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+___llmod@divisor 64 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__CFG_EBTR2$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__CFG_EBTR3$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__end_of_SetDCPWM1 440C 0 CODE 0 text32 dist/default/debug\batteria4480.X.debug.obj
+__end_of_LCD_write_integer 2E82 0 CODE 0 text3 dist/default/debug\batteria4480.X.debug.obj
+__size_of_LCD_write_string 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+?_fround C1 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of_SetDCPWM1 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__Hifardata 0 0 CODE 0 ifardata dist/default/debug\batteria4480.X.debug.obj
+?__div_to_l_ 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___awdiv@sign 6B 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__Hclrtext 0 0 ABS 0 clrtext dist/default/debug\batteria4480.X.debug.obj
+__pidataCOMRAM 4682 0 CODE 0 idataCOMRAM dist/default/debug\batteria4480.X.debug.obj
+__npowers_ 7E19 0 MEDIUMCONST 0 mediumconst dist/default/debug\batteria4480.X.debug.obj
+_delay_s 4580 0 CODE 0 text34 dist/default/debug\batteria4480.X.debug.obj
+___wmul@multiplicand 62 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+LCD_initialize@quartz_frequency 6D 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+_LCD_enable_pulse 4626 0 CODE 0 text48 dist/default/debug\batteria4480.X.debug.obj
+__end_of_LCD_goto_xy 4664 0 CODE 0 text44 dist/default/debug\batteria4480.X.debug.obj
+_ADCON0 FC2 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_ADCON1 FC1 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_ADCON2 FC0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_ADRESH FC4 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_ADRESL FC3 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_scale$1580 C5 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+LCD_write_message@buffer 70 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___awdiv@dividend 66 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\simon\AppData\Local\Temp\s9fc.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\simon\AppData\Local\Temp\s9fc.obj
+_SetDCPWM1 43C8 0 CODE 0 text32 dist/default/debug\batteria4480.X.debug.obj
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug\batteria4480.X.debug.obj
+_CCPR1L FBE 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+LCD_write_char@D0 6E 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+LCD_write_char@D1 6D 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+LCD_write_char@D2 6C 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+LCD_write_char@D3 6B 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/debug\batteria4480.X.debug.obj
+__end_of___flge 31B0 0 CODE 0 text30 dist/default/debug\batteria4480.X.debug.obj
+__end_of___wmul 44EA 0 CODE 0 text50 dist/default/debug\batteria4480.X.debug.obj
+?__tdiv_to_l_ 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\batteria4480.X.debug.obj
+SetDCPWM1@dutycycle 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+main@ore 12B 0 BANK1 1 cstackBANK1 dist/default/debug\batteria4480.X.debug.obj
+LCD_shift_cursor@number_of_shift 6B 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__size_of_sprintf 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+___fldiv@aexp 93 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___fldiv@bexp 92 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___fldiv@sign 87 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__Hmediumconst 8000 0 MEDIUMCONST 0 mediumconst dist/default/debug\batteria4480.X.debug.obj
+__LnvBANK1 0 0 ABS 0 nvBANK1 dist/default/debug\batteria4480.X.debug.obj
+__Hintcodelo B8 0 CODE 0 intcodelo dist/default/debug\batteria4480.X.debug.obj
+___awdiv@divisor 68 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___lwmod@divisor 62 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__end_of___awdiv 3D86 0 CODE 0 text15 dist/default/debug\batteria4480.X.debug.obj
+__end_of___awmod 3F9A 0 CODE 0 text14 dist/default/debug\batteria4480.X.debug.obj
+__end_of___fladd 1DEA 0 CODE 0 text28 dist/default/debug\batteria4480.X.debug.obj
+__end_of___fldiv 2650 0 CODE 0 text31 dist/default/debug\batteria4480.X.debug.obj
+__end_of___flmul 2290 0 CODE 0 text27 dist/default/debug\batteria4480.X.debug.obj
+__end_of___flneg 447E 0 CODE 0 text22 dist/default/debug\batteria4480.X.debug.obj
+__end_of___flsub 43C8 0 CODE 0 text21 dist/default/debug\batteria4480.X.debug.obj
+__end_of___fltol 395E 0 CODE 0 text20 dist/default/debug\batteria4480.X.debug.obj
+__end_of___lldiv 3E42 0 CODE 0 text19 dist/default/debug\batteria4480.X.debug.obj
+__end_of___llmod 40C4 0 CODE 0 text18 dist/default/debug\batteria4480.X.debug.obj
+__end_of___lwdiv 41B6 0 CODE 0 text7 dist/default/debug\batteria4480.X.debug.obj
+__end_of___lwmod 42EC 0 CODE 0 text6 dist/default/debug\batteria4480.X.debug.obj
+__size_of_isdigit 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+delay_s@repeat_loop 69 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__end_of_LCD_write_message 45D8 0 CODE 0 text35 dist/default/debug\batteria4480.X.debug.obj
+?_eval_poly C1 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__CFG_CCP2MX$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_dpowers 7E81 0 MEDIUMCONST 0 mediumconst dist/default/debug\batteria4480.X.debug.obj
+_sommatoriaCorrente ED 0 BANK0 1 bssBANK0 dist/default/debug\batteria4480.X.debug.obj
+__size_of__tdiv_to_l_ 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__end_of_fround 2922 0 CODE 0 text13 dist/default/debug\batteria4480.X.debug.obj
+___lwdiv@quotient 6B 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/debug\batteria4480.X.debug.obj
+__size_of_frexp 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+___fladd@a 98 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___fladd@b 94 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___fldiv@a 7F 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___fldiv@b 7B 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__size_of_scale 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+___flmul@a AC 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___flmul@b A8 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___flsub@a AC 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___flsub@b A8 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+_delay_set_quartz 4676 0 CODE 0 text41 dist/default/debug\batteria4480.X.debug.obj
+__end_of_scarica 2AF4 0 CODE 0 text2 dist/default/debug\batteria4480.X.debug.obj
+_LCD_shift_cursor 42EC 0 CODE 0 text45 dist/default/debug\batteria4480.X.debug.obj
+itoa@buf 76 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+itoa@val 78 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+_INTCON2bits FF1 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+___lwmod@dividend 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___lldiv@counter 6C 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__Lintcodelo 18 0 CODE 0 intcodelo dist/default/debug\batteria4480.X.debug.obj
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+start_initialization 422A 0 CODE 0 cinit dist/default/debug\batteria4480.X.debug.obj
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\batteria4480.X.debug.obj
+_TRISCbits F94 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_LCD_write_integer 2CC2 0 CODE 0 text3 dist/default/debug\batteria4480.X.debug.obj
+___lldiv@dividend 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___rparam_used 1 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_clock_counter_reference 13F 0 BANK1 1 nvBANK1 dist/default/debug\batteria4480.X.debug.obj
+fround@prec CD 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+LCD_send_command@D0 6A 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+LCD_send_command@D1 69 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+LCD_send_command@D2 68 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+LCD_send_command@D3 20 0 COMRAM 1 cstackCOMRAM dist/default/debug\batteria4480.X.debug.obj
+__CFG_WDTPS$32768 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_LCD_cursor 451C 0 CODE 0 text42 dist/default/debug\batteria4480.X.debug.obj
+__end_of_display_voltage 3C0A 0 CODE 0 text9 dist/default/debug\batteria4480.X.debug.obj
+__pcstackBANK0 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__pcstackBANK1 100 0 BANK1 1 cstackBANK1 dist/default/debug\batteria4480.X.debug.obj
+__end_of_LCD_enable_pulse 4648 0 CODE 0 text48 dist/default/debug\batteria4480.X.debug.obj
+utoa@buf 6D 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+utoa@val 6F 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__tdiv_to_l_@f1 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__tdiv_to_l_@f2 64 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__size_of_LCD_enable_pulse 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__Hbank0 0 0 ABS 0 bank0 dist/default/debug\batteria4480.X.debug.obj
+__Hbank1 0 0 ABS 0 bank1 dist/default/debug\batteria4480.X.debug.obj
+__Hbank2 0 0 ABS 0 bank2 dist/default/debug\batteria4480.X.debug.obj
+__Hbank3 0 0 ABS 0 bank3 dist/default/debug\batteria4480.X.debug.obj
+__Hbank4 0 0 ABS 0 bank4 dist/default/debug\batteria4480.X.debug.obj
+__Hbank5 0 0 ABS 0 bank5 dist/default/debug\batteria4480.X.debug.obj
+__Hbank6 0 0 ABS 0 bank6 dist/default/debug\batteria4480.X.debug.obj
+__Hbank7 0 0 ABS 0 bank7 dist/default/debug\batteria4480.X.debug.obj
+__Hcinit 0 0 ABS 0 cinit dist/default/debug\batteria4480.X.debug.obj
+__Hconst 0 0 CONST 0 const dist/default/debug\batteria4480.X.debug.obj
+__Hidata 0 0 CODE 0 idata dist/default/debug\batteria4480.X.debug.obj
+__Hidloc 200008 0 IDLOC 0 idloc dist/default/debug\batteria4480.X.debug.obj
+__end_of_LCD_clear 4580 0 CODE 0 text43 dist/default/debug\batteria4480.X.debug.obj
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/debug\batteria4480.X.debug.obj
+__Hparam 0 0 COMRAM 1 rparam dist/default/debug\batteria4480.X.debug.obj
+__Hrdata 0 0 COMRAM 1 rdata dist/default/debug\batteria4480.X.debug.obj
+__Hstack 0 0 STACK 2 stack dist/default/debug\batteria4480.X.debug.obj
+__Htext0 0 0 ABS 0 text0 dist/default/debug\batteria4480.X.debug.obj
+__Htext1 0 0 ABS 0 text1 dist/default/debug\batteria4480.X.debug.obj
+__Htext2 0 0 ABS 0 text2 dist/default/debug\batteria4480.X.debug.obj
+__Htext3 0 0 ABS 0 text3 dist/default/debug\batteria4480.X.debug.obj
+__Htext4 0 0 ABS 0 text4 dist/default/debug\batteria4480.X.debug.obj
+__Htext5 0 0 ABS 0 text5 dist/default/debug\batteria4480.X.debug.obj
+__Htext6 0 0 ABS 0 text6 dist/default/debug\batteria4480.X.debug.obj
+__Htext7 0 0 ABS 0 text7 dist/default/debug\batteria4480.X.debug.obj
+__Htext8 0 0 ABS 0 text8 dist/default/debug\batteria4480.X.debug.obj
+__Htext9 0 0 ABS 0 text9 dist/default/debug\batteria4480.X.debug.obj
+_main$1577 121 0 BANK1 1 cstackBANK1 dist/default/debug\batteria4480.X.debug.obj
+___lwdiv@counter 6A 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__size_of___xxtofl 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of_LCD_clear 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\batteria4480.X.debug.obj
+__Hbigram 0 0 ABS 0 bigram dist/default/debug\batteria4480.X.debug.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\simon\AppData\Local\Temp\s9fc.obj
+___xxtofl@arg 77 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___xxtofl@exp 76 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___xxtofl@val 6D 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__end_of_sprintf 924 0 CODE 0 text10 dist/default/debug\batteria4480.X.debug.obj
+__Hcomram 0 0 ABS 0 comram dist/default/debug\batteria4480.X.debug.obj
+__Hconfig 30000E 0 CONFIG 0 config dist/default/debug\batteria4480.X.debug.obj
+__CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__Lbank0 0 0 ABS 0 bank0 dist/default/debug\batteria4480.X.debug.obj
+__Lbank1 0 0 ABS 0 bank1 dist/default/debug\batteria4480.X.debug.obj
+__Lbank2 0 0 ABS 0 bank2 dist/default/debug\batteria4480.X.debug.obj
+__Lbank3 0 0 ABS 0 bank3 dist/default/debug\batteria4480.X.debug.obj
+__Lbank4 0 0 ABS 0 bank4 dist/default/debug\batteria4480.X.debug.obj
+__Lbank5 0 0 ABS 0 bank5 dist/default/debug\batteria4480.X.debug.obj
+__Lbank6 0 0 ABS 0 bank6 dist/default/debug\batteria4480.X.debug.obj
+__Lbank7 0 0 ABS 0 bank7 dist/default/debug\batteria4480.X.debug.obj
+__end_of_isdigit 4600 0 CODE 0 text12 dist/default/debug\batteria4480.X.debug.obj
+__Lcinit 0 0 ABS 0 cinit dist/default/debug\batteria4480.X.debug.obj
+__Lconst 0 0 CONST 0 const dist/default/debug\batteria4480.X.debug.obj
+__Lidata 0 0 CODE 0 idata dist/default/debug\batteria4480.X.debug.obj
+__Lidloc 200000 0 IDLOC 0 idloc dist/default/debug\batteria4480.X.debug.obj
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/debug\batteria4480.X.debug.obj
+__Lparam 0 0 COMRAM 1 rparam dist/default/debug\batteria4480.X.debug.obj
+__Lrdata 0 0 COMRAM 1 rdata dist/default/debug\batteria4480.X.debug.obj
+__Lstack 0 0 STACK 2 stack dist/default/debug\batteria4480.X.debug.obj
+__Ltext0 0 0 ABS 0 text0 dist/default/debug\batteria4480.X.debug.obj
+__Ltext1 0 0 ABS 0 text1 dist/default/debug\batteria4480.X.debug.obj
+__Ltext2 0 0 ABS 0 text2 dist/default/debug\batteria4480.X.debug.obj
+__Ltext3 0 0 ABS 0 text3 dist/default/debug\batteria4480.X.debug.obj
+__Ltext4 0 0 ABS 0 text4 dist/default/debug\batteria4480.X.debug.obj
+__Ltext5 0 0 ABS 0 text5 dist/default/debug\batteria4480.X.debug.obj
+__Ltext6 0 0 ABS 0 text6 dist/default/debug\batteria4480.X.debug.obj
+__Ltext7 0 0 ABS 0 text7 dist/default/debug\batteria4480.X.debug.obj
+__Ltext8 0 0 ABS 0 text8 dist/default/debug\batteria4480.X.debug.obj
+__Ltext9 0 0 ABS 0 text9 dist/default/debug\batteria4480.X.debug.obj
+read_adc@i DD 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/debug\batteria4480.X.debug.obj
+_LCD_write_message 45AC 0 CODE 0 text35 dist/default/debug\batteria4480.X.debug.obj
+___flmul@grs B6 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/debug\batteria4480.X.debug.obj
+_PORTBbits F81 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of_LCD_goto_xy 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_INTCONbits FF2 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+delay_ms@value_ms 66 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+_LCD_clear 454E 0 CODE 0 text43 dist/default/debug\batteria4480.X.debug.obj
+__Habs1 0 0 ABS 0 abs1 dist/default/debug\batteria4480.X.debug.obj
+__Hdata 0 0 ABS 0 data dist/default/debug\batteria4480.X.debug.obj
+__Hinit B8 0 CODE 0 init dist/default/debug\batteria4480.X.debug.obj
+__Hrbit 0 0 COMRAM 1 rbit dist/default/debug\batteria4480.X.debug.obj
+__Hrbss 0 0 COMRAM 1 rbss dist/default/debug\batteria4480.X.debug.obj
+__Htemp 41 0 COMRAM 1 temp dist/default/debug\batteria4480.X.debug.obj
+__Htext 0 0 ABS 0 text dist/default/debug\batteria4480.X.debug.obj
+__Labs1 0 0 ABS 0 abs1 dist/default/debug\batteria4480.X.debug.obj
+__Ldata 0 0 ABS 0 data dist/default/debug\batteria4480.X.debug.obj
+__Linit B8 0 CODE 0 init dist/default/debug\batteria4480.X.debug.obj
+__Lrbit 0 0 COMRAM 1 rbit dist/default/debug\batteria4480.X.debug.obj
+__Lrbss 0 0 COMRAM 1 rbss dist/default/debug\batteria4480.X.debug.obj
+__Ltemp 40 0 COMRAM 1 temp dist/default/debug\batteria4480.X.debug.obj
+__Ltext 0 0 ABS 0 text dist/default/debug\batteria4480.X.debug.obj
+__CFG_XINST$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__pnvBANK1 13F 0 BANK1 1 nvBANK1 dist/default/debug\batteria4480.X.debug.obj
+___flge 3020 0 CODE 0 text30 dist/default/debug\batteria4480.X.debug.obj
+___wmul 44B4 0 CODE 0 text50 dist/default/debug\batteria4480.X.debug.obj
+_display_voltage 3B38 0 CODE 0 text9 dist/default/debug\batteria4480.X.debug.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__LcstackBANK1 0 0 ABS 0 cstackBANK1 dist/default/debug\batteria4480.X.debug.obj
+int$flags 40 0 COMRAM 1 temp dist/default/debug\batteria4480.X.debug.obj
+__end_of_delay_set_quartz 467E 0 CODE 0 text41 dist/default/debug\batteria4480.X.debug.obj
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug\batteria4480.X.debug.obj
+__end_of_LCD_shift_cursor 4338 0 CODE 0 text45 dist/default/debug\batteria4480.X.debug.obj
+__Hintret 0 0 ABS 0 intret dist/default/debug\batteria4480.X.debug.obj
+__Hirdata 0 0 CODE 0 irdata dist/default/debug\batteria4480.X.debug.obj
+__end_of_LCD_cursor 454E 0 CODE 0 text42 dist/default/debug\batteria4480.X.debug.obj
+_PR2 FCB 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__S0 30000E 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__S1 141 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__S2 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_log 3338 0 CODE 0 text24 dist/default/debug\batteria4480.X.debug.obj
+_ore 31 0 COMRAM 1 bssCOMRAM dist/default/debug\batteria4480.X.debug.obj
+_str 36 0 COMRAM 1 bssCOMRAM dist/default/debug\batteria4480.X.debug.obj
+__CFG_VREGEN$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+LCD_write_string@buffer 70 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__size_of_delay_set_quartz 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of_LCD_shift_cursor 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_UCONbits F6D 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__CFG_PLLDIV$1 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+utoa@base 71 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__CFG_PBADEN$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+delay_set_quartz@frequency 20 0 COMRAM 1 cstackCOMRAM dist/default/debug\batteria4480.X.debug.obj
+_LCD_initialize 34BE 0 CODE 0 text40 dist/default/debug\batteria4480.X.debug.obj
+eval_poly@res CD 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+_LCD_write_char 3F9A 0 CODE 0 text36 dist/default/debug\batteria4480.X.debug.obj
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/debug\batteria4480.X.debug.obj
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\batteria4480.X.debug.obj
+_tempo_old 29 0 COMRAM 1 bssCOMRAM dist/default/debug\batteria4480.X.debug.obj
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/debug\batteria4480.X.debug.obj
+sprintf@exp 10C 0 BANK1 1 cstackBANK1 dist/default/debug\batteria4480.X.debug.obj
+sprintf@val 108 0 BANK1 1 cstackBANK1 dist/default/debug\batteria4480.X.debug.obj
+___xxtofl 2AF4 0 CODE 0 text29 dist/default/debug\batteria4480.X.debug.obj
+_inizializzazione 41B6 0 CODE 0 text38 dist/default/debug\batteria4480.X.debug.obj
+__size_of_read_adc 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__end_of_stabilizzazione 413E 0 CODE 0 text1 dist/default/debug\batteria4480.X.debug.obj
+_battery F5 0 BANK0 1 bssBANK0 dist/default/debug\batteria4480.X.debug.obj
+_fround 2650 0 CODE 0 text13 dist/default/debug\batteria4480.X.debug.obj
+__end_of_log 34BE 0 CODE 0 text24 dist/default/debug\batteria4480.X.debug.obj
+int_func 395E 0 CODE 0 intcode_body dist/default/debug\batteria4480.X.debug.obj
+__HnvBANK1 0 0 ABS 0 nvBANK1 dist/default/debug\batteria4480.X.debug.obj
+__Lintentry 0 0 ABS 0 intentry dist/default/debug\batteria4480.X.debug.obj
+___lldiv@divisor 64 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+_LCD_goto_line 3A4C 0 CODE 0 text46 dist/default/debug\batteria4480.X.debug.obj
+__Hramtop 800 0 RAM 0 ramtop dist/default/debug\batteria4480.X.debug.obj
+__Hrparam 0 0 COMRAM 1 rparam dist/default/debug\batteria4480.X.debug.obj
+_inizio 1F0 -1B2 COMRAM 1 bitbssCOMRAM dist/default/debug\batteria4480.X.debug.obj
+__end_of___xxtofl 2CC2 0 CODE 0 text29 dist/default/debug\batteria4480.X.debug.obj
+__powers_ 7E4D 0 MEDIUMCONST 0 mediumconst dist/default/debug\batteria4480.X.debug.obj
+__pdataBANK1 13B 0 BANK1 1 dataBANK1 dist/default/debug\batteria4480.X.debug.obj
+__activetblptr 2 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__Hstruct 0 0 COMRAM 1 struct dist/default/debug\batteria4480.X.debug.obj
+__size_of___flge 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of___wmul 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 dist/default/debug\batteria4480.X.debug.obj
+__LbssBANK1 0 0 ABS 0 bssBANK1 dist/default/debug\batteria4480.X.debug.obj
+__Htext10 0 0 ABS 0 text10 dist/default/debug\batteria4480.X.debug.obj
+__Htext11 0 0 ABS 0 text11 dist/default/debug\batteria4480.X.debug.obj
+__Htext12 0 0 ABS 0 text12 dist/default/debug\batteria4480.X.debug.obj
+__Htext13 0 0 ABS 0 text13 dist/default/debug\batteria4480.X.debug.obj
+__Htext14 0 0 ABS 0 text14 dist/default/debug\batteria4480.X.debug.obj
+__Htext15 0 0 ABS 0 text15 dist/default/debug\batteria4480.X.debug.obj
+__Htext16 0 0 ABS 0 text16 dist/default/debug\batteria4480.X.debug.obj
+__Htext17 0 0 ABS 0 text17 dist/default/debug\batteria4480.X.debug.obj
+__Htext18 0 0 ABS 0 text18 dist/default/debug\batteria4480.X.debug.obj
+__Htext19 0 0 ABS 0 text19 dist/default/debug\batteria4480.X.debug.obj
+__Htext20 0 0 ABS 0 text20 dist/default/debug\batteria4480.X.debug.obj
+__Htext21 0 0 ABS 0 text21 dist/default/debug\batteria4480.X.debug.obj
+__Htext22 0 0 ABS 0 text22 dist/default/debug\batteria4480.X.debug.obj
+__Htext23 0 0 ABS 0 text23 dist/default/debug\batteria4480.X.debug.obj
+__Htext24 0 0 ABS 0 text24 dist/default/debug\batteria4480.X.debug.obj
+__Htext25 0 0 ABS 0 text25 dist/default/debug\batteria4480.X.debug.obj
+__Htext26 0 0 ABS 0 text26 dist/default/debug\batteria4480.X.debug.obj
+__Htext27 0 0 ABS 0 text27 dist/default/debug\batteria4480.X.debug.obj
+__Htext28 0 0 ABS 0 text28 dist/default/debug\batteria4480.X.debug.obj
+__Htext29 0 0 ABS 0 text29 dist/default/debug\batteria4480.X.debug.obj
+__Htext30 0 0 ABS 0 text30 dist/default/debug\batteria4480.X.debug.obj
+__Htext31 0 0 ABS 0 text31 dist/default/debug\batteria4480.X.debug.obj
+__Htext32 0 0 ABS 0 text32 dist/default/debug\batteria4480.X.debug.obj
+__Htext33 0 0 ABS 0 text33 dist/default/debug\batteria4480.X.debug.obj
+__Htext34 0 0 ABS 0 text34 dist/default/debug\batteria4480.X.debug.obj
+__Htext35 0 0 ABS 0 text35 dist/default/debug\batteria4480.X.debug.obj
+__Htext36 0 0 ABS 0 text36 dist/default/debug\batteria4480.X.debug.obj
+__Htext37 0 0 ABS 0 text37 dist/default/debug\batteria4480.X.debug.obj
+__Htext38 0 0 ABS 0 text38 dist/default/debug\batteria4480.X.debug.obj
+__Htext39 0 0 ABS 0 text39 dist/default/debug\batteria4480.X.debug.obj
+__Htext40 0 0 ABS 0 text40 dist/default/debug\batteria4480.X.debug.obj
+__Htext41 0 0 ABS 0 text41 dist/default/debug\batteria4480.X.debug.obj
+__Htext42 0 0 ABS 0 text42 dist/default/debug\batteria4480.X.debug.obj
+__Htext43 0 0 ABS 0 text43 dist/default/debug\batteria4480.X.debug.obj
+__Htext44 0 0 ABS 0 text44 dist/default/debug\batteria4480.X.debug.obj
+__Htext45 0 0 ABS 0 text45 dist/default/debug\batteria4480.X.debug.obj
+__Htext46 0 0 ABS 0 text46 dist/default/debug\batteria4480.X.debug.obj
+__Htext47 0 0 ABS 0 text47 dist/default/debug\batteria4480.X.debug.obj
+__Htext48 0 0 ABS 0 text48 dist/default/debug\batteria4480.X.debug.obj
+__Htext49 0 0 ABS 0 text49 dist/default/debug\batteria4480.X.debug.obj
+__Htext50 0 0 ABS 0 text50 dist/default/debug\batteria4480.X.debug.obj
+__size_of_OpenPWM1 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+___awmod@counter 64 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__end_of__powers_ 7E81 0 MEDIUMCONST 0 mediumconst dist/default/debug\batteria4480.X.debug.obj
+__size_of_isr_alta 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__tdiv_to_l_@cntr 6F 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__tdiv_to_l_@exp1 70 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__tdiv_to_l_@quot 6B 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+_minuti 2F 0 COMRAM 1 bssCOMRAM dist/default/debug\batteria4480.X.debug.obj
+sprintf@flag 106 0 BANK1 1 cstackBANK1 dist/default/debug\batteria4480.X.debug.obj
+sprintf@fval 114 0 BANK1 1 cstackBANK1 dist/default/debug\batteria4480.X.debug.obj
+sprintf@prec 112 0 BANK1 1 cstackBANK1 dist/default/debug\batteria4480.X.debug.obj
+___fladd@signs A4 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__ptext10 BC 0 CODE 0 text10 dist/default/debug\batteria4480.X.debug.obj
+__ptext11 1470 0 CODE 0 text11 dist/default/debug\batteria4480.X.debug.obj
+__ptext12 45D8 0 CODE 0 text12 dist/default/debug\batteria4480.X.debug.obj
+__ptext13 2650 0 CODE 0 text13 dist/default/debug\batteria4480.X.debug.obj
+__ptext14 3EF8 0 CODE 0 text14 dist/default/debug\batteria4480.X.debug.obj
+__ptext15 3CC8 0 CODE 0 text15 dist/default/debug\batteria4480.X.debug.obj
+__ptext16 2E82 0 CODE 0 text16 dist/default/debug\batteria4480.X.debug.obj
+__ptext17 31B0 0 CODE 0 text17 dist/default/debug\batteria4480.X.debug.obj
+__ptext18 4030 0 CODE 0 text18 dist/default/debug\batteria4480.X.debug.obj
+__ptext19 3D86 0 CODE 0 text19 dist/default/debug\batteria4480.X.debug.obj
+__ptext20 3852 0 CODE 0 text20 dist/default/debug\batteria4480.X.debug.obj
+__ptext21 4380 0 CODE 0 text21 dist/default/debug\batteria4480.X.debug.obj
+__ptext22 4446 0 CODE 0 text22 dist/default/debug\batteria4480.X.debug.obj
+__ptext23 ECE 0 CODE 0 text23 dist/default/debug\batteria4480.X.debug.obj
+__ptext24 3338 0 CODE 0 text24 dist/default/debug\batteria4480.X.debug.obj
+__ptext25 3E42 0 CODE 0 text25 dist/default/debug\batteria4480.X.debug.obj
+__ptext26 3742 0 CODE 0 text26 dist/default/debug\batteria4480.X.debug.obj
+__ptext27 1DEA 0 CODE 0 text27 dist/default/debug\batteria4480.X.debug.obj
+__ptext28 1942 0 CODE 0 text28 dist/default/debug\batteria4480.X.debug.obj
+__ptext29 2AF4 0 CODE 0 text29 dist/default/debug\batteria4480.X.debug.obj
+__ptext30 3020 0 CODE 0 text30 dist/default/debug\batteria4480.X.debug.obj
+__ptext31 2290 0 CODE 0 text31 dist/default/debug\batteria4480.X.debug.obj
+__ptext32 43C8 0 CODE 0 text32 dist/default/debug\batteria4480.X.debug.obj
+__ptext33 4600 0 CODE 0 text33 dist/default/debug\batteria4480.X.debug.obj
+__ptext34 4580 0 CODE 0 text34 dist/default/debug\batteria4480.X.debug.obj
+__ptext35 45AC 0 CODE 0 text35 dist/default/debug\batteria4480.X.debug.obj
+__ptext36 3F9A 0 CODE 0 text36 dist/default/debug\batteria4480.X.debug.obj
+__ptext37 44EA 0 CODE 0 text37 dist/default/debug\batteria4480.X.debug.obj
+__ptext38 41B6 0 CODE 0 text38 dist/default/debug\batteria4480.X.debug.obj
+__ptext39 4664 0 CODE 0 text39 dist/default/debug\batteria4480.X.debug.obj
+__ptext40 34BE 0 CODE 0 text40 dist/default/debug\batteria4480.X.debug.obj
+__ptext41 4676 0 CODE 0 text41 dist/default/debug\batteria4480.X.debug.obj
+__ptext42 451C 0 CODE 0 text42 dist/default/debug\batteria4480.X.debug.obj
+__ptext43 454E 0 CODE 0 text43 dist/default/debug\batteria4480.X.debug.obj
+__ptext44 4648 0 CODE 0 text44 dist/default/debug\batteria4480.X.debug.obj
+__ptext45 42EC 0 CODE 0 text45 dist/default/debug\batteria4480.X.debug.obj
+__ptext46 3A4C 0 CODE 0 text46 dist/default/debug\batteria4480.X.debug.obj
+__ptext47 447E 0 CODE 0 text47 dist/default/debug\batteria4480.X.debug.obj
+__ptext48 4626 0 CODE 0 text48 dist/default/debug\batteria4480.X.debug.obj
+__ptext49 440C 0 CODE 0 text49 dist/default/debug\batteria4480.X.debug.obj
+__ptext50 44B4 0 CODE 0 text50 dist/default/debug\batteria4480.X.debug.obj
+___awdiv 3CC8 0 CODE 0 text15 dist/default/debug\batteria4480.X.debug.obj
+___awmod 3EF8 0 CODE 0 text14 dist/default/debug\batteria4480.X.debug.obj
+___fladd 1942 0 CODE 0 text28 dist/default/debug\batteria4480.X.debug.obj
+___fldiv 2290 0 CODE 0 text31 dist/default/debug\batteria4480.X.debug.obj
+___flmul 1DEA 0 CODE 0 text27 dist/default/debug\batteria4480.X.debug.obj
+___flneg 4446 0 CODE 0 text22 dist/default/debug\batteria4480.X.debug.obj
+___flsub 4380 0 CODE 0 text21 dist/default/debug\batteria4480.X.debug.obj
+___fltol 3852 0 CODE 0 text20 dist/default/debug\batteria4480.X.debug.obj
+__tdiv_to_l_ 2E82 0 CODE 0 text16 dist/default/debug\batteria4480.X.debug.obj
+__pintcode_body 395E 0 CODE 0 intcode_body dist/default/debug\batteria4480.X.debug.obj
+___lldiv 3D86 0 CODE 0 text19 dist/default/debug\batteria4480.X.debug.obj
+___llmod 4030 0 CODE 0 text18 dist/default/debug\batteria4480.X.debug.obj
+___lwdiv 413E 0 CODE 0 text7 dist/default/debug\batteria4480.X.debug.obj
+___lwmod 4290 0 CODE 0 text6 dist/default/debug\batteria4480.X.debug.obj
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\batteria4480.X.debug.obj
+__Lbigram 0 0 ABS 0 bigram dist/default/debug\batteria4480.X.debug.obj
+__CFG_BOR$ON 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__CFG_BORV$3 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of_delay_s 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__Lcomram 0 0 ABS 0 comram dist/default/debug\batteria4480.X.debug.obj
+__Lconfig 300000 0 CONFIG 0 config dist/default/debug\batteria4480.X.debug.obj
+___wmul@multiplier 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__end_of_LCD_initialize 362C 0 CODE 0 text40 dist/default/debug\batteria4480.X.debug.obj
+_LATBbits F8A 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_LATEbits F8D 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+___fldiv@grs 8E 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___fldiv@rem 88 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__end_of_LCD_write_char 4030 0 CODE 0 text36 dist/default/debug\batteria4480.X.debug.obj
+__size_of_fround 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/debug\batteria4480.X.debug.obj
+_stabilizzazione 40C4 0 CODE 0 text1 dist/default/debug\batteria4480.X.debug.obj
+___lwdiv@divisor 68 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__size_of_display_voltage 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__Lfardata 0 0 FARRAM 0 fardata dist/default/debug\batteria4480.X.debug.obj
+_read_adc ECE 0 CODE 0 text23 dist/default/debug\batteria4480.X.debug.obj
+___fldiv@new_exp 8C 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+_scarica 2922 0 CODE 0 text2 dist/default/debug\batteria4480.X.debug.obj
+itoa@cp 7C 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+stackhi 7FF 0 ABS 0 - C:\Users\simon\AppData\Local\Temp\s9fc.obj
+stacklo 141 0 ABS 0 - C:\Users\simon\AppData\Local\Temp\s9fc.obj
+_voltage F1 0 BANK0 1 bssBANK0 dist/default/debug\batteria4480.X.debug.obj
+__Lintcode 8 0 CODE 0 intcode dist/default/debug\batteria4480.X.debug.obj
+_secondi 33 0 COMRAM 1 bssCOMRAM dist/default/debug\batteria4480.X.debug.obj
+read_adc@F5407 12D 0 BANK1 1 bssBANK1 dist/default/debug\batteria4480.X.debug.obj
+__Lintret 0 0 ABS 0 intret dist/default/debug\batteria4480.X.debug.obj
+__Lirdata 0 0 CODE 0 irdata dist/default/debug\batteria4480.X.debug.obj
+__end_of_eval_poly 3852 0 CODE 0 text26 dist/default/debug\batteria4480.X.debug.obj
+_ADCON0bits FC2 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+___fladd@grs A7 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__end_of_read_adc 1470 0 CODE 0 text23 dist/default/debug\batteria4480.X.debug.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__div_to_l_ 31B0 0 CODE 0 text17 dist/default/debug\batteria4480.X.debug.obj
+__size_of_eval_poly 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__CFG_ICPRT$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_delay_quartz_frequency_value 3F 0 COMRAM 1 dataCOMRAM dist/default/debug\batteria4480.X.debug.obj
+__Lspace_0 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__Lspace_1 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__Lspace_2 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__pbssCOMRAM 21 0 COMRAM 1 bssCOMRAM dist/default/debug\batteria4480.X.debug.obj
+__HbitbssCOMRAM 0 0 ABS 0 bitbssCOMRAM dist/default/debug\batteria4480.X.debug.obj
+_OpenPWM1 4664 0 CODE 0 text39 dist/default/debug\batteria4480.X.debug.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__HcstackBANK1 0 0 ABS 0 cstackBANK1 dist/default/debug\batteria4480.X.debug.obj
+___flge@ff1 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___flge@ff2 64 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+_PIR1bits F9E 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__Lend_init B8 0 CODE 0 end_init dist/default/debug\batteria4480.X.debug.obj
+__end_of_inizializzazione 422A 0 CODE 0 text38 dist/default/debug\batteria4480.X.debug.obj
+__size_of_delay_ms 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug\batteria4480.X.debug.obj
+_isr_alta 8 0 CODE 0 intcode dist/default/debug\batteria4480.X.debug.obj
+___fltol@exp1 D3 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__CFG_CPUDIV$OSC1_PLL2 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__div_to_l_@f1 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__div_to_l_@f2 64 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+end_of_initialization 4282 0 CODE 0 cinit dist/default/debug\batteria4480.X.debug.obj
+__end_of_isr_bassa B8 0 CODE 0 intcodelo dist/default/debug\batteria4480.X.debug.obj
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/debug\batteria4480.X.debug.obj
+__Hintentry 0 0 ABS 0 intentry dist/default/debug\batteria4480.X.debug.obj
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_RCONbits FD0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__end_of_OpenPWM1 4676 0 CODE 0 text39 dist/default/debug\batteria4480.X.debug.obj
+__size_of_inizializzazione 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+LCD_shift_cursor@shift 6C 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__size_of_isr_bassa 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+___awdiv@quotient 6C 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+_eval_poly 3742 0 CODE 0 text26 dist/default/debug\batteria4480.X.debug.obj
+?___awdiv 66 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+?___awmod 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___lwdiv@dividend 66 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+?___fladd 94 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+?___fldiv 7B 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+?___flmul A8 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+?___flneg 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+?___flsub A8 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+?___fltol CA 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+?___lldiv 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+?___llmod 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+?___lwdiv 66 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+?___lwmod 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__end_of_isr_alta 3A4C 0 CODE 0 intcode_body dist/default/debug\batteria4480.X.debug.obj
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/debug\batteria4480.X.debug.obj
+LCD_cursor@active 6C 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__size_of_LCD_goto_line 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/debug\batteria4480.X.debug.obj
+__HbssBANK1 0 0 ABS 0 bssBANK1 dist/default/debug\batteria4480.X.debug.obj
+__size_of_ricarica 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+___awmod@dividend 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+LCD_cursor@blinking 6B 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__Lramtop 800 0 RAM 0 ramtop dist/default/debug\batteria4480.X.debug.obj
+LCD_write_integer@zero_cleaning 81 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__Lrparam 0 0 COMRAM 1 rparam dist/default/debug\batteria4480.X.debug.obj
+__pcinit 422A 0 CODE 0 cinit dist/default/debug\batteria4480.X.debug.obj
+___flneg@f1 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__ptext0 924 0 CODE 0 text0 dist/default/debug\batteria4480.X.debug.obj
+__ptext1 40C4 0 CODE 0 text1 dist/default/debug\batteria4480.X.debug.obj
+__ptext2 2922 0 CODE 0 text2 dist/default/debug\batteria4480.X.debug.obj
+__ptext3 2CC2 0 CODE 0 text3 dist/default/debug\batteria4480.X.debug.obj
+__ptext4 4338 0 CODE 0 text4 dist/default/debug\batteria4480.X.debug.obj
+__ptext5 3C0A 0 CODE 0 text5 dist/default/debug\batteria4480.X.debug.obj
+__ptext6 4290 0 CODE 0 text6 dist/default/debug\batteria4480.X.debug.obj
+__ptext7 413E 0 CODE 0 text7 dist/default/debug\batteria4480.X.debug.obj
+__ptext8 362C 0 CODE 0 text8 dist/default/debug\batteria4480.X.debug.obj
+__ptext9 3B38 0 CODE 0 text9 dist/default/debug\batteria4480.X.debug.obj
+__Lstruct 0 0 COMRAM 1 struct dist/default/debug\batteria4480.X.debug.obj
+__Ltext10 0 0 ABS 0 text10 dist/default/debug\batteria4480.X.debug.obj
+__Ltext11 0 0 ABS 0 text11 dist/default/debug\batteria4480.X.debug.obj
+__Ltext12 0 0 ABS 0 text12 dist/default/debug\batteria4480.X.debug.obj
+__Ltext13 0 0 ABS 0 text13 dist/default/debug\batteria4480.X.debug.obj
+__Ltext14 0 0 ABS 0 text14 dist/default/debug\batteria4480.X.debug.obj
+__Ltext15 0 0 ABS 0 text15 dist/default/debug\batteria4480.X.debug.obj
+__Ltext16 0 0 ABS 0 text16 dist/default/debug\batteria4480.X.debug.obj
+__Ltext17 0 0 ABS 0 text17 dist/default/debug\batteria4480.X.debug.obj
+__Ltext18 0 0 ABS 0 text18 dist/default/debug\batteria4480.X.debug.obj
+__Ltext19 0 0 ABS 0 text19 dist/default/debug\batteria4480.X.debug.obj
+__Ltext20 0 0 ABS 0 text20 dist/default/debug\batteria4480.X.debug.obj
+__Ltext21 0 0 ABS 0 text21 dist/default/debug\batteria4480.X.debug.obj
+__Ltext22 0 0 ABS 0 text22 dist/default/debug\batteria4480.X.debug.obj
+__Ltext23 0 0 ABS 0 text23 dist/default/debug\batteria4480.X.debug.obj
+__Ltext24 0 0 ABS 0 text24 dist/default/debug\batteria4480.X.debug.obj
+__Ltext25 0 0 ABS 0 text25 dist/default/debug\batteria4480.X.debug.obj
+__Ltext26 0 0 ABS 0 text26 dist/default/debug\batteria4480.X.debug.obj
+__Ltext27 0 0 ABS 0 text27 dist/default/debug\batteria4480.X.debug.obj
+__Ltext28 0 0 ABS 0 text28 dist/default/debug\batteria4480.X.debug.obj
+__Ltext29 0 0 ABS 0 text29 dist/default/debug\batteria4480.X.debug.obj
+__Ltext30 0 0 ABS 0 text30 dist/default/debug\batteria4480.X.debug.obj
+__Ltext31 0 0 ABS 0 text31 dist/default/debug\batteria4480.X.debug.obj
+__Ltext32 0 0 ABS 0 text32 dist/default/debug\batteria4480.X.debug.obj
+__Ltext33 0 0 ABS 0 text33 dist/default/debug\batteria4480.X.debug.obj
+__Ltext34 0 0 ABS 0 text34 dist/default/debug\batteria4480.X.debug.obj
+__Ltext35 0 0 ABS 0 text35 dist/default/debug\batteria4480.X.debug.obj
+__Ltext36 0 0 ABS 0 text36 dist/default/debug\batteria4480.X.debug.obj
+__Ltext37 0 0 ABS 0 text37 dist/default/debug\batteria4480.X.debug.obj
+__Ltext38 0 0 ABS 0 text38 dist/default/debug\batteria4480.X.debug.obj
+__Ltext39 0 0 ABS 0 text39 dist/default/debug\batteria4480.X.debug.obj
+__Ltext40 0 0 ABS 0 text40 dist/default/debug\batteria4480.X.debug.obj
+__Ltext41 0 0 ABS 0 text41 dist/default/debug\batteria4480.X.debug.obj
+__Ltext42 0 0 ABS 0 text42 dist/default/debug\batteria4480.X.debug.obj
+__Ltext43 0 0 ABS 0 text43 dist/default/debug\batteria4480.X.debug.obj
+__Ltext44 0 0 ABS 0 text44 dist/default/debug\batteria4480.X.debug.obj
+__Ltext45 0 0 ABS 0 text45 dist/default/debug\batteria4480.X.debug.obj
+__Ltext46 0 0 ABS 0 text46 dist/default/debug\batteria4480.X.debug.obj
+__Ltext47 0 0 ABS 0 text47 dist/default/debug\batteria4480.X.debug.obj
+__Ltext48 0 0 ABS 0 text48 dist/default/debug\batteria4480.X.debug.obj
+__Ltext49 0 0 ABS 0 text49 dist/default/debug\batteria4480.X.debug.obj
+__Ltext50 0 0 ABS 0 text50 dist/default/debug\batteria4480.X.debug.obj
+__ramtop 800 0 RAM 0 ramtop C:\Users\simon\AppData\Local\Temp\s9fc.obj
+_sprintf BC 0 CODE 0 text10 dist/default/debug\batteria4480.X.debug.obj
+_isr_bassa 18 0 CODE 0 intcodelo dist/default/debug\batteria4480.X.debug.obj
+_LCD_goto_xy 4648 0 CODE 0 text44 dist/default/debug\batteria4480.X.debug.obj
+main@minuti 129 0 BANK1 1 cstackBANK1 dist/default/debug\batteria4480.X.debug.obj
+__size_of_LCD_cursor 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__Lpowerup B8 0 CODE 0 powerup dist/default/debug\batteria4480.X.debug.obj
+?___xxtofl 6D 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\batteria4480.X.debug.obj
+sprintf@ap 104 0 BANK1 1 cstackBANK1 dist/default/debug\batteria4480.X.debug.obj
+sprintf@sp D4 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+_isdigit 45D8 0 CODE 0 text12 dist/default/debug\batteria4480.X.debug.obj
+___fladd@aexp A5 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___fladd@bexp A6 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___fltol@sign1 D2 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__end_of_delay_s 45AC 0 CODE 0 text34 dist/default/debug\batteria4480.X.debug.obj
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/debug\batteria4480.X.debug.obj
+scale@scl C9 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+eval_poly@d C5 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+eval_poly@n C7 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+eval_poly@x C1 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__CFG_FOSC$HS 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__end_of__div_to_l_ 3338 0 CODE 0 text17 dist/default/debug\batteria4480.X.debug.obj
+___fltol@f1 CA 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___param_bank 10 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__end_of_LCD_goto_line 3B38 0 CODE 0 text46 dist/default/debug\batteria4480.X.debug.obj
+__CFG_WDT$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\batteria4480.X.debug.obj
+__end_of__initialization 4282 0 CODE 0 cinit dist/default/debug\batteria4480.X.debug.obj
+_LCD_send_command 447E 0 CODE 0 text47 dist/default/debug\batteria4480.X.debug.obj
+___awmod@divisor 62 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__CFG_WRT2$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_delay_ms 440C 0 CODE 0 text49 dist/default/debug\batteria4480.X.debug.obj
+__CFG_WRT3$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of_stabilizzazione 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_combinazioni 13B 0 BANK1 1 dataBANK1 dist/default/debug\batteria4480.X.debug.obj
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__Libigdata 0 0 CODE 0 ibigdata dist/default/debug\batteria4480.X.debug.obj
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__CFG_WRTD$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+frexp@value 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+?_frexp 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__pidataBANK1 467E 0 CODE 0 idataBANK1 dist/default/debug\batteria4480.X.debug.obj
+OpenPWM1@period 20 0 COMRAM 1 cstackCOMRAM dist/default/debug\batteria4480.X.debug.obj
+?_scale C1 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__Lclrtext 0 0 ABS 0 clrtext dist/default/debug\batteria4480.X.debug.obj
+read_adc@lettura DE 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__end_of_delay_ms 4446 0 CODE 0 text49 dist/default/debug\batteria4480.X.debug.obj
+sprintf@tmpval 10E 0 BANK1 1 cstackBANK1 dist/default/debug\batteria4480.X.debug.obj
+__CFG_PWRT$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__pintcodelo 18 0 CODE 0 intcodelo dist/default/debug\batteria4480.X.debug.obj
+___lldiv@quotient 68 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\batteria4480.X.debug.obj
+_ricarica 362C 0 CODE 0 text8 dist/default/debug\batteria4480.X.debug.obj
+LCD_write_integer@number_of_digits 80 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__pmediumconst 7E18 0 MEDIUMCONST 0 mediumconst dist/default/debug\batteria4480.X.debug.obj
+__Hend_init BC 0 CODE 0 end_init dist/default/debug\batteria4480.X.debug.obj
+___llmod@dividend 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+___llmod@counter 20 0 COMRAM 1 cstackCOMRAM dist/default/debug\batteria4480.X.debug.obj
+sprintf@c 118 0 BANK1 1 cstackBANK1 dist/default/debug\batteria4480.X.debug.obj
+sprintf@f D6 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+LCD_write_integer@F5227 135 0 BANK1 1 bssBANK1 dist/default/debug\batteria4480.X.debug.obj
+__end_of_itoa 4380 0 CODE 0 text4 dist/default/debug\batteria4480.X.debug.obj
+__end_of_main ECE 0 CODE 0 text0 dist/default/debug\batteria4480.X.debug.obj
+__end_of_utoa 3CC8 0 CODE 0 text5 dist/default/debug\batteria4480.X.debug.obj
+__pintcode 8 0 CODE 0 intcode dist/default/debug\batteria4480.X.debug.obj
+isdigit@c 61 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__end_of_ricarica 3742 0 CODE 0 text8 dist/default/debug\batteria4480.X.debug.obj
+display_voltage@line E6 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+LCD_write_integer@index 8D 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__end_of_dpowers 7EA9 0 MEDIUMCONST 0 mediumconst dist/default/debug\batteria4480.X.debug.obj
+log@exponent D5 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__end_of_frexp 3EF8 0 CODE 0 text25 dist/default/debug\batteria4480.X.debug.obj
+?_sprintf D4 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+LCD_write_integer@value 7E 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+_isdigit$1144 60 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+_T0CON FD5 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_T1CON FCD 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_T2CON FCA 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_TMR0H FD7 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_TMR0L FD6 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_TMR1H FCF 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_TMR1L FCE 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_TRISA F92 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_TRISB F93 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_TRISC F94 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_TRISD F95 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_TRISE F96 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__end_of_scale 1942 0 CODE 0 text11 dist/default/debug\batteria4480.X.debug.obj
+__size_of_LCD_write_integer 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__CFG_CP0$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__CFG_CP1$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__HRAM 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__Hbss 0 0 RAM 1 bss dist/default/debug\batteria4480.X.debug.obj
+__Hram 0 0 ABS 0 ram dist/default/debug\batteria4480.X.debug.obj
+__Hsfr 0 0 ABS 0 sfr dist/default/debug\batteria4480.X.debug.obj
+__LRAM 1 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__Lbss 0 0 RAM 1 bss dist/default/debug\batteria4480.X.debug.obj
+__Lram 0 0 ABS 0 ram dist/default/debug\batteria4480.X.debug.obj
+__Lsfr 0 0 ABS 0 sfr dist/default/debug\batteria4480.X.debug.obj
+__CFG_CP2$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__CFG_CP3$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_errno 2D 0 COMRAM 1 bssCOMRAM dist/default/debug\batteria4480.X.debug.obj
+_frexp 3E42 0 CODE 0 text25 dist/default/debug\batteria4480.X.debug.obj
+__CFG_CPB$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+_scale 1470 0 CODE 0 text11 dist/default/debug\batteria4480.X.debug.obj
+_somme 21 0 COMRAM 1 bssCOMRAM dist/default/debug\batteria4480.X.debug.obj
+_stati 35 0 COMRAM 1 bssCOMRAM dist/default/debug\batteria4480.X.debug.obj
+_tempo 25 0 COMRAM 1 bssCOMRAM dist/default/debug\batteria4480.X.debug.obj
+_fround$1578 C9 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+_fround$1579 C5 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+_temperature F7 0 BANK0 1 bssBANK0 dist/default/debug\batteria4480.X.debug.obj
+_CCP1CON FBD 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__size_of_log 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__HdataBANK1 0 0 ABS 0 dataBANK1 dist/default/debug\batteria4480.X.debug.obj
+__LbitbssCOMRAM 0 0 ABS 0 bitbssCOMRAM dist/default/debug\batteria4480.X.debug.obj
+LCD_goto_xy@x 6F 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+LCD_goto_xy@y 6E 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+_LCD_write_string 4600 0 CODE 0 text33 dist/default/debug\batteria4480.X.debug.obj
+__initialization 422A 0 CODE 0 cinit dist/default/debug\batteria4480.X.debug.obj
+___xxtofl@sign 75 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__pbssBANK0 E9 0 BANK0 1 bssBANK0 dist/default/debug\batteria4480.X.debug.obj
+__pbssBANK1 12D 0 BANK1 1 bssBANK1 dist/default/debug\batteria4480.X.debug.obj
+__pdataCOMRAM 3F 0 COMRAM 1 dataCOMRAM dist/default/debug\batteria4480.X.debug.obj
+_T2CONbits FCA 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__Hfardata 0 0 FARRAM 0 fardata dist/default/debug\batteria4480.X.debug.obj
+___wmul@product 64 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/debug\batteria4480.X.debug.obj
+read_adc@logaritmo D9 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__Lifardata 0 0 CODE 0 ifardata dist/default/debug\batteria4480.X.debug.obj
+__size_of_LCD_home 0 0 ABS 0 - dist/default/debug\batteria4480.X.debug.obj
+__div_to_l_@cntr 6C 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__div_to_l_@exp1 6D 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__div_to_l_@quot 68 0 BANK0 1 cstackBANK0 dist/default/debug\batteria4480.X.debug.obj
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\batteria4480.X.debug.obj
+__Hintcode 16 0 CODE 0 intcode dist/default/debug\batteria4480.X.debug.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+intcodelo 0 18 18 466B 1
+idloc 0 200000 200000 8 1
+cstackCOMRAM 1 1 1 40 1
+cstackBANK0 1 60 60 9B 1
+cstackBANK1 1 100 100 41 1
+reset_vec 0 0 0 4 1
+intcode 0 8 8 E 1
+mediumconst 0 7E18 7E18 1E8 1
+config 0 300000 300000 E 1

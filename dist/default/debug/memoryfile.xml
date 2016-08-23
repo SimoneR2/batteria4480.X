@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\batteria4480.X.production.hex">
+  <executable name="dist/default/debug\batteria4480.X.debug.hex">
     <memory name="program">
       <units>bytes</units>
       <length>32768</length>
-      <used>18189</used>
-      <free>14579</free>
+      <used>18533</used>
+      <free>14235</free>
     </memory>
     <memory name="data">
       <units>bytes</units>

@@ -8,6 +8,7 @@
 #include "delay.c"
 #include <stdio.h>
 #include <math.h>
+#include "pwm.h"
 
 #define fan LATCbits.LATC2
 #define rapporto 0.3302367395864549 // R2/(R1+R2)
@@ -19,7 +20,7 @@
 #define Tnom 25
 #define  B 4300//coefficente beta
 
-volatile bit inizio = 0;
+volatile bit inizio, ricaricaFineCiclo = 0;
 
 volatile unsigned int ore, minuti, secondi, battery = 0;
 volatile unsigned long tempo, somme, tempo_old = 0;
@@ -62,10 +63,12 @@ __interrupt(high_priority) void isr_alta(void) { //incremento ogni secondo
     if (INTCONbits.INT0IF == 1) {
         if (PORTBbits.RB2 == 1) {
             battery += 5;
+            ricaricaFineCiclo = 1;
         }
         if (PORTBbits.RB2 == 0) {
             if (battery > 4) {
                 battery -= 5;
+                ricaricaFineCiclo = 0;
             }
         }
         INTCONbits.INT0IF = 0;
@@ -97,7 +100,35 @@ void main(void) {
             LCD_write_message("Ah");
             delay_ms(10);
             if (PORTBbits.RB1 == 0) {
-                inizio = 1;
+                while (PORTBbits.RB1 == 0);
+                LCD_clear();
+                while (inizio != 1) {
+                    LCD_home();
+                    LCD_write_message("Carico a fine test?");
+                    LCD_goto_line(2);
+                    if (ricaricaFineCiclo == 1) {
+                        LCD_write_message("         Sì         ");
+                    } else {
+                        LCD_write_message("         No         ");
+                    }
+                    if (PORTBbits.RB1 == 0) {
+                        inizio = 1;
+                        INTCONbits.INT0IE = 0;
+                    }
+                }
+
+                unsigned int ore, minuti = 0;
+                ore = battery / 9;
+                minuti = (((battery * 100) / 9)-(ore * 100))*0.6;
+                LCD_home();
+                LCD_write_message("  Durata  scarica:  ");
+                LCD_goto_line(2);
+                LCD_write_message("       ");
+                LCD_write_integer(ore, 2, ZERO_CLEANING_ON);
+                LCD_write_message(":");
+                LCD_write_integer(minuti, 2, ZERO_CLEANING_OFF);
+                LCD_write_message("        ");
+                delay_s(2);
             }
         }
 
@@ -112,14 +143,38 @@ void main(void) {
                 sommatoriaCorrente = sommatoriaCorrente / somme;
             }
             sommatoriaCorrente = sommatoriaCorrente * (ore + ((float) minuti / 60)+((float) secondi / 3600));
-            LCD_home();
-            LCD_write_message("test completato:");
-            LCD_goto_line(2);
-            LCD_write_message("capacita':");
-            sprintf(str, "%.3f", sommatoriaCorrente);
-            str[5] = '\0';
-            LCD_write_string(str);
-            while (1);
+            while (1) {
+                //VISUALIZZAZIONE CAPACITA' MISURATA
+                LCD_clear();
+                LCD_write_message("test completato:");
+                LCD_goto_line(2);
+                LCD_write_message("capacita':");
+                sprintf(str, "%.3f", sommatoriaCorrente);
+                str[5] = '\0';
+                LCD_write_string(str);
+                delay_ms(1500);
+                //CALCOLI PERCENTUALE RISPETTO A CAPACITA' IMPOSTATA
+                LCD_clear();
+                LCD_write_message("efficienza batteria:");
+                float percentuale = 0;
+                percentuale = (sommatoriaCorrente * 100) / battery;
+                LCD_goto_line(2);
+                sprintf(str, "%.2f", percentuale);
+                str[5] = '\0';
+                LCD_write_string(str);
+                LCD_write_message("%");
+                delay_ms(1500);
+                if (ricaricaFineCiclo == 1) {
+                    if ((current < -0.5) || (voltage < 14)) {
+                        batteryCharger = 1;
+                    } else {
+                        batteryCharger = 0;
+                        LCD_clear();
+                        LCD_write_message("  Batteria carica!  ");
+                        delay_s(1);
+                    }
+                }
+            }
         }
     }
 }
@@ -127,13 +182,22 @@ void main(void) {
 void ricarica(void) {
     LCD_initialize(16);
     while ((current < -0.5) || (voltage < 14)) {
-        batteryCharger = 1; //attivo ciclo ricarica
-        LCD_goto_line(1);
-        LCD_write_message("Carica in corso:");
-        display_voltage(2);
-        delay_s(1);
-        read_adc();
+        if ((voltage > 13) || (current < 0)) {
+            batteryCharger = 1; //attivo ciclo ricarica
+            LCD_goto_line(1);
+            LCD_write_message("Carica in corso:");
+            display_voltage(2);
+            delay_s(1);
+            read_adc();
+        } else {
+            LCD_home();
+            LCD_write_message("ERRORE! Carica bat. ");
+            LCD_goto_line(2);
+            LCD_write_message("scollegato o guasto.");
+            delay_ms(100);
+        }
     }
+
     batteryCharger = 0;
     LCD_clear();
     LCD_write_message("Carica terminata");
@@ -206,7 +270,7 @@ void display_voltage(unsigned char line) {
 }
 
 void read_adc(void) {
-    volatile int lettura []= {0,0,0,0};
+    volatile int lettura [] = {0, 0, 0, 0};
     for (unsigned char i = 0; i < 4; i++) {
         ADCON0bits.ADON = 1;
         ADCON0 = combinazioni[i]; //disattivo conversione, imposto il canale interessato
@@ -225,17 +289,24 @@ void read_adc(void) {
     voltage = (voltage * 5) / 1024;
     voltage = (float) voltage / rapporto; //Conversione in tensione reale
     temperature = lettura[3];
-    temperature = R0 / ((1023 / temperature) - 1);
-    temperature = temperature / R0; // (R/Ro)
-    temperature = log(temperature); // ln(R/Ro)
-    temperature = temperature / B; // 1/B * ln(R/Ro)
-    temperature = temperature + 1.0 / (Tnom + 273.15); // + (1/To)
-    temperature = 1.0 / temperature; // Invert
+
+    temperature = (temperature * 5) / 1024;
+    temperature = (((10000 * 5.0) / temperature) - 10000);
+    float logaritmo = 0;
+    logaritmo = log(temperature / R0);
+    temperature = (1 / 298.15)+(logaritmo / B);
+    temperature = 1 / temperature;
     temperature = temperature - 273.15; // convert to C
-    if (temperature > 40.0) {
-        fan = 1;
-    } else {
-        fan = 0;
+    if (temperature > 60.0) {
+        SetDCPWM1(1000);
+    } else if (temperature > 50.0) {
+        SetDCPWM1(500);
+    } else if (temperature > 40.0) {
+        SetDCPWM1(300);
+    } else if (temperature > 30.0) {
+        SetDCPWM1(100);
+    } else if (temperature < 20) {
+        SetDCPWM1(0);
     }
 }
 
@@ -287,5 +358,8 @@ void inizializzazione(void) {
     INTCONbits.TMR0IF = 0;
     INTCONbits.TMR0IE = 1;
 
-    ADCON0bits.ADON = 1; //attivo ADC
+    T2CON = 0b00000111;
+    OpenPWM1(0xff);
+
+    //ADCON0bits.ADON = 1; //attivo ADC
 }
